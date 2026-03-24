@@ -1,0 +1,8 @@
+{
+	"PixelSize": 2,
+	"PixelPerfect": "false",
+	"PreloadList": "preload.txt",
+	"Fullscreen": "true",
+	"CanvasID": "JuiceboxCanvas",
+	"PlayfabTitleID": "C740C"
+}
