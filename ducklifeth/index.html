@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Duck Life Treasure Hunt</title>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <canvas id="unity-canvas" style="margin: 0; width: 100%; height: 100%; background: #231F20"></canvas>
+    <script src="unity/WebGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "unity/DLTH WebGL.data",
+        frameworkUrl: "unity/framework.js",
+        codeUrl: "unity/DLTH WebGL.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Mofunzone.com",
+        productName: "Duck Life Treasure Hunt",
+        productVersion: "4.00300",
+      });
+    </script>
+  </body>
+</html>
