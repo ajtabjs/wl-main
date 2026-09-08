@@ -8,7 +8,7 @@
     <link rel="icon" href="icon.png">
     <script src="/js/main.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/10MinutesTillDawnWebGL.json");
+      var gameInstance;
       var scaleToFit;
       try {
         scaleToFit = !!JSON.parse("");
@@ -17,6 +17,7 @@
       }
 
       function onResize() {
+        if (!gameInstance) return;
         var canvas = gameInstance.Module.canvas;
         var container = gameInstance.container;
         var w;
@@ -43,6 +44,51 @@
         container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
       }
       window.addEventListener("resize", onResize);
+
+      async function mergeFiles(fileParts, cacheKey) {
+        const cache = await caches.open("unity-split-cache");
+        const cachedResponse = await cache.match(cacheKey);
+        if (cachedResponse) {
+          const blob = await cachedResponse.blob();
+          return URL.createObjectURL(blob);
+        }
+        const buffers = await Promise.all(
+          fileParts.map(part => fetch(part).then(r => r.arrayBuffer()))
+        );
+        const mergedBlob = new Blob(buffers);
+        await cache.put(cacheKey, new Response(mergedBlob));
+        return URL.createObjectURL(mergedBlob);
+      }
+
+      function getParts(file, start, end) {
+        let parts = [];
+        for (let i = start; i <= end; i++) {
+          parts.push(file + ".part" + i);
+        }
+        return parts;
+      }
+
+      (async () => {
+        const [dataUrl, wasmCodeUrl] = await Promise.all([
+          mergeFiles(getParts("Build/10MinutesTillDawnWebGL.data.unityweb", 0, 1), "10MinutesTillDawnWebGL.data.unityweb"),
+          mergeFiles(getParts("Build/10MinutesTillDawnWebGL.wasm.code.unityweb", 0, 1), "10MinutesTillDawnWebGL.wasm.code.unityweb"),
+        ]);
+
+        const originalOpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function (method, url, ...rest) {
+          this._requestUrl = url;
+          if (url.includes("10MinutesTillDawnWebGL.data.unityweb")) {
+            url = dataUrl;
+          } else if (url.includes("10MinutesTillDawnWebGL.wasm.code.unityweb")) {
+            url = wasmCodeUrl;
+          }
+          this._modifiedUrl = url;
+          return originalOpen.call(this, method, url, ...rest);
+        };
+
+        gameInstance = UnityLoader.instantiate("gameContainer", "Build/10MinutesTillDawnWebGL.json");
+        onResize();
+      })();
     </script>
     <style>
       html,
