@@ -28,6 +28,46 @@
 		},
 	};
 	</script>
+	<script>
+	function mergeFiles(fileParts, cacheKey) {
+		return caches.open("blockpost-split-cache").then(function (cache) {
+			return cache.match(cacheKey).then(function (cachedResponse) {
+				if (cachedResponse) {
+					return cachedResponse.blob().then(function (blob) {
+						return URL.createObjectURL(blob);
+					});
+				}
+				return Promise.all(
+					fileParts.map(function (part) {
+						return fetch(part).then(function (r) {
+							return r.arrayBuffer();
+						});
+					})
+				).then(function (buffers) {
+					var mergedBlob = new Blob(buffers);
+					return cache
+						.put(cacheKey, new Response(mergedBlob))
+						.then(function () {
+							return URL.createObjectURL(mergedBlob);
+						});
+				});
+			});
+		});
+	}
+
+	function getParts(file, start, end) {
+		var parts = [];
+		for (var i = start; i <= end; i++) {
+			parts.push(file + ".part" + i);
+		}
+		return parts;
+	}
+
+	window.__blockpostSplitWasm = mergeFiles(
+		getParts("Build/webgl_poki.wasm.code.unityweb", 0, 1),
+		"blockpost-split-cache"
+	);
+	</script>
     </head>
 <body>
 	<script src="master-loader.js"></script>
