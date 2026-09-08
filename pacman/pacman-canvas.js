@@ -355,17 +355,30 @@ function geronimo() {
 			}
 			
 			// get Level Map
-			$.ajax({
-				url: mapConfig,
-				async: false,
-				 beforeSend: function(xhr){
-					if (xhr.overrideMimeType) xhr.overrideMimeType("application/json"); 
-				},
-				dataType: "json",
-				success: function (data) {
-					game.map =  data;
+			// use a plain XHR to avoid jQuery's 'X-Requested-With' header,
+			// which triggers a CORS preflight failure when the request is
+			// redirected to the jsdelivr CDN (data/map.json).
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", mapConfig, false);
+			if (xhr.overrideMimeType) xhr.overrideMimeType("application/json");
+			try {
+				xhr.send(null);
+			} catch (e) {
+				console.warn("map load failed: " + e);
+			}
+			if (xhr.status === 200 && xhr.responseText) {
+				try {
+					game.map = JSON.parse(xhr.responseText);
+				} catch (e) {
+					console.error("map parse failed: " + e);
 				}
-			});
+			}
+			if (!game.map) {
+				this.showMessage("Error", "Map could not be loaded.<br/>" + mapConfig);
+				game.map = null;
+				console.error("map load failed: " + mapConfig);
+				return;
+			}
 		
 			var temp = 0;
 			$.each(this.map.posY, function(i, item) {
@@ -1392,6 +1405,7 @@ function checkAppCache() {
 		
 		function renderContent()
 		{
+			if (game.map == null) return;
 			//context.save()
 
 			// Refresh Score
