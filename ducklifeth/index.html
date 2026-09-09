@@ -34,8 +34,8 @@
 
       (async () => {
         const [dataUrl, wasmCodeUrl] = await Promise.all([
-          mergeFiles(getParts("unity/DLTH%20WebGL.data.unityweb", 0, 3), "unity/DLTH WebGL.data"),
-          mergeFiles(getParts("unity/DLTH%20WebGL.wasm.code.unityweb", 0, 1), "unity/DLTH WebGL.wasm"),
+          mergeFiles(getParts("unity/DLTH%20WebGL.data", 0, 3), "unity/DLTH WebGL.data"),
+          mergeFiles(getParts("unity/DLTH%20WebGL.wasm", 0, 1), "unity/DLTH WebGL.wasm"),
         ]);
 
         const originalOpen = XMLHttpRequest.prototype.open;
