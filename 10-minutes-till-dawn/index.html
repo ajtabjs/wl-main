@@ -6,7 +6,7 @@
     <title>10 Minutes Till Dawn | 3kh0</title>
     <script src="Build/UnityLoader.js"></script>
     <link rel="icon" href="icon.png">
-    <script src="/js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script>
       var gameInstance;
       var scaleToFit;
@@ -46,7 +46,7 @@
       window.addEventListener("resize", onResize);
 
       async function mergeFiles(fileParts, cacheKey) {
-        const cache = await caches.open("unity-split-cache");
+        const cache = await caches.open("10min-cache");
         const cachedResponse = await cache.match(cacheKey);
         if (cachedResponse) {
           const blob = await cachedResponse.blob();
