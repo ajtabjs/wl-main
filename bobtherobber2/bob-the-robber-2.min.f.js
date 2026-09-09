@@ -22545,7 +22545,7 @@ function() {
         this.isLoading = !1,
         this.hasLoaded = !1,
         this.preloadSprite = null,
-        this.crossOrigin = !1,
+        this.crossOrigin = "anonymous",
         this.baseURL = "",
         this.path = "",
         this.headers = {
@@ -34156,30 +34156,7 @@ function(e, t) {
     ae = re.logging.GALogger,
     ne = function() {
         function a() {}
-        return a.execute = function(e, t, i, r) {
-            if (a.countMap[t] || (a.countMap[t] = 0),
-            !(a.countMap[t] >= a.MaxCount)) {
-                var o = se.getHmac(r, i)
-                  , s = new XMLHttpRequest;
-                s.onreadystatechange = function() {
-                    if (4 === s.readyState) {
-                        if (!s.responseText)
-                            return;
-                        if (200 != s.status)
-                            return void ae.w("sdk error failed. response code not 200. status code: " + s.status + ", description: " + s.statusText + ", body: " + s.responseText);
-                        a.countMap[t] = a.countMap[t] + 1
-                    }
-                }
-                ,
-                console.log("--fx--open--post--", e),
-                s.open("POST", e, !0),
-                s.setRequestHeader("Content-Type", "application/json"),
-                s.setRequestHeader("Authorization", o);
-                try {
-                    s.send(i)
-                } catch (e) {}
-            }
-        }
+        return a.execute = function(e, t, i, r) {}
         ,
         a.MaxCount = 10,
         a.countMap = {},
@@ -34267,26 +34244,19 @@ function(e, t) {
         }
         ,
         l.sendRequest = function(e, t, i, r, o, s) {
-            var a = new XMLHttpRequest
-              , n = le.getGameSecret()
+            var n = le.getGameSecret()
               , h = ue.getHmac(n, t)
-              , c = [];
+              , c = []
+              , a = {
+                  responseText: "{}",
+                  status: 200,
+                  statusText: "OK",
+                  readyState: 4
+              };
             for (var l in c.push(h),
             i)
                 c.push(i[l]);
-            if (a.onreadystatechange = function() {
-                4 === a.readyState && o(a, e, s, c)
-            }
-            ,
-            console.log("--fx--open--post--", e),
-            a.open("POST", e, !0),
-            a.setRequestHeader("Content-Type", "text/plain"),
-            a.setRequestHeader("Authorization", h),
-            r)
-                throw new Error("gzip not supported");
-            try {
-                a.send(t)
-            } catch (e) {}
+            o(a, e, s, c)
         }
         ,
         l.initRequestCallback = function(e, t, i, r) {
