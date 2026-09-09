@@ -50,6 +50,17 @@
           return originalOpen.call(this, method, url, ...rest);
         };
 
+        const originalFetch = window.fetch;
+        window.fetch = function (input, ...rest) {
+          let url = typeof input === "string" ? input : input.url;
+          if (url.includes("DLTH WebGL.data")) {
+            input = dataUrl;
+          } else if (url.includes("DLTH WebGL.wasm")) {
+            input = wasmCodeUrl;
+          }
+          return originalFetch.call(this, input, ...rest);
+        };
+
         createUnityInstance(document.querySelector("#unity-canvas"), {
           dataUrl: "unity/DLTH WebGL.data",
           frameworkUrl: "unity/framework.js",
