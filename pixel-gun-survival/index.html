@@ -39,7 +39,7 @@
       };
 
       function mergeFiles(fileParts, cacheKey) {
-        return caches.open("unity-split-cache").then(function (cache) {
+        return caches.open("pgs-split").then(function (cache) {
           return cache.match(cacheKey).then(function (cachedResponse) {
             if (cachedResponse) {
               return cachedResponse.blob().then(function (blob) {
