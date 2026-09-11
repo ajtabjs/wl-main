@@ -8,7 +8,42 @@
     <script src="Build/UnityLoader.js"></script>
     <script src="/js/main.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/duck.json");
+      async function mergeFiles(fileParts, cacheKey) {
+        const cache = await caches.open("ducklife4cache");
+        const cachedResponse = await cache.match(cacheKey);
+        if (cachedResponse) {
+          const blob = await cachedResponse.blob();
+          return URL.createObjectURL(blob);
+        }
+        const buffers = await Promise.all(
+          fileParts.map(part => fetch(part).then(r => r.arrayBuffer()))
+        );
+        const mergedBlob = new Blob(buffers);
+        await cache.put(cacheKey, new Response(mergedBlob));
+        return URL.createObjectURL(mergedBlob);
+      }
+
+      function getParts(file, start, end) {
+        let parts = [];
+        for (let i = start; i <= end; i++) {
+          parts.push(file + ".part" + i);
+        }
+        return parts;
+      }
+
+      async function loadGame() {
+        const config = await fetch("Build/duck.json").then(r => r.json());
+        const dataPath = "Build/WebGL4.data.unityweb";
+        const parts = getParts(dataPath, 0, 2);
+        config.dataUrl = await mergeFiles(parts, dataPath);
+        ["asmCodeUrl", "asmMemoryUrl", "asmFrameworkUrl", "wasmCodeUrl", "wasmFrameworkUrl", "backgroundUrl"].forEach(key => {
+          if (config[key]) config[key] = new URL(config[key], "Build/duck.json").href;
+        });
+        const configUrl = URL.createObjectURL(new Blob([JSON.stringify(config)], { type: "application/json" }));
+        var gameInstance = UnityLoader.instantiate("gameContainer", configUrl);
+      }
+
+      loadGame().catch(err => console.error("Failed to load Duck Life 4:", err));
     </script>
     <link rel="icon" type="image/x-icon" href="splash.jpg" />
     <link rel="shortcut icon" type="image/x-icon" href="splash.jpg" />
