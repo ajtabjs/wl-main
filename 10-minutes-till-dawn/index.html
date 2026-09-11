@@ -53,7 +53,10 @@
           return URL.createObjectURL(blob);
         }
         const buffers = await Promise.all(
-          fileParts.map(part => fetch(part).then(r => r.arrayBuffer()))
+          fileParts.map(part => fetch(part).then(r => {
+            if (!r.ok) throw new Error("Failed to fetch " + part);
+            return r.arrayBuffer();
+          }))
         );
         const mergedBlob = new Blob(buffers);
         await cache.put(cacheKey, new Response(mergedBlob));
@@ -68,27 +71,23 @@
         return parts;
       }
 
-      (async () => {
-        const [dataUrl, wasmCodeUrl] = await Promise.all([
-          mergeFiles(getParts("Build/10MinutesTillDawnWebGL.data.unityweb", 0, 1), "10MinutesTillDawnWebGL.data.unityweb"),
-          mergeFiles(getParts("Build/10MinutesTillDawnWebGL.wasm.code.unityweb", 0, 1), "10MinutesTillDawnWebGL.wasm.code.unityweb"),
+      async function loadGame() {
+        const config = await fetch("Build/10MinutesTillDawnWebGL.json").then(r => r.json());
+        const dataPath = "Build/10MinutesTillDawnWebGL.data.unityweb";
+        const wasmCodePath = "Build/10MinutesTillDawnWebGL.wasm.code.unityweb";
+        [config.dataUrl, config.wasmCodeUrl] = await Promise.all([
+          mergeFiles(getParts(dataPath, 0, 1), dataPath),
+          mergeFiles(getParts(wasmCodePath, 0, 1), wasmCodePath),
         ]);
-
-        const originalOpen = XMLHttpRequest.prototype.open;
-        XMLHttpRequest.prototype.open = function (method, url, ...rest) {
-          this._requestUrl = url;
-          if (url.includes("10MinutesTillDawnWebGL.data.unityweb")) {
-            url = dataUrl;
-          } else if (url.includes("10MinutesTillDawnWebGL.wasm.code.unityweb")) {
-            url = wasmCodeUrl;
-          }
-          this._modifiedUrl = url;
-          return originalOpen.call(this, method, url, ...rest);
-        };
-
-        gameInstance = UnityLoader.instantiate("gameContainer", "Build/10MinutesTillDawnWebGL.json");
+        ["wasmFrameworkUrl", "backgroundUrl"].forEach(key => {
+          if (config[key]) config[key] = new URL(config[key], "Build/10MinutesTillDawnWebGL.json").href;
+        });
+        const configUrl = URL.createObjectURL(new Blob([JSON.stringify(config)], { type: "application/json" }));
+        gameInstance = UnityLoader.instantiate("gameContainer", configUrl);
         onResize();
-      })();
+      }
+
+      loadGame().catch(err => console.error("Failed to load 10 Minutes Till Dawn:", err));
     </script>
     <style>
       html,
