@@ -79,8 +79,9 @@
           mergeFiles(getParts(dataPath, 0, 1), dataPath),
           mergeFiles(getParts(wasmCodePath, 0, 1), wasmCodePath),
         ]);
+        const jsonUrl = new URL("Build/10MinutesTillDawnWebGL.json", document.baseURI).href;
         ["wasmFrameworkUrl", "backgroundUrl"].forEach(key => {
-          if (config[key]) config[key] = new URL(config[key], "Build/10MinutesTillDawnWebGL.json").href;
+          if (config[key]) config[key] = new URL(config[key], jsonUrl).href;
         });
         const configUrl = URL.createObjectURL(new Blob([JSON.stringify(config)], { type: "application/json" }));
         gameInstance = UnityLoader.instantiate("gameContainer", configUrl);

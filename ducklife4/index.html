@@ -33,11 +33,12 @@
 
       async function loadGame() {
         const config = await fetch("Build/duck.json").then(r => r.json());
+        const jsonUrl = new URL("Build/duck.json", document.baseURI).href;
         const dataPath = "Build/WebGL4.data.unityweb";
         const parts = getParts(dataPath, 0, 2);
         config.dataUrl = await mergeFiles(parts, dataPath);
         ["asmCodeUrl", "asmMemoryUrl", "asmFrameworkUrl", "wasmCodeUrl", "wasmFrameworkUrl", "backgroundUrl"].forEach(key => {
-          if (config[key]) config[key] = new URL(config[key], "Build/duck.json").href;
+          if (config[key]) config[key] = new URL(config[key], jsonUrl).href;
         });
         const configUrl = URL.createObjectURL(new Blob([JSON.stringify(config)], { type: "application/json" }));
         var gameInstance = UnityLoader.instantiate("gameContainer", configUrl);
