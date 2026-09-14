@@ -1,0 +1,35 @@
+{
+    "c2array": true,
+    "size": [
+        5,
+        1,
+        1
+    ],
+    "data": [
+        [
+            [
+                "Oh no you ran out of lives! Purchase unlimited lives to continue, or click restart to begin again at the start of the game."
+            ]
+        ],
+        [
+            [
+                "Oh non, vous n'avez plus de vies ! Achetez des vies illimitées pour continuer, ou cliquez sur redémarrer pour recommencer au début du jeu."
+            ]
+        ],
+        [
+            [
+                "Oh nein, Ihnen sind die Leben ausgegangen! Kaufen Sie unbegrenzte Leben, um fortzufahren, oder klicken Sie auf \"Neustart\", um wieder am Anfang des Spiels zu beginnen."
+            ]
+        ],
+        [
+            [
+                "Oh não, você ficou sem vida! Compre vidas ilimitadas para continuar, ou clique em reiniciar para começar novamente no início do jogo."
+            ]
+        ],
+        [
+            [
+                "Oh no, ¡te has quedado sin vidas! Compra vidas ilimitadas para continuar, o haz clic en reiniciar para empezar de nuevo al principio del juego."
+            ]
+        ]
+    ]
+}

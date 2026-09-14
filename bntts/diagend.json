@@ -1,0 +1,130 @@
+{
+    "c2array": true,
+    "size": [
+        6,
+        6,
+        1
+    ],
+    "data": [
+        [
+            [
+                "You killed Pineapple: "
+            ],
+            [
+                "You killed Big Square: "
+            ],
+            [
+                "Deaths: "
+            ],
+            [
+                "Thanks for playing! Tap and hold to restart."
+            ],
+            [
+                "Thanks for playing! Tap and hold to restart."
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            [
+                "Tu as tué Ananas : "
+            ],
+            [
+                "Tu as tué Big Square : "
+            ],
+            [
+                "Des décès : "
+            ],
+            [
+                "Merci de jouer ! Tapez et maintenez pour redémarrer."
+            ],
+            [
+                "Merci de jouer ! Tapez et maintenez pour redémarrer."
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            [
+                "Du hast Pineapple getötet: "
+            ],
+            [
+                "Sie haben Big Square getötet: "
+            ],
+            [
+                "Todesfälle: "
+            ],
+            [
+                "Danke fürs Spielen! Tippen und halten Sie zum Neustart."
+            ],
+            [
+                "Danke fürs Spielen! Tippen und halten Sie zum Neustart."
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            [
+                "Você matou o Abacaxi: "
+            ],
+            [
+                "Você matou o Big Square: "
+            ],
+            [
+                "Mortes: "
+            ],
+            [
+                "Obrigado por jogar! Toque e segure para reiniciar."
+            ],
+            [
+                "Obrigado por jogar! Toque e segure para reiniciar."
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            [
+                "Tú mataste a Pineapple:"
+            ],
+            [
+                "Tú mataste a Big Square:"
+            ],
+            [
+                "Muertes: "
+            ],
+            [
+                "¡Gracias por jugar! Toca y mantén pulsado para reiniciar."
+            ],
+            [
+                "¡Gracias por jugar! Toca y mantén pulsado para reiniciar."
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ]
+    ]
+}
