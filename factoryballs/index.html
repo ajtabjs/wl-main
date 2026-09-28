@@ -5,8 +5,8 @@
 <title>Factory Balls forever | 3kh0</title>
 <link
       rel="icon"
-      type="image/png"
-      href="https://raw.githubusercontent.com/Piplup7575/factoryballz/main/images/favicon.ico"
+      type="image/x-icon"
+      href="images/favicon.ico"
       sizes="16x16"
     />
 <style>
@@ -26,7 +26,7 @@ function init() {
 	dom_overlay_container = document.getElementById("dom_overlay_container");
 	var comp=AdobeAn.getComposition("FD3559EF710E8E4AABB26802F91D9290");
 	var lib=comp.getLibrary();
-	var loader = new createjs.LoadQueue(false);
+	var loader = new createjs.LoadQueue(true);
 	loader.installPlugin(createjs.Sound);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
 	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
@@ -72,6 +72,6 @@ function playSound(id, loop) {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:960px; height:720px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:720px; width: 960px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src="https://raw.githubusercontent.com/Piplup7575/factoryballz/b756c41c487dc6daa7b46cf4464e2c9c7e64b4d9/images/preloader.gif" style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:720px; width: 960px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src="images/preloader.gif" style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>
