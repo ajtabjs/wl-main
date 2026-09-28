@@ -11,7 +11,60 @@
     <script src="Build/UnityLoader.js"></script>
     <script src="/js/main.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", { onProgress: UnityProgress });
+      var unityInstance;
+
+      async function mergeFiles(fileParts, cacheKey) {
+        let cache = null;
+        try {
+          cache = await caches.open("station141");
+        } catch (err) {
+          cache = null;
+        }
+        if (cache) {
+          const cachedResponse = await cache.match(cacheKey);
+          if (cachedResponse) {
+            const blob = await cachedResponse.blob();
+            return URL.createObjectURL(blob);
+          }
+        }
+        const buffers = await Promise.all(
+          fileParts.map(part => fetch(part).then(r => {
+            if (!r.ok) throw new Error("Failed to fetch " + part);
+            return r.arrayBuffer();
+          }))
+        );
+        const mergedBlob = new Blob(buffers);
+        if (cache) {
+          try {
+            await cache.put(cacheKey, new Response(mergedBlob));
+          } catch (err) {
+            console.warn("Cache write failed for " + cacheKey, err);
+          }
+        }
+        return URL.createObjectURL(mergedBlob);
+      }
+
+      function getParts(file, start, end) {
+        let parts = [];
+        for (let i = start; i <= end; i++) {
+          parts.push(file + ".part" + i);
+        }
+        return parts;
+      }
+
+      async function loadGame() {
+        const jsonUrl = new URL("Build/WebGL.json", document.baseURI).href;
+        const config = await fetch(jsonUrl).then(r => r.json());
+        const dataPath = "Build/WebGL.data.unityweb";
+        config.dataUrl = await mergeFiles(getParts(dataPath, 0, 1), "station141/" + dataPath);
+        ["wasmCodeUrl", "wasmFrameworkUrl", "backgroundUrl"].forEach(key => {
+          if (config[key]) config[key] = new URL(config[key], jsonUrl).href;
+        });
+        const configUrl = URL.createObjectURL(new Blob([JSON.stringify(config)], { type: "application/json" }));
+        unityInstance = UnityLoader.instantiate("unityContainer", configUrl, { onProgress: UnityProgress });
+      }
+
+      loadGame().catch(err => console.error("Failed to load Station 141:", err));
     </script>
   </head>
   <body>
