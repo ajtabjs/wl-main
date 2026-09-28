@@ -1,0 +1,47 @@
+name: auto purge jsdelivr cache for files
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files and build jsDelivr URLs
+        id: purge_urls
+        run: |
+          FILES=$(git diff --name-only \
+            ${{ github.event.before }} \
+            ${{ github.event.after }} \
+            --diff-filter=AMR)
+
+          FILTERED=$(echo "$FILES" | grep -Ev '^(\.github/|.*\.md$|.*\.txt$)' || true)
+
+          REPO="${{ github.repository }}"
+          URLS=""
+
+          for alias in main master latest; do
+            while IFS= read -r file; do
+              [ -z "$file" ] && continue
+              URLS+="https://cdn.jsdelivr.net/gh/${REPO}@${alias}/${file},"
+            done <<< "$FILTERED"
+          done
+
+          echo "urls=${URLS%,}" >> $GITHUB_OUTPUT
+
+      - name: Purge jsDelivr cache
+        if: steps.purge_urls.outputs.urls != ''
+        uses: egad13/purge-jsdelivr-cache@v1
+        with:
+          url: ${{ steps.purge_urls.outputs.urls }}
+          attempts: 5
