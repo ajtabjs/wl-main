@@ -6,7 +6,89 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "./dh.json");
+      // This build's data archive is not part of this folder. dh.json points at
+      // https://ubg100.bitbucket.io/games/dh/dh.data.unityweb, which answers 404
+      // "File not found", and data.json at cdn.weblfg.com, which answers 403 for
+      // every path including its own root.
+      //
+      // UnityLoader does not look at the response before reading the archive
+      // header out of it, so a failed download used to surface as
+      //
+      //   Uncaught RangeError: Offset is outside the bounds of the DataView
+      //     at UnityLoader.js:3695
+      //
+      // with nothing but a black screen for the visitor. Fetch the archive's
+      // first bytes first, check they really are an archive, and only hand the
+      // config to UnityLoader once that holds. Anything else gets a readable
+      // message instead.
+      var CONFIG_URL = "./dh.json";
+      var ARCHIVE_MAGIC = ["UnityFS", "UnityWeb", "UnityRaw"];
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (char) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char];
+        });
+      }
+
+      function showError(heading, detail) {
+        var container = document.getElementById("gameContainer");
+        container.innerHTML =
+          '<div style="box-sizing:border-box;width:100%;height:100%;padding:32px;' +
+          'display:flex;flex-direction:column;align-items:center;justify-content:center;' +
+          'gap:12px;background:#111;color:#eee;font-family:system-ui,-apple-system,Segoe UI,' +
+          'Roboto,Helvetica,Arial,sans-serif;text-align:center">' +
+          '<h2 style="margin:0;font-size:20px">' + escapeHtml(heading) + "</h2>" +
+          '<p style="margin:0;max-width:46ch;color:#aaa;font-size:14px;line-height:1.5">' +
+          detail +
+          "</p></div>";
+      }
+
+      // Range is a CORS-safelisted header for a single byte range, so this costs
+      // one small request and no preflight.
+      async function checkArchive(url) {
+        var res = await fetch(url, { headers: { Range: "bytes=0-11" } });
+        if (!res.ok && res.status !== 206) {
+          throw new Error("the server answered HTTP " + res.status);
+        }
+        var bytes = new Uint8Array(await res.arrayBuffer());
+        var magic = String.fromCharCode.apply(null, bytes);
+        if (ARCHIVE_MAGIC.indexOf(magic.slice(0, 7)) === -1) {
+          throw new Error("the server returned " + JSON.stringify(magic.slice(0, 40)) +
+            " instead of a Unity data archive");
+        }
+      }
+
+      async function startGame() {
+        var configUrl = new URL(CONFIG_URL, document.baseURI).href;
+        var config = await fetch(configUrl).then(function (r) {
+          if (!r.ok) throw new Error("could not read " + CONFIG_URL);
+          return r.json();
+        });
+
+        if (!config.dataUrl) {
+          showError("This build is incomplete", "dh.json does not name a data archive.");
+          return;
+        }
+
+        try {
+          await checkArchive(config.dataUrl);
+        } catch (err) {
+          showError(
+            "Drift Hunters can't load - its game data is missing",
+            "The Unity data archive this build needs is not hosted any more, so there is " +
+              "nothing to play. <code>" + escapeHtml(config.dataUrl) + "</code> answered: " +
+              escapeHtml(err.message) + "."
+          );
+          return;
+        }
+
+        window.gameInstance = UnityLoader.instantiate("gameContainer", configUrl);
+      }
+
+      startGame().catch(function (err) {
+        console.error("Failed to start Drift Hunters:", err);
+        showError("Drift Hunters failed to start", String(err && err.message ? err.message : err));
+      });
     </script>
   </head>
   <body style="margin: 0; overflow: hidden;">
