@@ -1,1 +1,3 @@
 *.py
+/screenshots/
+/shot_*.png
