@@ -30,7 +30,9 @@ pc.script.createLoadingScreen(function (app) {
 
     var hideSplash = function () {
         var splash = document.getElementById('application-splash-wrapper');
-        splash.parentElement.removeChild(splash);
+        if (splash) {
+            splash.parentElement.removeChild(splash);
+        }
     };
 
     var setProgress = function (value) {

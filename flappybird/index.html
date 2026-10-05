@@ -9,8 +9,13 @@
     <title>Flappy Bird</title>
     <script src="playcanvas-stable.min.js"></script>
     <script>
-        ASSET_PREFIX = "";
-        SCRIPT_PREFIX = "";
+        // PlayCanvas resolves SCENE_PATH, CONFIG_FILENAME and every asset
+        // id against this prefix. An empty prefix makes them relative to the
+        // document, which points at the host page rather than this game folder
+        // when the page is embedded, so the scene 404s. Derive it from the
+        // document base instead.
+        ASSET_PREFIX = new URL(".", document.baseURI).href;
+        SCRIPT_PREFIX = ASSET_PREFIX;
         SCENE_PATH = "404993.json";
         CONTEXT_OPTIONS = {
             'antialias': true,
