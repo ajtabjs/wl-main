@@ -6,6 +6,7 @@
     <title>Townscaper | 3kh0</title>
     <link rel="icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="split-loader.js"></script>
     <script type="application/javascript" src="/js/main.js"></script>
   </head>
   <body>
@@ -64,7 +65,9 @@
 
       var script = document.createElement("script"); 
       script.src = loaderUrl;
-      script.onload = () => {
+      script.onload = async () => {
+        // merge the split parts before Unity asks for dataUrl / codeUrl
+        await prepareSplitBuild(config);
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {

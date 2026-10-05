@@ -23,6 +23,7 @@
         <div id="unity-build-title">Backrooms 2D</div>
       </div>
     </div>
+    <script src="split-loader.js"></script>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -104,7 +105,9 @@
 
       var script = document.createElement("script");
       script.src = loaderUrl;
-      script.onload = () => {
+      script.onload = async () => {
+        // merge the split parts before Unity asks for dataUrl / codeUrl
+        await prepareSplitBuild(config);
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
