@@ -11,7 +11,7 @@
     <script src="Build/WebGL.loader.js"></script>
     <script src="split-loader.js"></script>
     <script>
-      createUnityInstance(document.querySelector("#unity-canvas"), {
+      prepareSplitBuild({
         dataUrl: "Build/WebGL.data.gz",
         frameworkUrl: "Build/WebGL.framework.js.gz",
         codeUrl: "Build/WebGL.wasm.gz",
@@ -21,6 +21,8 @@
         productVersion: "0.1",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then(function (config) {
+        createUnityInstance(document.querySelector("#unity-canvas"), config);
       });
     </script>
   </body>

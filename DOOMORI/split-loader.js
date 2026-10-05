@@ -24,7 +24,7 @@ var ENTRIES = [
 async function mergeFiles(fileParts, cacheKey, mimeType) {
   let cache = null;
   try {
-    cache = await caches.open(DOOMORI);
+    cache = await caches.open("DOOMORI");
   } catch (err) {
     cache = null;
   }
@@ -81,27 +81,42 @@ async function checkArchive(url, entry) {
   return url;
 }
 
-(function () {
-  const original = window.createUnityInstance;
-  window.createUnityInstance = function (canvas, config, onProgress) {
-    const patched = Object.assign({}, config);
-    let chain = Promise.resolve();
+// The merge is exposed as prepareSplitBuild(config) rather than by wrapping the
+// global, and index.html calls it before createUnityInstance. Wrapping the global
+// does not work here: three of these pages inject their loader at runtime with
+//
+//     var script = document.createElement("script");
+//     script.src = loaderUrl;                 // "buildUrl + "/X.loader.js""
+//     script.onload = () => createUnityInstance(canvas, config, ...)
+//
+// and the loader's top-level "function createUnityInstance(...)" declaration goes
+// through CreateGlobalFunctionBinding, which redefines the property as
+// non-configurable. That silently discards an accessor installed beforehand, and
+// throws "Cannot redefine property: createUnityInstance" if it is installed as a
+// setter. Both were observed before this was written the other way round.
+//
+// config is mutated in place and the promise resolves with it, so a caller with a
+// config variable only needs to await it, and a caller with an inline object
+// literal passes the literal straight in.
+window.prepareSplitBuild = function (config) {
+  let chain = Promise.resolve();
     chain = chain.then(function () {
       return mergeFiles(getParts(ENTRIES[0].path, 0, ENTRIES[0].parts - 1), "DOOMORI/Build/WEBGL Doomori Build.data.gz", null).then(function (url) {
         return checkArchive(url, ENTRIES[0]).then(function () {
-          patched.dataUrl = url;
+          config.dataUrl = url;
         });
       });
     });
-    return chain
-      .then(function () {
-        return original(canvas, patched, onProgress);
-      })
-      .catch(function (err) {
-        console.error("DOOMORI: could not load the split game data:", err);
-        if (canvas) {
-          canvas.textContent = "DOOMORI can't load its game data: " + err.message;
-        }
-      });
-  };
-})();
+  return chain
+    .then(function () {
+      return config;
+    })
+    .catch(function (err) {
+      console.error("DOOMORI: could not load the split game data:", err);
+      const canvas = document.querySelector("canvas");
+      if (canvas) {
+        canvas.textContent = "DOOMORI can't load its game data: " + err.message;
+      }
+      return config;
+    });
+};
