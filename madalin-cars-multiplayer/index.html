@@ -10,8 +10,26 @@
 	<link rel="stylesheet" href="TemplateData/style.css">
 	<script src="TemplateData/UnityProgress.js"></script>
 	<script src="Build/b14b32a200649d0650c1a6ff3db39cf4.js"></script>
+	<script src="split-loader.js"></script>
 	<script>
-		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/37f4fe02fe4acc34c6a26d8cf99ddc67.json", { onProgress: UnityProgress });
+		// Build/7d7b82eb5e1c0ce8feedf2e1323e904d.unityweb is 45 MB, over
+		// jsdelivr's 20 MB per-file limit, so split-loader.js stitches its three
+		// parts back together and hands the merged copy to the loader as an
+		// override. Everything else in the build config is read from the JSON
+		// unchanged.
+		window.prepareSplitBuild({ onProgress: UnityProgress })
+			.then(function (overrides) {
+				window.gameInstance = UnityLoader.instantiate(
+					"gameContainer",
+					"Build/37f4fe02fe4acc34c6a26d8cf99ddc67.json",
+					overrides
+				);
+			})
+			.catch(function (err) {
+				console.error("Failed to start Madalin Cars Multiplayer:", err);
+				document.getElementById("gameContainer").textContent =
+					"Madalin Cars Multiplayer can't load its game data: " + err.message;
+			});
 	</script>
 </head>
 <body>
