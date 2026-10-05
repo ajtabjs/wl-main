@@ -24,8 +24,16 @@ if (!window.config.unityWebglLoaderUrl) {
     //         window.config.unityWebglLoaderUrl = "UnityLoader.js"
     // }
 }
-var sdkScript = document.createElement("script");
-sdkScript.src = "./poki-sdk.js", sdkScript.onload = function() {
-    var i = document.createElement("script");
-    i.src = root + loader, document.body.appendChild(i)
-}, document.body.appendChild(sdkScript);poki-sdk-core.js
+// The wasm build is stitched together from parts by split-loader.js before the
+// SDK is pulled in, so poki's unity.js reads the patched build config.
+window.prepareSplitBuild(window.config.unityWebglBuildUrl).then(function (patchedBuildUrl) {
+    window.config.unityWebglBuildUrl = patchedBuildUrl;
+    var sdkScript = document.createElement("script");
+    sdkScript.src = "./poki-sdk.js", sdkScript.onload = function() {
+        var i = document.createElement("script");
+        i.src = root + loader, document.body.appendChild(i)
+    }, document.body.appendChild(sdkScript);
+}, function (err) {
+    console.error("Failed to assemble the Papery Planes build:", err);
+});
+
