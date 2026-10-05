@@ -68,7 +68,7 @@ var loadingLogoIcon = document.getElementById('img_loadinglogoicon');
 var loadingBar = document.getElementById('img_loadingbar');
 var loadingBarOverlay = document.getElementById('img_loadingbaroverlay');
 
-if (showBH5Icon == false)
+if (showBH5Icon == false && loadingLogoIcon)
 {
       loadingLogoIcon.style.display        ="none";
       loadingLogoIcon.style.visibility     ="hidden";
