@@ -34,19 +34,26 @@ jobs:
             ${{ github.event.after }} \
             --diff-filter=AMR)
 
-          FILTERED=$(echo "$FILES" | grep -Ev '^(\.github/|.*\.md$|.*\.txt$)' || true)
+          FILTERED=$(printf '%s\n' "$FILES" | grep -Ev '^(\.github/|.*\.md$|.*\.txt$)' || true)
 
           REPO="${{ github.repository }}"
-          URLS=""
 
-          for alias in main master latest; do
-            while IFS= read -r file; do
-              [ -z "$file" ] && continue
-              URLS+="https://cdn.jsdelivr.net/gh/${REPO}@${alias}/${file},"
-            done <<< "$FILTERED"
-          done
+          # Percent-encode each path. The action splits its input on /[\s,]+/,
+          # so a raw space in a path (e.g. "DOOMORI/Build/WEBGL Doomori Build...")
+          # would be torn into bogus tokens and fail validation.
+          URLS=$(printf '%s\n' "$FILTERED" | python3 -c '
+          import sys, urllib.parse
+          repo = sys.argv[1]
+          paths = [p for p in (l.strip("\n") for l in sys.stdin) if p]
+          out = []
+          for alias in ("main", "master", "latest"):
+              for p in paths:
+                  out.append("https://cdn.jsdelivr.net/gh/%s@%s/%s" % (
+                      repo, alias, urllib.parse.quote(p, safe="/")))
+          print(",".join(out))
+          ' "$REPO")
 
-          echo "urls=${URLS%,}" >> $GITHUB_OUTPUT
+          echo "urls=$URLS" >> $GITHUB_OUTPUT
 
       - name: Purge jsDelivr cache
         if: steps.purge_urls.outputs.urls != ''
