@@ -17,11 +17,68 @@
         errorhandler: null, // arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
         compatibilitycheck: null,
         dataUrl: "webgl.datagz",
-        codeUrl: "webgl.jsgz",
         memUrl: "webgl.memgz",
       };
+
+      // The asm.js code file is over jsdelivr's 20 MB per-file limit, so it is
+      // stored as parts and stitched back together here (same approach as
+      // station-141). UnityLoader reads Module.codeUrl while it bootstraps, so
+      // it has to be injected only after the merge has finished.
+      async function mergeFiles(fileParts, cacheKey) {
+        let cache = null;
+        try {
+          cache = await caches.open("superhot");
+        } catch (err) {
+          cache = null;
+        }
+        if (cache) {
+          const cachedResponse = await cache.match(cacheKey);
+          if (cachedResponse) {
+            const blob = await cachedResponse.blob();
+            return URL.createObjectURL(blob);
+          }
+        }
+        const buffers = await Promise.all(
+          fileParts.map(part => fetch(part).then(r => {
+            if (!r.ok) throw new Error("Failed to fetch " + part);
+            return r.arrayBuffer();
+          }))
+        );
+        const mergedBlob = new Blob(buffers);
+        if (cache) {
+          try {
+            await cache.put(cacheKey, new Response(mergedBlob));
+          } catch (err) {
+            console.warn("Cache write failed for " + cacheKey, err);
+          }
+        }
+        return URL.createObjectURL(mergedBlob);
+      }
+
+      function getParts(file, start, end) {
+        let parts = [];
+        for (let i = start; i <= end; i++) {
+          parts.push(file + ".part" + i);
+        }
+        return parts;
+      }
+
+      async function loadGame() {
+        const codePath = "webgl.jsgz";
+        Module.codeUrl = await mergeFiles(getParts(codePath, 0, 1), "superhot/" + codePath);
+        // Unity keys its IndexedDB copy of the asm.js code on Module.codeUrl,
+        // which is now a throwaway blob: URL, so caching there would write
+        // 23 MB of dead cache on every visit. The Cache Storage entry above is
+        // the real cache, so keep Module.indexedDB undefined.
+        Object.defineProperty(Module, "indexedDB", { value: undefined, writable: true, configurable: true });
+
+        const loader = document.createElement("script");
+        loader.src = "UnityLoader.js";
+        document.body.appendChild(loader);
+      }
+
+      loadGame().catch(err => console.error("Failed to load SUPERHOT:", err));
     </script>
-    <script src="UnityLoader.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
