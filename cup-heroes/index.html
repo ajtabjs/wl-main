@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>Cup Heroes</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        #gameContainer {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #unity-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #000;
+        }
+        #ziggyLoader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #05080c, #102331, #263b4a);
+        }
+        #loadingText {
+            margin-top: 18px;
+            opacity: 0.8;
+        }
+        #progressBar {
+            width: min(400px, 80vw);
+            height: 8px;
+            margin-top: 15px;
+            background: rgba(255,255,255,.15);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #progressFill {
+            width: 0%;
+            height: 100%;
+            background: white;
+            transition: width .15s ease;
+        }
+    </style>
+
+    <script>
+        window.czyVariables = {
+            countryCode: "US"
+        };
+    </script>
+</head>
+
+<body>
+
+<div id="ziggyLoader">
+    <div style="font-size:40px">❄</div>
+    <div id="loadingText">Preparing Cup Heroes…</div>
+    <div id="progressBar">
+        <div id="progressFill"></div>
+    </div>
+</div>
+
+<div id="gameContainer">
+    <canvas id="unity-canvas"></canvas>
+</div>
+
+<script>
+(function () {
+    var gameInstance = null;
+    var msgQueue = [];
+
+    window.gameInstance = null;
+    window.msgQueue = msgQueue;
+
+    try {
+        Object.defineProperty(document, "URL", {
+            configurable: true,
+            get: function () {
+                return "https://www.crazygames.com/game/cup-heroes";
+            }
+        });
+        Object.defineProperty(document, "documentURI", {
+            configurable: true,
+            get: function () {
+                return "https://www.crazygames.com/game/cup-heroes";
+            }
+        });
+    } catch (e) {
+        console.warn("[CrazyGames Shim] URL override failed", e);
+    }
+
+    function sendToUnity(objectName, methodName, parameter) {
+        try {
+            if (
+                gameInstance &&
+                typeof gameInstance.SendMessage === "function"
+            ) {
+                gameInstance.SendMessage(objectName, methodName, parameter);
+            } else {
+                msgQueue.push([objectName, methodName, parameter]);
+            }
+        } catch (e) {
+            console.warn("[CrazyGames Shim] SendMessage failed:", e);
+        }
+    }
+
+    window.unityInstance = {
+        SendMessage: function (objectName, methodName, parameter) {
+            sendToUnity(objectName, methodName, parameter);
+        }
+    };
+
+    var dataStore = (function () {
+        var mem = {};
+        function safeLS(method, a, b) {
+            try {
+                if (method === "get") return window.localStorage.getItem(a);
+                if (method === "set") window.localStorage.setItem(a, b);
+                if (method === "del") window.localStorage.removeItem(a);
+                if (method === "clear") window.localStorage.clear();
+            } catch (e) {
+                if (method === "get") return (a in mem) ? mem[a] : null;
+                if (method === "set") mem[a] = String(b);
+                if (method === "del") delete mem[a];
+                if (method === "clear") mem = {};
+            }
+            return undefined;
+        }
+        return {
+            getItem: function (k) {
+                var v = safeLS("get", k);
+                return v === undefined ? null : v;
+            },
+            setItem: function (k, v) { safeLS("set", k, v); },
+            removeItem: function (k) { safeLS("del", k); },
+            clear: function () { safeLS("clear"); }
+        };
+    })();
+
+    var sdk = { SDK: {
+        init: function (config) {
+            console.log("[CrazyGames Shim] Init");
+            try {
+                if (config && config.crazySDKObjectName) {
+                    sendToUnity(config.crazySDKObjectName, "OnSDKInit");
+                }
+            } catch (e) {
+                console.warn("[CrazyGames Shim] Init callback failed", e);
+            }
+            return Promise.resolve(true);
+        },
+        ad: {
+            hasAdblock: function () { return Promise.resolve(false); },
+            prefetchAd: function () {},
+            requestAd: function (adType, callbacks) {
+                console.log("[CrazyGames Shim] requestAd", adType);
+                callbacks = callbacks || {};
+                try { if (typeof callbacks.adStarted === "function") callbacks.adStarted(); } catch (e) {}
+                setTimeout(function () {
+                    try { if (typeof callbacks.adFinished === "function") callbacks.adFinished(); } catch (e) {}
+                }, 100);
+                return Promise.resolve(true);
+            }
+        },
+        game: {
+            gameplayStart: function () {},
+            gameplayStop: function () {},
+            happytime: function () {},
+            hideInviteButton: function () {},
+            inviteLink: function () { return ""; },
+            showInviteButton: function () { return ""; },
+            settings: {}
+        },
+        user: {
+            addScore: function () {},
+            getUser: function () { return Promise.resolve(null); },
+            getUserToken: function () { return Promise.resolve(""); },
+            getXsollaUserToken: function () { return Promise.resolve(""); },
+            addAuthListener: function () { return function () {}; },
+            showAuthPrompt: function () { return Promise.resolve(null); },
+            showAccountLinkPrompt: function () { return Promise.resolve(null); },
+            isUserAccountAvailable: false,
+            systemInfo: {}
+        },
+        data: {
+            getItem: function (k) { return dataStore.getItem(k); },
+            setItem: function (k, v) { dataStore.setItem(k, v); },
+            removeItem: function (k) { dataStore.removeItem(k); },
+            clear: function () { dataStore.clear(); },
+            syncUnityGameData: function () {}
+        },
+        banner: {
+            requestOverlayBanners: function () {}
+        },
+        analytics: {
+            trackOrder: function () {}
+        },
+        environment: "local",
+        isQaTool: false
+    } };
+
+    sdk.init = sdk.SDK.init;
+    sdk.gameplayStart = sdk.SDK.game.gameplayStart;
+    sdk.gameplayStop = sdk.SDK.game.gameplayStop;
+    sdk.happytime = sdk.SDK.game.happytime;
+    sdk.requestAd = function () { return sdk.SDK.ad.requestAd("midgame"); };
+    sdk.requestBanners = sdk.SDK.banner.requestOverlayBanners;
+    sdk.requestInviteUrl = sdk.SDK.game.inviteLink;
+    sdk.screenshotReceived = function () { return Promise.resolve(true); };
+
+    window.CrazyGames = sdk;
+    window.Crazygames = sdk;
+    window.CrazyGamesSDK = sdk;
+    window.CrazyGamesSdk = sdk;
+
+    (function () {
+        var stubInit = sdk.SDK.init;
+        function patchRealSDK() {
+            try {
+                var cg = window.CrazyGames;
+                if (!cg || !cg.SDK || cg.SDK === sdk.SDK || cg.SDK.__shimPatched) return false;
+                var realInit = cg.SDK.init.bind(cg.SDK);
+                cg.SDK.init = function (opts) {
+                    return realInit(opts).catch(function (e) {
+                        console.warn("[CrazyGames Shim] Real SDK init failed, using stub", e);
+                        return stubInit.call(sdk.SDK, opts);
+                    });
+                };
+                cg.SDK.__shimPatched = true;
+                return true;
+            } catch (e) { return false; }
+        }
+        var attempts = 0;
+        var timer = setInterval(function () {
+            attempts++;
+            if (patchRealSDK() || attempts > 100) clearInterval(timer);
+        }, 200);
+    })();
+
+    document
+        .getElementById("unity-canvas")
+        .addEventListener("webglcontextlost", function (event) {
+            console.warn("[Unity] WebGL context lost");
+            event.preventDefault();
+        });
+
+    window.addEventListener("unhandledrejection", function (event) {
+        var error = event.reason;
+        if (!error) return;
+        var message = String(error.message || error);
+        if (
+            message.toLowerCase().includes("crazysdk") ||
+            message.toLowerCase().includes("sdkdisabled")
+        ) {
+            console.warn("[CrazyGames Shim] Suppressed:", error);
+            event.preventDefault();
+        }
+    });
+
+    console.log("[CrazyGames Shim] Ready");
+})();
+</script>
+
+<script>
+const build = "./Build/";
+
+const loader = build + "cup_heroes_CG_v1.3.loader.js";
+const framework = build + "cup_heroes_CG_v1.3.framework.js.br";
+const dataPath = build + "cup_heroes_CG_v1.3.data.br";
+const wasmPath = build + "cup_heroes_CG_v1.3.wasm.br";
+
+const wasmMime = "application/wasm";
+const dataMime = "application/octet-stream";
+
+function setStatus(text, percent) {
+    const loadingText = document.getElementById("loadingText");
+    const progressFill = document.getElementById("progressFill");
+    if (loadingText) loadingText.textContent = text;
+    if (progressFill && typeof percent === "number") {
+        progressFill.style.width = Math.max(0, Math.min(100, percent)) + "%";
+    }
+}
+
+async function mergeFiles(fileParts, cacheKey, mime) {
+    const cache = await caches.open("cup-heroes-cache");
+    const cachedResponse = await cache.match(cacheKey);
+    if (cachedResponse) {
+        console.log("[Cache] Hit:", cacheKey);
+        const blob = await cachedResponse.blob();
+        return URL.createObjectURL(blob);
+    }
+
+    console.log("[Cache] Miss, fetching:", fileParts);
+    const buffers = await Promise.all(
+        fileParts.map(part => fetch(part).then(r => {
+            if (!r.ok) throw new Error("Failed to fetch " + part);
+            return r.arrayBuffer();
+        }))
+    );
+
+    const mergedBlob = new Blob(buffers, { type: mime });
+    await cache.put(cacheKey, new Response(mergedBlob));
+    return URL.createObjectURL(mergedBlob);
+}
+
+function getParts(file, start, end) {
+    let parts = [];
+    for (let i = start; i <= end; i++) {
+        parts.push(file + ".part" + i);
+    }
+    return parts;
+}
+
+function loadUnityLoader() {
+    return new Promise(function (resolve, reject) {
+        if (typeof createUnityInstance === "function") {
+            resolve();
+            return;
+        }
+        const script = document.createElement("script");
+        script.src = loader;
+        script.onload = function () {
+            console.log("Cup Heroes Unity loader loaded.");
+            resolve();
+        };
+        script.onerror = function () {
+            reject(new Error("Unity loader failed to load: " + loader));
+        };
+        document.head.appendChild(script);
+    });
+}
+
+async function loadGame() {
+    try {
+        setStatus("Downloading game files…", 0);
+
+        const [wasmURL, dataURL] = await Promise.all([
+            mergeFiles(getParts(wasmPath, 0, 1), wasmPath, wasmMime),
+            mergeFiles(getParts(dataPath, 0, 1), dataPath, dataMime)
+        ]);
+
+        setStatus("Loading Unity…", 85);
+        await loadUnityLoader();
+        setStatus("Starting Cup Heroes…", 90);
+
+        const unityConfig = {
+            loaderUrl: loader,
+            dataUrl: dataURL,
+            frameworkUrl: framework,
+            codeUrl: wasmURL,
+            streamingAssetsUrl: new URL("StreamingAssets", window.location.href).href,
+            companyName: "Cup Heroes",
+            productName: "Cup Heroes",
+            productVersion: "1.3",
+            showBanner: false
+        };
+
+        console.log("[Unity] Config:", unityConfig);
+
+        const instance = await createUnityInstance(
+            document.getElementById("unity-canvas"),
+            unityConfig,
+            function (progress) {
+                const percent = 90 + Math.round(progress * 10);
+                setStatus("Starting game " + Math.round(progress * 100) + "%…", percent);
+            }
+        );
+
+        window.gameInstance = instance;
+        window.unityInstance = {
+            SendMessage: function (objectName, methodName, parameter) {
+                try {
+                    instance.SendMessage(objectName, methodName, parameter);
+                } catch (e) {
+                    console.warn("[Shim] Unity SendMessage failed:", e);
+                }
+            }
+        };
+
+        if (window.msgQueue) {
+            while (window.msgQueue.length > 0) {
+                const msg = window.msgQueue.shift();
+                try {
+                    instance.SendMessage(msg[0], msg[1], msg[2]);
+                } catch (e) {
+                    console.warn("[Shim] Queued message failed:", e);
+                }
+            }
+        }
+
+        console.log("Cup Heroes started successfully.");
+        setStatus("Game loaded!", 100);
+
+        setTimeout(function () {
+            const ziggyLoader = document.getElementById("ziggyLoader");
+            if (ziggyLoader) ziggyLoader.remove();
+        }, 300);
+
+    } catch (err) {
+        console.error("Failed to load Cup Heroes:", err);
+        setStatus("Failed to load Cup Heroes: " + err.message, 0);
+    }
+}
+
+loadGame();
+</script>
+
+</body>
+</html>
