@@ -52,8 +52,17 @@ function build(image, src) {
     // The default low-quality filter drops the thin dark outline when halving.
     context.imageSmoothingQuality = "high";
     context.drawImage(image, 0, 0, target.width, target.height);
-    const base = target.toDataURL("image/png");
 
+    let base = null;
+    try {
+        base = target.toDataURL("image/png");
+    } catch (error) {
+        console.warn("cursor bitmap is not readable, using the source art:", error);
+    }
+
+    if (base === null) {
+        return `url("${src}") 0 0, auto`;
+    }
     // The first form the browser accepts wins; image-set in cursor is still uneven, and an
     // unsupported value would otherwise throw the whole declaration away.
     const set = `url("${base}") 1x, url("${src}") 2x`;
@@ -70,9 +79,14 @@ function build(image, src) {
 
 for (const [name, src] of Object.entries(sources)) {
     const image = new Image();
+    image.crossOrigin = "anonymous";
     image.decoding = "async";
     image.addEventListener("load", () => {
-        values[name] = build(image, src);
+        try {
+            values[name] = build(image, src);
+        } catch (error) {
+            console.warn("cursor declaration failed:", error);
+        }
         apply();
     });
     image.src = src;

@@ -20,6 +20,23 @@ export async function resume() {
     await ensureContext().resume();
 }
 
+const retryableStatus = new Set([403, 408, 425, 429, 500, 502, 503, 504]);
+const retryDelaysMs = [250, 700, 1800];
+
+async function fetchWithRetry(url) {
+    let response = await fetch(url);
+    for (const delay of retryDelaysMs) {
+        if (!retryableStatus.has(response.status)) {
+            return response;
+        }
+        await new Promise((resolve) =>
+            setTimeout(resolve, delay + Math.random() * delay * 0.5),
+        );
+        response = await fetch(url);
+    }
+    return response;
+}
+
 async function loadBuffer(key, url) {
     if (buffers.has(key)) {
         return buffers.get(key);
@@ -29,8 +46,9 @@ async function loadBuffer(key, url) {
     }
 
     const pending = (async () => {
-        const response = await fetch(url);
+        const response = await fetchWithRetry(url);
         if (!response.ok) {
+            console.warn(`audio unavailable: ${key} (${response.status})`);
             return null;
         }
         const bytes = await response.arrayBuffer();

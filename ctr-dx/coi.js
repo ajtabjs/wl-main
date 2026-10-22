@@ -69,6 +69,13 @@
     }
 
     function bootstrapIsolation() {
+        const assets = new URL(document.baseURI, globalThis.location.href);
+        if (assets.origin !== globalThis.location.origin) {
+            globalThis.ctrdxServiceWorkerRegistration = Promise.resolve(null);
+            finishReady(globalThis.crossOriginIsolated === true);
+            return;
+        }
+
         const isolated = globalThis.crossOriginIsolated === true;
         if (isolated) {
             clearFlag();
