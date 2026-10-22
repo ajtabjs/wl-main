@@ -1,0 +1,89 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="bottom" background="Disco" />
+</layer>
+<layer name="Objects">
+<discoball x="99" y="100" ballNumber="first" />
+<laser x="35" y="290" angle="90" />
+<grab x="100" y="25" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<target x="205" y="70" targetType="basic" />
+<target x="275" y="425" targetType="special" />
+<grab x="205" y="420" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="280" y="100" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="204" y="335" candyNumber="first" isDriven="false" />
+<candy x="281" y="180" candyNumber="second" isDriven="false" />
+<star x="205" y="260" timeout="-1" index="0" />
+<star x="270" y="340" timeout="-1" index="0" />
+<star x="205" y="140" timeout="-1" index="0" />
+<bubble x="205" y="335" />
+<grab x="100" y="220" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="30" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="100" y="450" radius="30" />
+</layer>
+<layer name="En">
+<tutorial06 x="105" y="325" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="en" text="Beware of the lasers as they can break the candies" width="160" special="0" />
+<tutorialText x="155" y="145" locale="en" text="Disco ball blocks the laser beam" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="en" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorial06 x="105" y="325" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="es" text="Ten cuidado con los láser ya que pueden destruir los dulces" width="160" special="0" />
+<tutorialText x="150" y="145" locale="es" text="La pelota Disco bloquea el rayo láser" width="100" special="0" />
+<tutorial04 x="125" y="177" locale="es" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorial06 x="105" y="325" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="zh" text="小心激光，*它们会将糖果击碎" width="160" special="0" />
+<tutorialText x="155" y="145" locale="zh" text="迪斯科球*能够阻挡激光束" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="zh" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorial06 x="105" y="325" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="br" text="Preste atenção aos lasers, pois eles podem quebrar os doces" width="160" special="0" />
+<tutorialText x="140" y="138" locale="br" text="O globo espelhado bloqueia o feixe de laser" width="120" special="0" />
+<tutorial04 x="131" y="177" locale="br" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorial06 x="105" y="325" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="ja" text="レーザーは*キャンディーを*破壊できますので*気をつけてください" width="160" special="0" />
+<tutorialText x="150" y="145" locale="ja" text="ディスコボールは*レーザービームを*ブロックします" width="100" special="0" />
+<tutorial04 x="117" y="175" locale="ja" angle="90" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorial06 x="105" y="325" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="de" text="Achtung vor den Lasern, die Bonbons könnten brechen" width="160" special="0" />
+<tutorialText x="155" y="135" locale="de" text="Die Spiegelkugel blockiert den Laserstrahl" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="de" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorial06 x="105" y="325" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="it" text="Attenzione ai laser, in quanto possono rompere le caramelle" width="155" special="0" />
+<tutorialText x="155" y="135" locale="it" text="La palla da discoteca blocca il raggio laser" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="it" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorial06 x="105" y="325" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="fr" text="Attention aux rayons laser, ils peuvent couper les bonbons" width="160" special="0" />
+<tutorialText x="150" y="135" locale="fr" text="La boule à facettes peut bloquer le rayon laser" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="fr" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorial06 x="105" y="325" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="nl" text="Pas op voor de lasers! Lasers kunnen het snoep breken" width="160" special="0" />
+<tutorialText x="155" y="145" locale="nl" text="Discoballen blokkeren de laserstraal" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="nl" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorial06 x="105" y="325" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="ko" text="레이저는 사탕을 깨뜨릴 수 있으니 조심하세요" width="145" special="0" />
+<tutorialText x="155" y="145" locale="ko" text="미러볼로 레이저 빔을 막아 보세요" width="100" special="0" />
+<tutorial04 x="131" y="177" locale="ko" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorial06 x="105" y="325" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="25" y="340" locale="ru" text="Остерегайтесь лазеров – они опасны для конфет" width="160" special="0" />
+<tutorialText x="155" y="145" locale="ru" text="Диско-шар блокирует луч лазера" width="95" special="0" />
+<tutorial04 x="131" y="177" locale="ru" angle="80" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

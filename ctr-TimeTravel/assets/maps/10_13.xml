@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="30" y="180" candyNumber="first" isDriven="false" lasso="false" />
+<target x="42" y="404" targetType="basic" followTheCandy="none" />
+<target x="124" y="403" targetType="special" followTheCandy="none" />
+<candy x="195" y="196" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="35" y="74" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<sock x="191" y="311" group="0" angle="270" />
+<sock x="188" y="64" group="0" angle="90" />
+<p_magnetSwitcher x="265" y="407" />
+<sock x="102" y="184" group="1" angle="0" />
+<sock x="288" y="181" group="1" angle="180" />
+<bubble x="193" y="193" />
+<grab x="35" y="285" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="75" y="120" path="175,0," moveSpeed="30" timeout="9" index="0" />
+<star x="139" y="296" path="0,-116," moveSpeed="58" timeout="6" index="0" />
+<star x="255" y="298" path="0, -116," moveSpeed="21" timeout="13.1" index="0" />
+<hiddenElement x="257" y="66" radius="30" />
+</layer>
+</map>

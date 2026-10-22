@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="259" y="118" candyNumber="first" isDriven="false" />
+<target x="43" y="332" targetType="basic" />
+<target x="46" y="224" targetType="special" />
+<candy x="257" y="306" candyNumber="second" isDriven="false" />
+<star x="255" y="176" timeout="-1" index="0" />
+<star x="100" y="301" timeout="-1" index="0" />
+<star x="185" y="236" timeout="-1" index="0" />
+<grab x="258" y="224" length="57" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="260" y="35" length="57" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<sock x="260" y="415" group="0" angle="270" />
+<sock x="62" y="134" group="0" angle="0" />
+<sock x="203" y="132" group="1" angle="180" path="0,120" moveSpeed="100" />
+<sock x="139" y="254" group="1" angle="180" path="0,-120" moveSpeed="100" />
+<shieldTrigger x="99" y="134" />
+<hiddenElement x="41" y="423" radius="30" />
+</layer>
+</map>

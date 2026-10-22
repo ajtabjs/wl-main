@@ -1,0 +1,20 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Greece" />
+</layer>
+<layer name="Objects">
+<candy x="260" y="130" candyNumber="first" isDriven="false" lasso="false" />
+<target x="265" y="425" targetType="basic" followTheCandy="none" />
+<grab x="150" y="40" length="125" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="50" y="257" candyNumber="second" isDriven="false" lasso="false" />
+<shieldTrigger x="130" y="325" />
+<target x="80" y="425" targetType="special" followTheCandy="none" />
+<grab x="160" y="165" length="125" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<star x="265" y="355" timeout="-1" index="0" />
+<star x="265" y="385" timeout="-1" index="0" />
+<star x="87" y="383" timeout="-1" index="0" />
+<hiddenElement x="66" y="65" radius="30" />
+<snowflake x="82" y="231" radius="30" />
+</layer>
+</map>

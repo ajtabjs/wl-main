@@ -1,0 +1,70 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="123" y="156" targetType="special" followTheCandy="none" />
+<target x="198" y="152" targetType="basic" followTheCandy="none" />
+<grab x="143" y="395" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<candy x="66" y="387" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="177" y="395" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="252" y="385" candyNumber="second" isDriven="false" lasso="false" />
+<star x="119" y="279" timeout="-1" index="0" />
+<star x="199" y="229" timeout="-1" index="0" />
+<star x="120" y="230" timeout="-1" index="0" />
+<grab x="161" y="214" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="54" y="160" axeNumber="first" />
+<bubble x="251" y="385" />
+<bubble x="67" y="387" />
+<grab x="67" y="467" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="252" y="464" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<snowflake x="264" y="290" radius="30" />
+<hiddenElement x="263" y="229" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="87" y="21" locale="en" text="Having trouble completing the level? Unleash Om Nom's Superpowers!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="en" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="ja">
+<tutorialText x="87" y="22" locale="ja" text="なかなかステージが*クリアできませんか？*Om Nom の超能力を*解き放ちましょう！" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="ja" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="ru">
+<tutorialText x="87" y="22" locale="ru" text="Не удается пройти уровень? Суперсилы Ам Няма помогут вам!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="ru" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="es">
+<tutorialText x="87" y="22" locale="es" text="¿Tienes problemas con el nivel? ¡Desata los superpoderes de Om Nom!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="es" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="br">
+<tutorialText x="87" y="22" locale="br" text="Dificuldade para completar o nível? Liberte os superpoderes de Om Nom!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="br" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="it">
+<tutorialText x="87" y="22" locale="it" text="Non riesci a completare il livello? Scatena i superpoteri di Om Nom!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="it" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="zh">
+<tutorialText x="87" y="22" locale="zh" text="无法*完成*这一关？*释放*Om Nom*的*超能力吧！" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="zh" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="nl">
+<tutorialText x="87" y="22" locale="nl" text="Lukt het je niet om je level te voltooien? Ontketen de superkrachten van Om Nom!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="nl" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="de">
+<tutorialText x="87" y="22" locale="de" text="Probleme mit dem Level? Entfessele Om Noms Superkräfte!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="de" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="ko">
+<tutorialText x="87" y="22" locale="ko" text="레벨을 완료하기 어려우세요?
+Om Nom의 초능력을 사용하세요!" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="ko" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+<layer name="fr">
+<tutorialText x="87" y="22" locale="fr" text="Le niveau est trop dur ? Utilise les super-pouvoirs d’Om Nom !" width="220" special="0" />
+<tutorial10 x="68" y="90" locale="fr" moveSpeed="100" rotateSpeed="100" special="4" />
+</layer>
+</map>

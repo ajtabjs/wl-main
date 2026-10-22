@@ -1,0 +1,120 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="2" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="left" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<target x="123" y="86" targetType="special" />
+<target x="198" y="86" targetType="basic" />
+<grab x="159" y="178" length="110" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="162" y="141" length="110" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="280" y="91" candyNumber="first" isDriven="false" />
+<candy x="38" y="128" candyNumber="second" isDriven="false" />
+<pauseSwitcher x="159" y="368" />
+<bubble x="129" y="440" />
+<bubble x="192" y="440" />
+<star x="141" y="443" timeout="-1" index="0" />
+<star x="193" y="440" timeout="-1" index="0" />
+<star x="117" y="442" timeout="-1" index="0" />
+<hiddenElement x="160" y="30" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="17" y="139" locale="en" text="You can still cut the ropes while time is frozen" width="110" special="2" />
+<tutorialText x="199" y="315" locale="en" text="Tap the button to freeze time" width="120" special="0" />
+<tutorial04 x="218" y="385" locale="en" angle="35" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="en" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="en" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="en" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="en" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="nl">
+<tutorialText x="17" y="117" locale="nl" text="Je kunt touwen doorsnijden zelfs als de tijd stilstaat" width="110" special="2" />
+<tutorialText x="199" y="315" locale="nl" text="Tik op de knop om de tijd stil te zetten" width="120" special="0" />
+<tutorial04 x="213" y="400" locale="nl" angle="50" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="nl" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="nl" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="nl" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="nl" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="ko">
+<tutorialText x="17" y="150" locale="ko" text="줄은 시간이 멈춘 상태에서도 자를 수 있어요" width="120" special="2" />
+<tutorialText x="199" y="315" locale="ko" text="버튼을 누르면 시간이 멈춰요" width="120" special="0" />
+<tutorial04 x="218" y="385" locale="ko" angle="35" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="ko" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="ko" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="ko" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="ko" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="es">
+<tutorialText x="17" y="139" locale="es" text="Puedes cortar las cuerdas aun con el tiempo detenido" width="120" special="2" />
+<tutorialText x="199" y="315" locale="es" text="Toca el botón para detener el tiempo" width="120" special="0" />
+<tutorial04 x="212" y="398" locale="es" angle="50" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="es" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="es" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="es" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="es" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="br">
+<tutorialText x="17" y="117" locale="br" text="É possível cortar as cordas mesmo com o tempo congelado" width="110" special="2" />
+<tutorialText x="199" y="315" locale="br" text="Toque no botão para congelar o tempo" width="120" special="0" />
+<tutorial04 x="214" y="400" locale="br" angle="50" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="br" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="br" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="br" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="br" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="ja">
+<tutorialText x="100" y="183" locale="ja" text="時間が止まっていても*ロープを切ることができます" width="110" special="2" />
+<tutorialText x="97" y="273" locale="ja" text="ボタンをタップすると*時間が止まります" width="120" special="0" />
+<tutorial04 x="217" y="351" locale="ja" angle="-20" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="ja" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="ja" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="ja" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="ja" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="de">
+<tutorialText x="17" y="135" locale="de" text="Du kannst Seile durchtrennen, während die Zeit gestoppt ist" width="130" special="2" />
+<tutorialText x="190" y="306" locale="de" text="Tippe auf den Button, um die Zeit anzuhalten" width="130" special="0" />
+<tutorial04 x="215" y="397" locale="de" angle="35" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="de" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="de" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="de" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="de" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="ru">
+<tutorialText x="17" y="139" locale="ru" text="Веревки можно резать, даже если время остановлено" width="110" special="2" />
+<tutorialText x="199" y="300" locale="ru" text="Нажмите на кнопку, чтобы остановить время" width="120" special="0" />
+<tutorial04 x="210" y="400" locale="ru" angle="50" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="ru" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="ru" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="ru" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="ru" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="it">
+<tutorialText x="17" y="139" locale="it" text="Puoi tagliare le corde anche quando il tempo è sospeso" width="130" special="2" />
+<tutorialText x="185" y="310" locale="it" text="Premi il pulsante per fermare il tempo" width="130" special="0" />
+<tutorial04 x="213" y="395" locale="it" angle="50" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="it" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="it" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="it" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="it" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="zh">
+<tutorialText x="17" y="139" locale="zh" text="你还*可以在*时间*停止后*切断*绳子" width="110" special="2" />
+<tutorialText x="199" y="315" locale="zh" text="点击*此键*使时间*停止" width="120" special="0" />
+<tutorial04 x="218" y="385" locale="zh" angle="35" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="zh" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="zh" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="zh" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="zh" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+<layer name="fr">
+<tutorialText x="17" y="119" locale="fr" text="Tu peux couper les cordes lorsque le temps est arrêté" width="110" special="2" />
+<tutorialText x="195" y="315" locale="fr" text="Touche le bouton pour arrêter le temps" width="120" special="0" />
+<tutorial04 x="213" y="399" locale="fr" angle="50" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="88" y="249" locale="fr" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="143" y="248" locale="fr" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="195" y="248" locale="fr" moveSpeed="100" rotateSpeed="100" special="2" />
+<tutorial01 x="246" y="248" locale="fr" moveSpeed="100" rotateSpeed="100" special="2" />
+</layer>
+</map>

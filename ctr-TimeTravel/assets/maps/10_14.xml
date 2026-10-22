@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="221" y="418" targetType="special" followTheCandy="none" />
+<star x="120" y="432" timeout="-1" index="0" />
+<bubble x="118" y="342" />
+<pump x="45" y="192" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<bouncer1 x="118" y="256" angle="0" size="1" path="0,-175," moveSpeed="100" />
+<target x="221" y="52" targetType="basic" followTheCandy="none" />
+<candy x="117" y="221" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="167" y="177" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="222" y="228" candyNumber="first" isDriven="false" lasso="false" />
+<p_magnetSwitcher x="227" y="296" />
+<grab x="287" y="177" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="222" y="353" timeout="-1" index="0" />
+<spike2 x="160" y="383" angle="90" size="2" toggled="false" />
+<spike2 x="77" y="385" angle="90" size="2" toggled="false" />
+<star x="227" y="158" timeout="-1" index="0" />
+<hiddenElement x="43" y="97" radius="30" />
+</layer>
+</map>

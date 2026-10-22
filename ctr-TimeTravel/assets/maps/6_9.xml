@@ -1,0 +1,27 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Prehistoric" />
+</layer>
+<layer name="Objects">
+<candy x="46" y="360" candyNumber="first" isDriven="false" lasso="false" />
+<target x="205" y="65" targetType="basic" followTheCandy="none" />
+<target x="115" y="75" targetType="special" followTheCandy="none" />
+<candy x="274" y="360" candyNumber="second" isDriven="false" lasso="false" />
+<clock x="160" y="365" />
+<grab x="45" y="460" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="275" y="460" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bubble x="45" y="360" />
+<bubble x="275" y="360" />
+<bouncer1 x="45" y="235" angle="180" size="1" path="0,0" moveSpeed="45" rotateSpeed="45" />
+<bouncer1 x="160" y="165" angle="180" size="1" path="0,0" moveSpeed="45" rotateSpeed="45" />
+<bouncer1 x="45" y="70" angle="180" size="1" path="0,0" moveSpeed="45" rotateSpeed="45" />
+<star x="158" y="227" timeout="-1" index="0" />
+<star x="63" y="131" timeout="-1" index="0" />
+<bouncer1 x="275" y="235" angle="180" size="1" path="0,0" moveSpeed="45" rotateSpeed="45" />
+<star x="265" y="128" timeout="-1" index="0" />
+<bouncer1 x="275" y="70" angle="180" size="1" path="0,0" moveSpeed="45" rotateSpeed="45" />
+<hiddenElement x="160" y="432" radius="30" />
+<snowflake x="158" y="131" radius="30" />
+</layer>
+</map>

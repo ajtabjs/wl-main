@@ -1,0 +1,25 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Western" />
+</layer>
+<layer name="Objects">
+<target x="113" y="229" targetType="special" followTheCandy="none" />
+<target x="200" y="400" targetType="basic" followTheCandy="none" />
+<candy x="163" y="165" candyNumber="first" isDriven="false" lasso="true" />
+<candy x="242" y="95" candyNumber="second" isDriven="false" lasso="true" />
+<grab x="163" y="23" length="110" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="242" y="23" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<star x="123" y="436" timeout="-1" index="0" />
+<star x="156" y="349" timeout="-1" index="0" />
+<star x="189" y="275" timeout="-1" index="0" />
+<bubble x="156" y="353" />
+<bubble x="189" y="275" />
+<bubble x="227" y="187" />
+<bubble x="124" y="434" />
+<grab x="15" y="48" length="20" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="77" y="53" axeNumber="first" />
+<grab x="301" y="44" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="33" y="232" radius="30" />
+</layer>
+</map>

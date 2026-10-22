@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Western" />
+</layer>
+<layer name="Objects">
+<target x="250" y="68" targetType="basic" followTheCandy="none" />
+<target x="182" y="238" targetType="special" followTheCandy="none" />
+<grab x="45" y="263" length="150" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="120" moveVertical="true" moveOffset="120" spider="false" bombed="true" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<bomb x="44" y="438" bombNumber="second" />
+<grab x="251" y="319" length="25" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="255" y="141" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="151" y="318" candyNumber="first" isDriven="false" lasso="true" />
+<candy x="256" y="262" candyNumber="second" isDriven="false" lasso="true" />
+<star x="75" y="234" timeout="-1" index="0" />
+<star x="127" y="69" timeout="-1" index="0" />
+<star x="127" y="234" timeout="-1" index="0" />
+<grab x="67" y="319" length="25" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<sock x="290" y="319" group="0" angle="180" />
+<sock x="58" y="73" group="0" angle="0" />
+<hiddenElement x="282" y="438" radius="30" />
+</layer>
+</map>

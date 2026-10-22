@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="205" y="275" candyNumber="first" isDriven="false" lasso="false" />
+<target x="197" y="66" targetType="basic" targetLook="-1" followTheCandy="none" />
+<target x="126" y="67" targetType="special" targetLook="10" followTheCandy="first" />
+<candy x="118" y="276" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="200" y="382" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" bindBasket="false" />
+<grab x="117" y="381" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" bindBasket="false" />
+<star x="179" y="127" path="RC20" moveSpeed="80" timeout="-1" index="0" />
+<star x="114" y="154" path="RW30" moveSpeed="100" timeout="-1" index="0" />
+<star x="202" y="172" path="RW30" moveSpeed="50" timeout="-1" index="0" />
+<axe x="281" y="369" axeNumber="second" />
+<grab x="282" y="237" length="65" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="250" moveVertical="false" moveOffset="250" spider="false" bombed="false" axed="true" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<bubble x="204" y="277" />
+<bubble x="120" y="279" />
+<grab x="282" y="442" length="25" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<bouncer2 x="49" y="194" angle="0" size="2" path="234,0," moveSpeed="100" />
+</layer>
+</map>

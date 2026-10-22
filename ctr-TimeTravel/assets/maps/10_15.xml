@@ -1,0 +1,30 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="103" y="280" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="222" y="360" candyNumber="second" isDriven="false" lasso="false" />
+<target x="48" y="347" targetType="special" followTheCandy="none" />
+<target x="161" y="79" targetType="basic" followTheCandy="none" />
+<grab x="102" y="207" length="53" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" bindBasket="false" />
+<grab x="221" y="210" length="135" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" bindBasket="false" />
+<p_magnetSwitcher x="162" y="346" />
+<grab x="160" y="124" length="37" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<axe x="160" y="186" axeNumber="first" />
+<rocket x="161" y="248" angle="90" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="277" y="245" angle="135" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="47" y="245" angle="45" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<bubble x="218" y="429" />
+<bubble x="104" y="429" />
+<star x="223" y="160" timeout="-1" index="0" />
+<star x="103" y="159" timeout="-1" index="0" />
+<star x="162" y="431" timeout="-1" index="0" />
+<bubble x="160" y="429" />
+<spike1 x="162" y="465" angle="0" size="1" toggled="false" />
+<sock x="44" y="435" group="0" angle="270" />
+<sock x="161" y="36" group="0" angle="90" />
+<hiddenElement x="278" y="438" radius="30" />
+</layer>
+</map>

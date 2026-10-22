@@ -1,0 +1,65 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="60" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Future" />
+</layer>
+<layer name="Objects">
+<target x="109" y="421" targetType="basic" followTheCandy="none" />
+<target x="200" y="420" targetType="special" followTheCandy="first" />
+<candy x="111" y="249" candyNumber="first" isDriven="false" lasso="false" />
+<star x="107" y="52" timeout="-1" index="0" />
+<star x="108" y="92" timeout="-1" index="0" />
+<star x="108" y="134" timeout="-1" index="0" />
+<candy x="273" y="285" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="272" y="168" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<bubble x="111" y="249" />
+<grab x="110" y="331" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="109" y="170" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<pump x="41" y="96" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<hiddenElement x="273" y="421" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="130" y="95" locale="en" text="Move radio-candy to control flying platform" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="en" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="Ru">
+<tutorialText x="130" y="45" locale="ru" text="Двигайте радиоледенец, чтобы управлять летающей платформой" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="ru" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="130" y="45" locale="ja" text="ラジオキャンデ*ィを移動させると、*空飛ぶプラッ*トフォームをコント*ロールできます" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="ja" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="130" y="45" locale="es" text="Mueve el radiocaramelo para controlar la plataforma voladora" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="es" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="130" y="45" locale="br" text="Mova o doce com rádio para controlar a plataforma de voo" width="130" special="0" />
+<tutorial04 x="170" y="215" locale="br" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="130" y="45" locale="it" text="Sposta la radio-caramella per controllare la piattaforma volante" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="it" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="130" y="95" locale="zh" text="移动收音机糖果控制漂移平台" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="zh" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="130" y="45" locale="nl" text="Beweeg het radiosnoepje om het vliegende platform te besturen" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="nl" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="130" y="45" locale="de" text="Bewege das Funkbonbon zum Steuern der fliegenden Plattform" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="de" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="120" y="95" locale="ko" text="날아다니는 발판을 컨트롤하려면 무전 사탕을 움직이세요" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="ko" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="130" y="95" locale="fr" text="Bouge le bonbon pour contrôler le socle volant" width="140" special="0" />
+<tutorial04 x="170" y="215" locale="fr" angle="345" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

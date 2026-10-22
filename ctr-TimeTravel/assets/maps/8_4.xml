@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Western" />
+</layer>
+<layer name="Objects">
+<grab x="88" y="142" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="274" y="46" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="206" y="87" candyNumber="first" isDriven="false" lasso="true" />
+<bouncer1 x="125" y="254" angle="0" size="1" />
+<candy x="125" y="212" candyNumber="second" isDriven="false" lasso="true" />
+<bouncer1 x="257" y="360" angle="0" size="1" />
+<bouncer1 x="116" y="430" angle="0" size="1" />
+<target x="35" y="186" targetType="special" followTheCandy="none" />
+<target x="193" y="386" targetType="basic" followTheCandy="none" />
+<star x="282" y="184" timeout="-1" index="0" />
+<star x="140" y="428" path="RC40" moveSpeed="120" timeout="-1" index="0" />
+<star x="283" y="356" path="RW40" moveSpeed="120" timeout="-1" index="0" />
+<hiddenElement x="84" y="52" radius="30" />
+<snowflake x="38" y="356" radius="30" />
+</layer>
+</map>

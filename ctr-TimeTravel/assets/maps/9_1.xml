@@ -1,0 +1,74 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="35" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="China" />
+</layer>
+<layer name="Objects">
+<grab x="66" y="42" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="66" y="116" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="66" y="181" candyNumber="second" isDriven="false" lasso="false" />
+<bouncer1 x="66" y="291" angle="15" size="1" />
+<target x="254" y="421" targetType="special" followTheCandy="none" />
+<target x="66" y="419" targetType="basic" followTheCandy="none" />
+<star x="67" y="221" timeout="-1" index="0" />
+<star x="229" y="335" timeout="-1" index="0" />
+<star x="66" y="378" timeout="-1" index="0" />
+<fan x="113" y="297" angle="90" length="155" angleLength="90" />
+<hiddenElement x="144" y="118" radius="30" />
+</layer>
+<layer name="en">
+<tutorialText x="196" y="27" locale="en" text="The hand fan conceals all objects except candy" width="110" special="0" />
+<tutorialText x="199" y="139" locale="en" text="You can change the hand fan's angle by rotating it" width="100" special="0" />
+<tutorial04 x="235" y="291" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="195" y="27" locale="ru" text="Веер скрывает все объекты, кроме леденца" width="100" special="0" />
+<tutorialText x="199" y="139" locale="ru" text="Положение веера можно изменить путем вращения" width="100" special="0" />
+<tutorial04 x="236" y="292" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="195" y="27" locale="fr" text="L'éventail cache tous les objets, sauf les bonbons" width="110" special="0" />
+<tutorialText x="190" y="139" locale="fr" text="Vous pouvez changer l'angle de l'éventail en le faisant tourner" width="120" special="0" />
+<tutorial04 x="236" y="292" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="195" y="27" locale="de" text="Handfächer verbirgt alle Objekte außer Süßem" width="100" special="0" />
+<tutorialText x="199" y="139" locale="de" text="Ändere den Winkel des Fächers, indem du ihn rotierst" width="100" special="0" />
+<tutorial04 x="236" y="292" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="188" y="37" locale="ko" text="부채는 사탕을 제외한 모든 물체를 숨길 수 있어요" width="120" special="0" />
+<tutorialText x="190" y="147" locale="ko" text="부채를 돌려서 각도를 조절할 수 있어요" width="120" special="0" />
+<tutorial04 x="232" y="291" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="147" y="209" locale="zh" text="折扇会将所有物品藏起来，除了糖果" width="30" special="0" />
+<tutorialText x="148" y="334" locale="zh" text="你可以通过旋转折扇改变其角度" width="30" special="0" />
+<tutorial03 x="220" y="297" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="179" y="29" locale="ja" text="扇は*キャンディー以外の*すべての物を*隠します" width="40" special="0" />
+<tutorialText x="179" y="138" locale="ja" text="扇の角度は*回転させることによって*調節できます" width="45" special="0" />
+<tutorial04 x="221" y="246" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="185" y="19" locale="es" text="Los abanicos ocultan todos los objetos, menos los caramelos" width="120" special="0" />
+<tutorialText x="197" y="140" locale="es" text="Puedes cambiar el ángulo del abanico girándolo" width="100" special="0" />
+<tutorial04 x="228" y="292" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="182" y="23" locale="it" text="Il ventaglio nasconde tutti gli oggetti tranne le caramelle" width="130" special="0" />
+<tutorialText x="198" y="143" locale="it" text="Puoi modificare l'angolo del ventaglio ruotandolo" width="100" special="0" />
+<tutorial04 x="231" y="295" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="196" y="13" locale="nl" text="De waaier verbergt alle voorwerpen, behalve snoep" width="120" special="0" />
+<tutorialText x="199" y="115" locale="nl" text="Je kunt de hoek van de waaier veranderen door de waaier te draaien" width="110" special="0" />
+<tutorial04 x="234" y="291" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="198" y="137" locale="br" text="Você pode alterar o ângulo do leque, girando-o" width="100" special="0" />
+<tutorialText x="196" y="15" locale="br" text="Leque oculta todos os objetos, exceto os doces" width="100" special="0" />
+<tutorial04 x="231" y="291" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

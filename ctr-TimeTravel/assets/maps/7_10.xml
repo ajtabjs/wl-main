@@ -1,0 +1,25 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Disco" />
+</layer>
+<layer name="Objects">
+<target x="137" y="420" targetType="basic" />
+<target x="218" y="420" targetType="special" />
+<bubble x="140" y="360" />
+<discoball x="66" y="190" ballNumber="first" />
+<grab x="140" y="75" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="141" y="190" candyNumber="first" isDriven="false" />
+<candy x="214" y="190" candyNumber="second" isDriven="false" />
+<grab x="215" y="75" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<laser x="25" y="311" angle="90" />
+<grab x="65" y="75" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<pauseSwitcher x="270" y="260" />
+<bubble x="65" y="360" />
+<bubble x="215" y="360" />
+<star x="140" y="360" timeout="-1" index="0" />
+<star x="215" y="260" timeout="-1" index="0" />
+<star x="140" y="40" timeout="-1" index="0" />
+<hiddenElement x="283" y="75" radius="30" />
+</layer>
+</map>

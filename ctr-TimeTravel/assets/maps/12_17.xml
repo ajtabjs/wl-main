@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="60" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="China" />
+</layer>
+<layer name="Layer 1">
+<fan x="231" y="203" angle="90" length="165" angleLength="90" />
+<target x="138" y="273" targetType="basic" targetLook="-1" followTheCandy="none" />
+<target x="69" y="80" targetType="special" targetLook="8" followTheCandy="none" />
+<candy x="158" y="101" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="158" y="27" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<grab x="233" y="388" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="230" y="319" candyNumber="second" isDriven="false" lasso="false" />
+<star x="139" y="212" timeout="-1" index="0" />
+<star x="227" y="91" timeout="-1" index="0" />
+<star x="233" y="433" timeout="-1" index="0" />
+<bubble x="231" y="318" />
+<clock x="141" y="398" />
+<bouncer1 x="228" y="158" angle="0" size="1" path="0,0" rotateSpeed="50" />
+<bubble x="232" y="433" />
+<bouncer2 x="137" y="157" angle="0" size="2" />
+</layer>
+</map>

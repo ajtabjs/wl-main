@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="120" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<target x="122" y="77" targetType="basic" followTheCandy="none" />
+<target x="199" y="78" targetType="special" followTheCandy="none" />
+<candy x="91" y="444" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="235" y="447" candyNumber="second" isDriven="false" lasso="false" />
+<star x="205" y="150" timeout="-1" index="0" />
+<star x="120" y="132" timeout="-1" index="0" />
+<grab x="162" y="54" length="120" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<axe x="287" y="14" axeNumber="second" />
+<bubble x="92" y="448" />
+<pump x="103" y="235" angle="90" attachedToRail="false" railGroup="0" startDelay="0" />
+<bubble x="236" y="447" />
+<pump x="229" y="234" angle="90" attachedToRail="false" railGroup="0" startDelay="0" />
+<star x="121" y="174" timeout="-1" index="0" />
+<hiddenElement x="164" y="411" radius="30" />
+<snowflake x="160" y="323" radius="30" />
+</layer>
+</map>

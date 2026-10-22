@@ -1,0 +1,64 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="1" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="70" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="40" y="348" targetType="basic" />
+<target x="280" y="348" targetType="special" />
+<candy x="114" y="300" candyNumber="first" isDriven="false" />
+<candy x="204" y="301" candyNumber="second" isDriven="false" />
+<grab x="40" y="251" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="286" y="251" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="160" y="67" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="158" y="181" axeNumber="first" />
+<star x="80" y="353" timeout="-1" index="0" />
+<star x="238" y="351" timeout="-1" index="0" />
+<star x="107" y="354" timeout="-1" index="0" />
+<hiddenElement x="65" y="96" radius="30" />
+</layer>
+<layer name="En">
+<tutorial04 x="235" y="164" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="177" y="55" locale="en" text="Chains can only be broken with special blades" width="130" special="0" />
+</layer>
+<layer name="nl">
+<tutorial04 x="225" y="164" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="175" y="30" locale="nl" text="Kettingen kunnen alleen met een speciaal zaagblad worden verbroken" width="140" special="0" />
+</layer>
+<layer name="ko">
+<tutorial04 x="225" y="164" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="175" y="55" locale="ko" text="사슬은 특수 칼날로만 자를 수 있어요" width="135" special="0" />
+</layer>
+<layer name="es">
+<tutorial04 x="225" y="164" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="175" y="30" locale="es" text="Las cadenas se pueden romper solo con cuchillas especiales" width="140" special="0" />
+</layer>
+<layer name="br">
+<tutorial04 x="225" y="164" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="175" y="30" locale="br" text="As correntes só podem ser rompidas pelas lâminas especiais" width="135" special="0" />
+</layer>
+<layer name="ja">
+<tutorial04 x="110" y="200" locale="ja" angle="170" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="93" y="184" locale="ja" text="チェーンは*特別な刃でしか*破壊することができません" width="140" special="0" />
+</layer>
+<layer name="de">
+<tutorial04 x="225" y="164" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="175" y="30" locale="de" text="Ketten können nur mit Spezialklingen zerschnitten werden" width="140" special="0" />
+</layer>
+<layer name="ru">
+<tutorial04 x="235" y="164" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="180" y="30" locale="ru" text="Цепи можно разрубить только специальными лезвиями" width="140" special="0" />
+</layer>
+<layer name="it">
+<tutorial04 x="225" y="164" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="175" y="30" locale="it" text="Le catene possono essere spezzate utilizzando lame speciali" width="140" special="0" />
+</layer>
+<layer name="zh">
+<tutorial04 x="235" y="164" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="180" y="55" locale="zh" text="只有风扇刃能够切断铁链" width="140" special="0" />
+</layer>
+<layer name="fr">
+<tutorial04 x="230" y="164" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="180" y="30" locale="fr" text="Seules les lames spéciales peuvent détruire les chaînes" width="135" special="0" />
+</layer>
+</map>

@@ -1,220 +1,213 @@
-﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport">
+    <title>Cut The Rope Time Travel</title>
+    <style>
 
-    <title>Cut the Rope: Time Travel</title>
-    <meta name="description" content="Play Cut the Rope: Time Travel! Join Om Nom as he travels back in time to feed his ancestors with candy. Cut the Rope: Time Travel is a completely new adventure filled with time-traveling, candy-crunching, physics-based action!">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        html {height: 100%; width: 100%}
+        body {
+            padding: 0; margin: 0;
+            height: 100%; width: 100%;
+            text-align: center;
+            background: #000 url("ttsplash.webp") center bottom / cover no-repeat;
+            overflow: hidden; position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
 
-    <meta property="og:title" content="Cut the Rope: Time Travel" />
-    <meta property="og:type" content="game" />
-    <meta property="og:description" content="Join Om Nom as he travels back in time to feed his ancestors with candy. Cut the Rope: Time Travel is a completely new adventure filled with time-traveling, candy-crunching, physics-based action!">
-    <meta property="og:site_name" content="Cut the Rope: Time Travel" />
-    <link href="css/ctr.css?238" rel="stylesheet" type="text/css">
-    <script src="scripts/sm2.js?238" type="text/javascript"></script>
-    <script src="scripts/libraries.js?238" type="text/javascript"></script>
-    <script src="scripts/ctr-time.js?238" type="text/javascript"></script>
-    <noscript>
-        <link href="css/nojavascript.css?238" rel="stylesheet" type="text/css">
-    </noscript>
-</head>
-<body class="ctrCursor">
-  <div id="lang">
-
-    <style  type="text/css">
-        .hideBeforeLoad, #loaderWindow, #popupWindow { display: none; }  
+        .game {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            margin: 0; border: 0;
+            overflow: hidden; display: block;
+            image-rendering: auto; -ms-interpolation-mode: bicubic;
+        }
     </style>
+</head>
 
-    <div id="gameContainer">
-        <div id="gameArea" class="hideBeforeLoad">
-            <canvas id="c"></canvas>
-            <div id="loadingPanel" class="panel"></div>
-            <div id="startBackground" class="panel"></div>
-            <div id="menuBackground" class="panel"></div>
-            <div id="levelBackground" class="panel">
-                <canvas id="levelCanvas"></canvas>
-                <div id="levelTape" class="levelTape"></div>
-                <div id="doorGradient"></div>
-            </div>
-            <div id="shadowPanel" class="panel">
-                <canvas id="shadowCanvas" width="1024" height="576"></canvas>
-            </div>
-            <div id="menuPanel" class="panel seethrough">
-                <div class="panelContent">
-                    <div id="menuLogo" ></div>
-                    <div id="menuBtnVbox" class="fBtnVBox">
-                        <div id="playBtn" class="fBtn"><img src="" /></div>
-                        <div id="optionsBtn" class="fBtn"><img src="" /></div>
-                    </div>
-                </div>
-                <div id="miniOptionsMenu">
-                    <div id="optionSd"></div>
-                    <div id="optionHd"></div>
-                    <div id="optionSound" class="ctrPointer"></div>
-                    <div id="optionMsg"></div>
-                </div>
-            </div>
+<body>
+    <canvas class="game" id="canvas" oncontextmenu="event.preventDefault();"></canvas>
+    <script>
+        window.__CTRTT_BUILD_INDEX__ = 60;
+        !function () {
+            try {
+                var t = document.getElementById("canvas");
+                t && (
+                    t.style.position = "absolute",
+                    t.style.left = "0",
+                    t.style.top = "0",
+                    t.style.width = "100%",
+                    t.style.height = "100%"
+                );
+            } catch (t) { }
+        }();
+    </script>
+    <script>
+        (function () {
+            function applyOffsets(ofs) {
+                try {
+                    var canvas = document.getElementById("canvas");
+                    if (!canvas || !ofs) return;
+                    var left = 0 | ofs.left, top = 0 | ofs.top,
+                        right = 0 | ofs.right, bottom = 0 | ofs.bottom;
+                    canvas.style.left = left + "px"; canvas.style.top = top + "px";
+                    canvas.style.right = ""; canvas.style.bottom = "";
+                    canvas.style.width = "calc(100% - " + (left + right) + "px)";
+                    canvas.style.height = "calc(100% - " + (top + bottom) + "px)";
+                    setTimeout(function () {
+                        if (typeof _on_canvas_resize === "function") _on_canvas_resize();
+                    }, 0);
+                } catch (_) { }
+            }
+            if (typeof window.GameInterface === "undefined") {
+                window.GameInterface = {
+                    isMuted: function () { return false; },
+                    sendPreloadProgress: function () { },
+                    onOffsetChange: function () { },
+                    getOffsets: function () { return { left: 0, top: 0, right: 0, bottom: 0 }; },
+                    showInterstitialAd: function () { return Promise.resolve(); },
+                    showRewardedAd: function () { return Promise.resolve({ isRewardGranted: true }); },
+                    hasRewardedAd: function () { return Promise.resolve(true); },
+                    gameReady: function () { },
+                    gameStart: function () { },
+                    gameOver: function () { },
+                    gameComplete: function () { }
+                };
+            }
 
-            <div id="boxPanel" class="panel seethrough">
-                
-                <canvas id="boxCanvas" width="1024" height="576"></canvas>
-                <div id="boxEnterCodeButton" class="fBtn ctrPointer"></div>
-                <div id="boxScore" class="hideFromMouse"><img src="" /></div>
+            try {
+                if (window.GameInterface && typeof window.GameInterface.onOffsetChange === "function") {
+                    window.GameInterface.onOffsetChange(applyOffsets);
+                }
+                if (window.GameInterface && typeof window.GameInterface.getOffsets === "function") {
+                    Promise.resolve(window.GameInterface.getOffsets()).then(applyOffsets).catch(function () { });
+                } else {
+                    applyOffsets({ left: 0, top: 0, right: 0, bottom: 0 });
+                }
+            } catch (_) { }
+        })();
+    </script>
+    <script src="fflate.js"></script>
+    <script>
+        (function () {
+            function decodeparam() {
+                var params = new URLSearchParams(window.location.search);
+                var raw = params.get("data");
+                if (!raw) return null;
+                try {
+                    raw = decodeURIComponent(raw);
+                } catch (_) { }
+                function b64ToBinary(str) {
+                    try {
+                        return atob(str);
+                    } catch (_) {
+                        return null;
+                    }
+                }
+                function bintuahu8(bin) {
+                    var len = bin.length;
+                    var out = new Uint8Array(len);
+                    for (var i = 0; i < len; i++) out[i] = bin.charCodeAt(i) & 0xff;
+                    return out;
+                }
+                var b64 = raw.replace(/-/g, "+").replace(/_/g, "/");
+                while (b64.length % 4 !== 0) b64 += "=";
+                var bin = b64ToBinary(b64);
+                if (bin !== null) {
+                    try {
+                        if (typeof fflate !== "undefined") {
+                            var u8 = bintuahu8(bin);
+                            if (u8.length >= 2 && u8[0] === 0x1f && u8[1] === 0x8b) {
+                                var inflated = fflate.decompressSync(u8);
+                                return fflate.strFromU8(inflated);
+                            }
+                        }
+                    } catch (_) { }
+                    try {
+                        var u8plain = bintuahu8(bin);
+                        return (typeof fflate !== "undefined" && fflate.strFromU8)
+                            ? fflate.strFromU8(u8plain)
+                            : bin;
+                    } catch (_) { }
+                }
+                return raw;
+            }
 
-                <div id="boxNavBack">
-                    <div class="boxNavDisabled">
-                    </div>
-                </div>
-                <div id="boxNavForward">
-                    <div>
-                    </div>
-                </div>
-                <div id="boxBack" class="bBtn">
-                </div>
-            </div>
-            <div id="codePanel" class="panel seethrough">
-                <input id="codeText" type="text" />
-                <div id="codeOkButton" class="ctrPointer"></div>
-                <div id="codeMessage"></div>
-                <div id="codeBack" class="bBtn"></div>
-            </div>
-            <div id="levelPanel" class="panel">
-                <div id="levelScore">
-                    <img src="" /></div>
-                <div id="levelBack" class="bBtn">
-                </div>
-                <div id="levelOptions"></div>
-                <div id="levelResults">
-                    <div id="resultStatus"><img src="" /></div>
-                    <div class="starCase">
-                        <div id="resultStar1" class=""></div>
-                        <div id="resultStar2" class=""></div>
-                        <div id="resultStar3" class=""></div>
-                    </div>
-                    <div id="resultTicker">
-                        <img id="resultTickerLabel" />
-                        <img id="resultTickerValue" />
-                        <img id="resultTickerMessage" />
-                    </div>
-                    <div class="line"></div>
-                    <div id="resultScore"></div>
-                    <div class="btnCase">
-                        <div id="replayBtn" class="sBtn"><img src="" /></div>
-                        <div id="lrMenuBtn" class="sBtn"><img src="" /></div>
-                        <div id="nextBtn" class="sBtn"><img src="" /></div>
-                    </div>
-                    <div id="resultImproved"></div>
-                </div>
-            </div>
+            var xml = decodeparam();
+            if (!xml || typeof xml !== "string") return;
+            // strip xml comments (<!-- ... -->)
+            xml = xml.replace(/<!--[\s\S]*?-->/g, "");
+            window.__CUSTOM_LEVEL_XML__ = xml;
+        })();
+    </script>
+    <script>
+        (function () {
 
-            <div id="gameCompletePanel" class="panel">
-                <div id="congrats"></div>
-                <div id="finalScore"><img src="" /></div>
-                <a href="../../" id="finalFunBtn" class="lBtn" target="_blank"><img src="" /><div id="funOmNom"></div></a>
-                <div id="gameCompleteBack" class="bBtn"></div>
-            </div>
-
-            <div id="optionsPanel" class="panel">
-                <div class="fBtnVBox">
-                    <div id="optionsTitle"><img src="" /></div>
-                    <div id="soundBtn" class="mini-button ctrCursor"><div id="options-speaker"></div><div class="options-x"></div></div>
-                    <div id="musicBtn" class="mini-button ctrCursor"><div id="options-note"></div><div class="options-x"></div></div>
-                    <div id="langBtn" class="fBtn"><img src="" /><div id="flag"></div></div>
-                    <div id="resetBtn" class="fBtn"><img src="" /></div>
-                    <div id="creditsBtn" class="fBtn"><img src="" /></div>
-                    <div id="dragBtn"><img id="dragText" /><div class="options-check-disabled"></div></div>
-                    <div id="cutBtn" class="ctrCursor"><img id="cutText" /><div class="options-check"></div></div>
-                </div>
-                <div id="optionsBack" class="bBtn"></div>
-            </div>
-            <div id="d" class="panel ctrPointer">
-                <img id="dmsg" />
-                <div id="dframe">
-                    <div id="dpic"></div>
-                </div>
-                <div id="dshareBtn" class="fBtn"><img src="" /><div id="dfb"></div></div>
-            </div>
-            <div id="gameBtnTray">
-                <div id="gameMsg" class="allSound"></div>
-                <div id="gameSound" class="ctrPointer allSound"></div>
-                <div id="gameRestartBtn" class="ctrPointer"></div>
-                <div id="gameMenuBtn" class="ctrPointer"></div>
-            </div>
-            <div id="levelMenu">
-                <div class="fBtnVBox">
-                    <div id="continueBtn" class="fBtn"><img src="" /></div>
-                    <div id="skipBtn" class="fBtn"><img src="" /></div>
-                    <div id="selectBtn" class="fBtn"><img src="" /></div>
-                    <div id="menuBtn" class="fBtn"><img src="" /></div>
-                </div>
-            </div>
-
-            <div id="boxCutter">
-            </div>
-            <div id="tapeRoll">
-            </div>
-            <div id="video"></div>
-            <div id="fadeToBlack" class="panel"></div>
-        </div>
-        <canvas id="e"></canvas>
-
-        <div id="loaderWindow">
-            <div id="loaderBubbles">
-                <img id="loaderLogo" src="images/page/loader-logo.png" />
-                <div id="loaderCanvasHost">
-                    <canvas id="loaderCanvas"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div id="lsWarning" style="display:none;">
-            <p>
-                Your browser settings won't allow us to save your game progress after you
-                close this tab. This might happen if you've disabled cookies or site data
-                for some domains.
-            </p>
-            <p>Don't worry, you can still play!</p>
-            <p>
-                Consider modifying your settings to allow <br/>
-                our domain ( <span id="lsDomain"></span> ) <br/>
-                to store site data so we can save your progress.
-            </p>
-
-            <a id="lsChromeInfoLink" target="_blank" href="http://support.google.com/chrome/bin/answer.py?hl=en&answer=95647">
-                Details on how to manage your <br/> cookies and site data in Google Chrome
-            </a>
-            <div class="mBtn" id="lsOkButton"><span>OK</span></div>
-        </div>
-    </div>
-
-    <div id="popupWindow">
-        <div class="popupOuterFrame">
-            <div class="popupInnerFrame" id="slowComputer">
-                <div class="fBtn" id="slowComputerBtn"><img src="" /></div>
-            </div>
-            <div class="popupInnerFrame" id="resetGame">
-                <div id="resetText"></div>
-                <div class="mBtn" id="resetYesBtn"><img src="" /></div>
-                <div class="mBtn" id="resetNoBtn"><img src="" /></div>
-                <div id="resetHoldYes"></div>
-            </div>
-            <div class="popupInnerFrame" id="missingStars">
-                <div id="missingLine1"></div>
-                <div id="missingCount"><div id="missingStar"></div></div>
-                <div id="missingLine2"></div>
-                <div id="missingLine3"></div>
-                <div class="mBtn" id="missingOkBtn"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="upgrade">
-        <div id="upgrade-header"></div>
-        <a id="upgrade-button" href="http://windows.microsoft.com/ie"></a>
-    </div>
-  </div>
+            // attempt to rewrite localstorage
+            var KEY = "CTRTT_PREFS__ALL";
+            function patchPrefsObject(obj) {
+                if (!obj || typeof obj !== "object") obj = {};
+                obj.CTRTT_PREFS_PREFS_SUPERPOWERS_COUNT = "999";
+                obj.CTRTT_PREFS_PREFS_HINTS_COUNT = "999";
+                obj.CTRTT_PREFS_PREFS_HINTS_BOUGHT = "999";
+                obj.CTRTT_PREFS_PREFS_FREE_HINTS_GIFT = "999";
+                obj.CTRTT_PREFS_PREFS_FREE_HINTS_RECEIVED = "999";
+                obj.CTRTT_PREFS_PREF_SUBSC_DAILY_REWARD_HINT = "999";
+                obj.CTRTT_PREFS_SUBSCRIPTION_IS_ACTIVE_PREF = "1";
+                return obj;
+            }
+            function patchPrefsString(raw) {
+                if (typeof raw !== "string" || !raw) return raw;
+                try {
+                    return JSON.stringify(patchPrefsObject(JSON.parse(raw)));
+                } catch (_) {
+                    return raw;
+                }
+            }
+            try {
+                var ls = localStorage;
+                var origGet = ls.getItem.bind(ls);
+                var origSet = ls.setItem.bind(ls);
+                try {
+                    var v0 = origGet(KEY);
+                    if (typeof v0 === "string" && v0) origSet(KEY, patchPrefsString(v0));
+                } catch (_) { }
+                ls.getItem = function (k) {
+                    var v = origGet(k);
+                    return (k === KEY) ? patchPrefsString(v) : v;
+                };
+                ls.setItem = function (k, v) {
+                    if (k === KEY) v = patchPrefsString(v);
+                    return origSet(k, v);
+                };
+                setInterval(function () {
+                    try {
+                        var v = origGet(KEY);
+                        if (typeof v === "string" && v) {
+                            var pv = patchPrefsString(v);
+                            if (pv !== v) origSet(KEY, pv);
+                        }
+                    } catch (_) { }
+                }, 1000);
+            } catch (_) { }
+        })();
+    </script>
+    <script>
+        // When the game is ready, switch to a solid black background so
+        // semi‑transparent canvas pixels don't show the splash image.
+        (function () {
+            var originalGameReady = window.GameInterface && window.GameInterface.gameReady;
+            if (!window.GameInterface) window.GameInterface = {};
+            window.GameInterface.gameReady = function () {
+                try {
+                    document.body.style.background = "#000";
+                } catch (_) { }
+                if (typeof originalGameReady === "function") {
+                    try { originalGameReady(); } catch (_) { }
+                }
+            };
+        })();
+    </script>
+    <script src="ctrttboot.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,68 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="20" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="special" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Greece" />
+</layer>
+<layer name="Objects">
+<candy x="109" y="134" candyNumber="first" isDriven="false" lasso="false" />
+<sock x="257" y="436" group="1" angle="270" />
+<sock x="251" y="118" group="1" angle="180" />
+<target x="40" y="323" targetType="basic" followTheCandy="none" />
+<target x="130" y="323" targetType="special" followTheCandy="none" />
+<grab x="257" y="280" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="100" moveVertical="true" moveOffset="100" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="256" y="344" candyNumber="second" isDriven="false" lasso="false" />
+<star x="40" y="230" path="90,0" moveSpeed="100" timeout="-1" index="0" />
+<star x="130" y="270" path="-90,0" moveSpeed="100" timeout="-1" index="0" />
+<grab x="212" y="399" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="302" y="399" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="110" y="34" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<shieldTrigger x="25" y="85" />
+<spike2 x="40" y="44" angle="0" size="2" toggled="false" />
+<star x="130" y="190" path="-90,0" moveSpeed="100" timeout="-1" index="0" />
+<hiddenElement x="190" y="50" radius="30" />
+</layer>
+<layer name="En">
+<tutorial09 x="36" y="427" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="58" y="384" locale="en" text="Candies maintain their speed when teleporting" width="140" special="0" />
+</layer>
+<layer name="nl">
+<tutorial09 x="28" y="423" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="50" y="380" locale="nl" text="Snoepjes behouden hun snelheid tijdens teleportatie" width="150" special="0" />
+</layer>
+<layer name="ko">
+<tutorial09 x="36" y="427" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="58" y="384" locale="ko" text="사탕이 순간 이동할 때도 속도는 변하지 않아요" width="140" special="0" />
+</layer>
+<layer name="es">
+<tutorial09 x="25" y="432" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="47" y="372" locale="es" text="Los caramelos conservan la velocidad al teletransportarse" width="165" special="0" />
+</layer>
+<layer name="br">
+<tutorial09 x="24" y="426" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="35" y="383" locale="br" text="Os doces mantêm a mesma velocidade quando são teleportados" width="190" special="0" />
+</layer>
+<layer name="ja">
+<tutorial09 x="26" y="427" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="48" y="375" locale="ja" text="キャンディは*テレポート中も*その速度を*維持します" width="165" special="0" />
+</layer>
+<layer name="de">
+<tutorial09 x="21" y="427" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="26" y="372" locale="de" text="Bonbons behalten ihre Geschwindigkeit bei, wenn sie teleportiert werden" width="190" special="0" />
+</layer>
+<layer name="ru">
+<tutorial09 x="36" y="427" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="58" y="384" locale="ru" text="Леденцы сохраняют свою скорость при телепортации" width="145" special="0" />
+</layer>
+<layer name="it">
+<tutorial09 x="27" y="436" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="37" y="371" locale="it" text="I bonbon mantengono la stessa velocità durante il teletrasporto" width="165" special="0" />
+</layer>
+<layer name="zh">
+<tutorial09 x="36" y="427" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="58" y="384" locale="zh" text="糖果*在*传送*中*会*保持*原有*速度" width="140" special="0" />
+</layer>
+<layer name="fr">
+<tutorial09 x="29" y="429" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="47" y="385" locale="fr" text="Les bonbons gardent leur vitesse lors de la téléportation" width="160" special="0" />
+</layer>
+</map>

@@ -1,0 +1,27 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="55" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="China" />
+</layer>
+<layer name="Objects">
+<bouncer1 x="189" y="271" angle="25" size="1" />
+<fan x="155" y="239" angle="0" length="160" angleLength="180" />
+<target x="51" y="148" targetType="basic" followTheCandy="none" />
+<target x="269" y="424" targetType="special" followTheCandy="none" />
+<star x="190" y="77" timeout="-1" index="0" />
+<grab x="168" y="41" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="222" y="121" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="282" y="39" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bubble x="117" y="380" />
+<bubble x="189" y="379" />
+<candy x="270" y="274" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="275" y="156" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<axe x="189" y="379" axeNumber="first" />
+<grab x="187" y="460" length="47" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="116" y="379" timeout="-1" index="0" />
+<star x="270" y="347" timeout="-1" index="0" />
+<bouncer1 x="121" y="271" angle="-25" size="1" />
+<bouncer1 x="188" y="206" angle="-30" size="1" />
+<hiddenElement x="48" y="385" radius="30" />
+</layer>
+</map>

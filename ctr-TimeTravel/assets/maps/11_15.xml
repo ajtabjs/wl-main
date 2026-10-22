@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Future" />
+</layer>
+<layer name="Objects">
+<target x="160" y="205" targetType="special" followTheCandy="first" />
+<target x="255" y="87" targetType="basic" followTheCandy="none" />
+<candy x="259" y="244" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="51" y="193" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="260" y="332" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<clock x="261" y="426" />
+<star x="50" y="65" timeout="-1" index="0" />
+<star x="160" y="140" timeout="-1" index="0" />
+<star x="260" y="175" timeout="-1" index="0" />
+<bubble x="260" y="241" />
+<sock x="160" y="353" group="0" angle="270" path="-110,0" moveSpeed="55" />
+<sock x="50" y="265" group="0" angle="270" path="110,0" moveSpeed="55" />
+<grab x="50" y="97" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<pauseSwitcher x="111" y="431" />
+<spike1 x="260" y="355" angle="0" size="1" toggled="false" />
+<hiddenElement x="49" y="427" radius="30" />
+</layer>
+</map>

@@ -1,0 +1,98 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="1" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="133" y="245" candyNumber="first" isDriven="false" lasso="false" />
+<target x="48" y="375" targetType="basic" followTheCandy="none" />
+<target x="276" y="377" targetType="special" followTheCandy="none" />
+<candy x="184" y="245" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="45" y="240" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="162" y="153" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="162" y="153" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="275" y="240" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bubble x="133" y="358" />
+<star x="277" y="341" timeout="-1" index="0" />
+<star x="275" y="112" timeout="-1" index="0" />
+<star x="42" y="114" timeout="-1" index="0" />
+<bubble x="192" y="358" />
+<hiddenElement x="160" y="440" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="104" y="182" locale="en" text="Pop the bubble with your finger" width="125" special="1" />
+<tutorial05 x="275" y="110" locale="en" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="en" text="The bubbles will lift the candies up" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="en" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="nl">
+<tutorialText x="104" y="182" locale="nl" text="Prik de bel met je vinger door" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="nl" text="De bellen blazen de snoepjes omhoog" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="ko">
+<tutorialText x="104" y="182" locale="ko" text="손가락으로 비눗방울을 터뜨리세요" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="95" y="47" locale="ko" text="방울이 사탕을 띄워줘요" width="140" special="0" />
+<tutorial09 x="95" y="81" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="es">
+<tutorialText x="104" y="182" locale="es" text="Haz estallar la burbuja con el dedo" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="es" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="es" text="Las burbujas hacen que los caramelos se eleve" width="155" special="0" />
+<tutorial09 x="83" y="81" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="es" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="br">
+<tutorialText x="104" y="182" locale="br" text="Estoure as bolhas usando o dedo" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="br" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="br" text="As bolhas fazem os doces subir" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="br" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="ja">
+<tutorialText x="104" y="182" locale="ja" text="指で泡を*はじけさせましょう" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="ja" text="泡はキャンディを*持ち上げます" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="de">
+<tutorialText x="104" y="182" locale="de" text="Lass die Blasen mit einem Fingertippen zerplatzen" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="de" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="de" text="Die Blasen tragen Bonbons nach oben" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="de" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="ru">
+<tutorialText x="104" y="182" locale="ru" text="Пузырь можно лопнуть" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="ru" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="ru" text="Пузыри поднимут леденцы вверх" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="44" y="111" locale="ru" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="it">
+<tutorialText x="104" y="182" locale="it" text="Fai scoppiare la bolla con il dito" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="it" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="it" text="Le bolle sollevano i bonbon" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="it" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+<layer name="zh">
+<tutorialText x="104" y="182" locale="zh" text="用手指*点破*泡泡" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="zh" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="zh" text="泡泡*会将*糖果*托起来" width="140" special="0" />
+<tutorial09 x="83" y="81" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="104" y="182" locale="fr" text="Crève la bulle avec ton doigt" width="120" special="1" />
+<tutorial05 x="275" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" special="1" />
+<tutorialText x="106" y="47" locale="fr" text="Les bulles vont soulever les bonbons dans les airs" width="156" special="0" />
+<tutorial09 x="83" y="81" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorial05 x="43" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" special="1" />
+</layer>
+</map>

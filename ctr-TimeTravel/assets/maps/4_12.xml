@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="40" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="259" y="402" targetType="basic" />
+<target x="60" y="400" targetType="special" />
+<candy x="159" y="215" candyNumber="first" isDriven="false" />
+<candy x="248" y="215" candyNumber="second" isDriven="true" />
+<star x="60" y="215" timeout="-1" index="0" />
+<bomb x="159" y="275" bombNumber="second" />
+<grab x="302" y="275" length="85" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="true" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="20" y="275" length="85" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="true" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="160" y="105" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="255" y="105" timeout="-1" index="0" />
+<star x="160" y="340" timeout="-1" index="0" />
+<grab x="30" y="61" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="40" invisible="false" moveLength="130" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<rocket x="160" y="412" angle="270" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<hiddenElement x="254" y="46" radius="30" />
+</layer>
+</map>

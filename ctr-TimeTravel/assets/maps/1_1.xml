@@ -1,0 +1,139 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="3" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Medieval" />
+</layer>
+<layer name="Objects">
+<grab x="65" y="65" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="256" y="179" candyNumber="first" isDriven="false" lasso="false" />
+<target x="65" y="385" targetType="basic" followTheCandy="none" />
+<target x="255" y="385" targetType="special" followTheCandy="none" />
+<grab x="253" y="65" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="63" y="178" candyNumber="second" isDriven="false" lasso="false" />
+<star x="254" y="243" timeout="-1" index="0" />
+<star x="65" y="236" timeout="-1" index="0" />
+<star x="255" y="307" timeout="-1" index="0" />
+<hiddenElement x="160" y="65" radius="30" />
+</layer>
+<layer name="En">
+<tutorial01 x="65" y="110" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="en" text="Slide your finger to cut the ropes" width="160" special="0" />
+<tutorialText x="100" y="320" locale="en" text="Feed candies to both Om Noms" width="120" special="0" />
+<tutorial10 x="65" y="165" locale="en" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorial01 x="65" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="25" locale="nl" text="Schuif met je vinger om touwen door te snijden" width="160" special="0" />
+<tutorialText x="100" y="320" locale="nl" text="Geef snoepjes aan beide Om Noms" width="120" special="0" />
+<tutorial10 x="65" y="165" locale="nl" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorial01 x="65" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="ko" text="손가락으로 줄을 자르세요" width="160" special="0" />
+<tutorialText x="100" y="320" locale="ko" text="Om Nom 모두에게 사탕을 먹이세요" width="115" special="0" />
+<tutorial10 x="65" y="165" locale="ko" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorial01 x="65" y="110" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="es" text="Desliza el dedo para cortar las cuerdas" width="160" special="0" />
+<tutorialText x="100" y="320" locale="es" text="Haz llegar los caramelos hasta los Om Noms" width="110" special="0" />
+<tutorial10 x="65" y="165" locale="es" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorial01 x="65" y="110" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="45" locale="br" text="Deslize o dedo para cortar as cordas" width="160" special="0" />
+<tutorialText x="100" y="310" locale="br" text="Dê os doces para os dois Om Noms" width="125" special="0" />
+<tutorial10 x="65" y="165" locale="br" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="300" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorial01 x="65" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="ja" text="指をスライドさせて*ロープを切ります" width="160" special="0" />
+<tutorialText x="100" y="320" locale="ja" text="キャンディを*両方の Om Nom の口に*運びましょう" width="120" special="0" />
+<tutorial10 x="65" y="165" locale="ja" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorial01 x="65" y="110" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="23" locale="de" text="Wische mit dem Finger, um Seile zu durchtrennen" width="160" special="0" />
+<tutorialText x="100" y="320" locale="de" text="Füttere beide Om Noms mit Bonbons" width="120" special="0" />
+<tutorial10 x="65" y="165" locale="de" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorial01 x="65" y="110" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="ru" text="Перережьте веревки движением пальца" width="160" special="0" />
+<tutorialText x="100" y="320" locale="ru" text="Накормите обоих Ам Нямов леденцами" width="130" special="0" />
+<tutorial10 x="65" y="165" locale="ru" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorial01 x="65" y="110" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="it" text="Scorri il dito per tagliare le corde" width="160" special="0" />
+<tutorialText x="100" y="320" locale="it" text="Porta i bonbon a entrambi gli Om Nom" width="109" special="0" />
+<tutorial10 x="65" y="165" locale="it" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorial01 x="65" y="110" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="80" y="35" locale="zh" text="手指*在屏幕上*滑动*即可*切断*绳子" width="160" special="0" />
+<tutorialText x="100" y="320" locale="zh" text="使*两个*Om Nom*都获得*糖果" width="120" special="0" />
+<tutorial10 x="65" y="165" locale="zh" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorial01 x="65" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="115" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="165" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="215" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorial01 x="265" y="110" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="90" y="25" locale="fr" text="Fais glisser ton doigt pour couper les cordes" width="140" special="0" />
+<tutorialText x="100" y="320" locale="fr" text="Donne les bonbons aux Om Noms" width="113" special="0" />
+<tutorial10 x="65" y="165" locale="fr" moveSpeed="100" rotateSpeed="100" special="3" />
+<tutorial09 x="159" y="308" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

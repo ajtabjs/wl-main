@@ -1,0 +1,65 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="20" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="special" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Greece" />
+</layer>
+<layer name="Objects">
+<target x="90" y="375" targetType="basic" followTheCandy="none" />
+<target x="230" y="375" targetType="special" followTheCandy="none" />
+<grab x="100" y="85" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="220" y="85" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="101" y="205" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="221" y="205" candyNumber="second" isDriven="false" lasso="false" />
+<star x="160" y="241" timeout="-1" index="0" />
+<star x="95" y="285" timeout="-1" index="0" />
+<star x="225" y="285" timeout="-1" index="0" />
+<shieldTrigger x="160" y="201" />
+<pump x="30" y="215" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<pump x="290" y="215" angle="180" attachedToRail="false" railGroup="0" startDelay="0" />
+<hiddenElement x="160" y="40" radius="30" />
+</layer>
+<layer name="En">
+<tutorial04 x="197" y="175" locale="en" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="30" y="80" locale="en" text="Stone platforms turn around when the candy flies in front of the switch" width="260" special="0" />
+</layer>
+<layer name="nl">
+<tutorial04 x="214" y="170" locale="nl" angle="-10" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="29" y="79" locale="nl" text="Stenen platforms draaien rond wanneer het snoepje langs de schakelaar vliegt" width="270" special="0" />
+</layer>
+<layer name="ko">
+<tutorial04 x="197" y="175" locale="ko" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="63" y="81" locale="ko" text="사탕이 스위치 앞으로 날아가면 스톤 플랫폼이 돌아가요" width="190" special="0" />
+</layer>
+<layer name="es">
+<tutorial04 x="197" y="175" locale="es" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="20" y="80" locale="es" text="Las plataformas de piedra se giran cuando el caramelo pasa frente al interruptor" width="270" special="0" />
+</layer>
+<layer name="br">
+<tutorial04 x="197" y="175" locale="br" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="30" y="80" locale="br" text="As plataformas de pedra viram quando o doce voa na frente do ativador" width="260" special="0" />
+</layer>
+<layer name="ja">
+<tutorial04 x="197" y="175" locale="ja" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="37" y="82" locale="ja" text="キャンディが*スイッチの前を*飛ぶと*石のプラットフォームが*回転します" width="240" special="0" />
+</layer>
+<layer name="de">
+<tutorial04 x="197" y="175" locale="de" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="30" y="80" locale="de" text="Steinplattformen drehen sich, sobald ein Bonbon am Schalter vorbeifällt" width="250" special="0" />
+</layer>
+<layer name="ru">
+<tutorial04 x="212" y="173" locale="ru" angle="-10" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="17" y="80" locale="ru" text="Каменные платформы поворачиваются, когда леденец пролетает перед переключателем" width="290" special="0" />
+</layer>
+<layer name="it">
+<tutorial04 x="211" y="173" locale="it" angle="-10" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="30" y="80" locale="it" text="Le piattaforme di pietra ruotano quando il bonbon passa davanti all'interruttore" width="260" special="0" />
+</layer>
+<layer name="zh">
+<tutorial04 x="197" y="175" locale="zh" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="30" y="80" locale="zh" text="糖果*从*开关前*飞过*的时候，*石头*平台*会*转动" width="260" special="0" />
+</layer>
+<layer name="fr">
+<tutorial04 x="197" y="175" locale="fr" angle="-30" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="20" y="80" locale="fr" text="Les plateformes de pierre tournent lorsque le bonbon vole devant le bouton" width="270" special="0" />
+</layer>
+</map>

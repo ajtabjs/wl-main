@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="280" y="420" targetType="special" followTheCandy="none" />
+<target x="160" y="420" targetType="basic" followTheCandy="none" />
+<candy x="239" y="140" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="139" y="141" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="240" y="40" length="75" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="138" y="41" length="75" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bomb x="131" y="358" bombNumber="first" />
+<grab x="25" y="430" length="25" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="200" moveVertical="true" moveOffset="200" spider="false" bombed="true" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="220" y="330" length="25" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="true" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="280" y="330" timeout="-1" index="0" />
+<star x="160" y="380" timeout="-1" index="0" />
+<star x="195" y="194" timeout="-1" index="0" />
+<hiddenElement x="79" y="37" radius="30" />
+<snowflake x="219" y="275" radius="30" />
+</layer>
+</map>

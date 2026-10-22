@@ -1,0 +1,64 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="20" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="special" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Greece" />
+</layer>
+<layer name="Objects">
+<grab x="47" y="31" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="45" y="144" candyNumber="first" isDriven="false" />
+<sock x="48" y="415" group="1" angle="270" />
+<sock x="285" y="238" group="1" angle="180" />
+<target x="251" y="417" targetType="basic" />
+<target x="124" y="239" targetType="special" />
+<grab x="249" y="31" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="249" y="148" candyNumber="second" isDriven="false" />
+<star x="251" y="359" timeout="-1" index="0" />
+<star x="41" y="301" timeout="-1" index="0" />
+<star x="192" y="240" timeout="-1" index="0" />
+<shieldTrigger x="247" y="241" />
+<hiddenElement x="150" y="90" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="83" y="306" locale="en" text="Drop the candy into one portal and it will fly out of the other portal" width="115" special="0" />
+<tutorial04 x="111" y="446" locale="en" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="80" y="310" locale="nl" text="Laat het snoepje los voor een portal en het valt uit een andere portal" width="135" special="0" />
+<tutorial04 x="107" y="430" locale="nl" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="83" y="303" locale="ko" text="사탕을 포털에 떨어뜨리면 다른 포털에서 튕겨나와요" width="105" special="0" />
+<tutorial04 x="108" y="420" locale="ko" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="80" y="312" locale="es" text="Al caer en un portal, el caramelo saldrá por el otro" width="120" special="0" />
+<tutorial04 x="113" y="427" locale="es" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="79" y="314" locale="br" text="Quando você solta o doce num portal, ele sai pelo outro" width="123" special="0" />
+<tutorial04 x="109" y="431" locale="br" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="82" y="296" locale="ja" text="キャンディを*ポータルに*落とすと*他のポータルから*出てきます" width="120" special="0" />
+<tutorial04 x="107" y="434" locale="ja" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="83" y="305" locale="de" text="Lass ein Bonbon in ein Portal fallen und es wird aus einem anderen herausfallen" width="130" special="0" />
+<tutorial04 x="111" y="442" locale="de" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="82" y="306" locale="ru" text="Киньте леденец в один из порталов, и он вылетит из другого" width="130" special="0" />
+<tutorial04 x="114" y="425" locale="ru" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="75" y="313" locale="it" text="Lascia cadere il bonbon in un portale e uscirà dall'altro" width="130" special="0" />
+<tutorial04 x="110" y="431" locale="it" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="84" y="325" locale="zh" text="糖果*进入*传送门后，*会从*另一个*传送门*出来" width="100" special="0" />
+</layer>
+<layer name="fr">
+<tutorialText x="70" y="292" locale="fr" text="Fais tomber le bonbon dans le portail et il atterrira dans l'autre" width="140" special="0" />
+<tutorial04 x="109" y="432" locale="fr" angle="30" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="70" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="top" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="284" y="135" candyNumber="first" isDriven="false" lasso="false" />
+<target x="40" y="240" targetType="basic" followTheCandy="none" />
+<target x="40" y="135" targetType="special" followTheCandy="none" />
+<candy x="284" y="241" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="284" y="366" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<clock x="63" y="420" />
+<star x="96" y="245" timeout="-1" index="0" />
+<star x="178" y="143" timeout="-1" index="0" />
+<star x="177" y="245" timeout="-1" index="0" />
+<grab x="284" y="25" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<rocket x="284" y="134" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<rocket x="284" y="239" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<pauseSwitcher x="179" y="435" />
+<spike2 x="224" y="148" angle="90" size="2" path="0,-100" moveSpeed="50" toggled="false" />
+<spike2 x="224" y="245" angle="90" size="2" path="0,100" moveSpeed="50" toggled="false" />
+<spike2 x="128" y="348" angle="90" size="2" path="0,-100" moveSpeed="50" toggled="false" />
+<spike2 x="129" y="47" angle="90" size="2" path="0,100" moveSpeed="50" toggled="false" />
+<hiddenElement x="180" y="352" radius="30" />
+</layer>
+</map>

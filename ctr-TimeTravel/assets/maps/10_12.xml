@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="75" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<bubble x="65" y="421" />
+<bubble x="161" y="421" />
+<bubble x="256" y="418" />
+<star x="67" y="422" timeout="3" index="0" />
+<star x="162" y="422" timeout="8" index="0" />
+<grab x="67" y="38" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="70" y="114" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="163" y="35" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<grab x="259" y="35" length="195" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<grab x="66" y="228" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="65" y="312" candyNumber="second" isDriven="false" lasso="false" />
+<target x="255" y="102" targetType="basic" followTheCandy="none" />
+<target x="257" y="194" targetType="special" followTheCandy="none" />
+<p_magnetSwitcher x="159" y="303" />
+<star x="257" y="420" timeout="13" index="0" />
+<hiddenElement x="112" y="423" radius="30" />
+</layer>
+</map>

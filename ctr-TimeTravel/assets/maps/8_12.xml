@@ -1,0 +1,20 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Western" />
+</layer>
+<layer name="Objects">
+<candy x="205" y="188" candyNumber="first" isDriven="false" lasso="true" />
+<target x="283" y="70" targetType="basic" followTheCandy="none" />
+<target x="214" y="394" targetType="special" followTheCandy="none" />
+<candy x="119" y="436" candyNumber="second" isDriven="false" lasso="true" />
+<grab x="120" y="329" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="114" y="189" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<rocket x="208" y="191" angle="90" impulse="6" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<star x="226" y="22" path="0,80" moveSpeed="100" timeout="-1" index="0" />
+<star x="45" y="360" timeout="-1" index="0" />
+<star x="41" y="466" path="0,-80" moveSpeed="100" timeout="-1" index="0" />
+<pauseSwitcher x="283" y="261" />
+<hiddenElement x="218" y="301" radius="30" />
+</layer>
+</map>

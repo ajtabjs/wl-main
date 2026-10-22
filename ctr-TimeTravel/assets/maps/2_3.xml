@@ -1,0 +1,54 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="80" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="left" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<candy x="249" y="322" candyNumber="first" isDriven="false" />
+<target x="249" y="406" targetType="basic" />
+<target x="74" y="408" targetType="special" />
+<candy x="71" y="316" candyNumber="second" isDriven="false" />
+<pauseSwitcher x="159" y="331" />
+<star x="112" y="251" path="150,0" moveSpeed="50" timeout="-1" index="0" />
+<bubble x="247" y="321" />
+<bubble x="71" y="319" />
+<star x="110" y="150" path="150,0" moveSpeed="50" timeout="-1" index="0" />
+<star x="207" y="206" path="-150,0" moveSpeed="50" timeout="-1" index="0" />
+<spike1 x="68" y="89" angle="0" size="1" toggled="false" />
+<spike1 x="247" y="89" angle="0" size="1" toggled="false" />
+<hiddenElement x="160" y="400" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="97" y="18" locale="en" text="Moving stars are not affected by time freeze" width="120" special="0" />
+</layer>
+<layer name="nl">
+<tutorialText x="97" y="18" locale="nl" text="De stopgezette tijd is niet van invloed op bewegende sterren" width="120" special="0" />
+</layer>
+<layer name="ko">
+<tutorialText x="97" y="18" locale="ko" text="시간이 멈춰도 별은 계속 움직입니다" width="120" special="0" />
+</layer>
+<layer name="es">
+<tutorialText x="96" y="28" locale="es" text="Las estrellas en movimiento no se paran al detener el tiempo" width="123" special="0" />
+</layer>
+<layer name="br">
+<tutorialText x="97" y="10" locale="br" text="As estrelas que se movem não são afetadas pelo congelamento do tempo" width="125" special="0" />
+</layer>
+<layer name="ja">
+<tutorialText x="97" y="10" locale="ja" text="動くスターは*時間が*止まっても*これに*影響されません" width="120" special="0" />
+</layer>
+<layer name="de">
+<tutorialText x="26" y="18" locale="de" text="Sich bewegende Sterne werden von der angehaltenen Zeit nicht beeinflusst" width="250" special="0" />
+</layer>
+<layer name="ru">
+<tutorialText x="97" y="18" locale="ru" text="На движущиеся звезды не влияет остановка времени" width="120" special="0" />
+</layer>
+<layer name="it">
+<tutorialText x="97" y="18" locale="it" text="La sospensione del tempo non influisce sulle stelle in movimento" width="120" special="0" />
+</layer>
+<layer name="zh">
+<tutorialText x="97" y="18" locale="zh" text="移动的*星星*不受*时间停止*影响" width="120" special="0" />
+</layer>
+<layer name="fr">
+<tutorialText x="97" y="18" locale="fr" text="L'arrêt du temps n'affecte pas les étoiles mouvantes" width="123" special="0" />
+</layer>
+</map>

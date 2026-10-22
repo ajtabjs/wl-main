@@ -1,0 +1,62 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Western" />
+</layer>
+<layer name="Objects">
+<target x="282" y="356" targetType="special" followTheCandy="none" />
+<target x="172" y="357" targetType="basic" followTheCandy="none" />
+<candy x="195" y="220" candyNumber="first" isDriven="false" lasso="true" />
+<grab x="196" y="67" length="122" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="51" y="67" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="50" y="161" candyNumber="second" isDriven="false" lasso="true" />
+<star x="77" y="327" path="0,50" moveSpeed="60" timeout="-1" index="0" />
+<star x="115" y="378" timeout="-1" index="0" />
+<star x="36" y="278" path="0,100" moveSpeed="120" timeout="-1" index="0" />
+<hiddenElement x="263" y="107" radius="30" />
+<tutorial04 x="100" y="196" locale="en" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="196" locale="ru" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="196" locale="de" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="196" locale="it" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="196" locale="fr" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="197" locale="nl" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="197" locale="ko" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="203" locale="es" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="197" locale="zh" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="197" locale="br" angle="45" moveSpeed="100" rotateSpeed="100" />
+<tutorial04 x="100" y="197" locale="ja" angle="45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="En">
+<tutorialText x="78" y="57" locale="en" text="Tap on one of the candies to connect them with a rope" width="100" special="0" />
+</layer>
+<layer name="Ru">
+<tutorialText x="77" y="35" locale="ru" text="Нажми на один из леденцов, чтобы соединить их веревкой" width="100" special="0" />
+</layer>
+<layer name="de">
+<tutorialText x="77" y="34" locale="de" text="Tippe auf eines der Bonbons, um es mit einem Seil zu verbinden" width="100" special="0" />
+</layer>
+<layer name="it">
+<tutorialText x="78" y="57" locale="it" text="Tocca una delle caramelle per collegarle con una corda" width="100" special="0" />
+</layer>
+<layer name="fr">
+<tutorialText x="78" y="57" locale="fr" text="Appuie sur 1 des bonbons pour les lier avec une corde" width="100" special="0" />
+</layer>
+<layer name="nl">
+<tutorialText x="78" y="57" locale="nl" text="Tik op een snoepje om deze aan een touw te binden" width="100" special="0" />
+</layer>
+<layer name="ko">
+<tutorialText x="78" y="78" locale="ko" text="사탕을 줄에 연결하려면 사탕 중 하나를 탭하세요" width="100" special="0" />
+</layer>
+<layer name="es">
+<tutorialText x="77" y="21" locale="es" text="Pulsa sobre uno de los caramelos para conectarlos con una cuerda" width="100" special="0" />
+</layer>
+<layer name="zh">
+<tutorialText x="78" y="57" locale="zh" text="点击一个糖果，与一根绳子连接起来" width="100" special="0" />
+</layer>
+<layer name="br">
+<tutorialText x="77" y="41" locale="br" text="Toque em um dos doces para conectá-los com uma corda" width="100" special="0" />
+</layer>
+<layer name="ja">
+<tutorialText x="78" y="72" locale="ja" text="キャンディを*タップすると、*ロープと*つながります" width="100" special="0" />
+</layer>
+</map>

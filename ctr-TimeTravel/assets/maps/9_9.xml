@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="105" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="China" />
+</layer>
+<layer name="Layer 1">
+<target x="170" y="51" targetType="special" followTheCandy="none" />
+<target x="157" y="419" targetType="basic" followTheCandy="none" />
+<fan x="158" y="382" angle="-90" length="150" angleLength="90" />
+<candy x="163" y="257" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="75" y="235" length="65" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<candy x="238" y="381" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="300" y="365" length="35" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="251" y="233" length="65" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bubble x="158" y="333" />
+<star x="99" y="393" timeout="-1" index="0" />
+<star x="39" y="334" timeout="-1" index="0" />
+<grab x="114" y="110" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="112" y="179" axeNumber="first" />
+<star x="165" y="180" timeout="-1" index="0" />
+<hiddenElement x="64" y="62" radius="30" />
+</layer>
+</map>

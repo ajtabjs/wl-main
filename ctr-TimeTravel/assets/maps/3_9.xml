@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="219" y="52" targetType="basic" followTheCandy="none" />
+<target x="274" y="436" targetType="special" followTheCandy="none" />
+<candy x="211" y="340" candyNumber="first" isDriven="false" lasso="false" />
+<star x="275" y="274" timeout="-1" index="0" />
+<star x="52" y="242" timeout="-1" index="0" />
+<candy x="166" y="341" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="214" y="241" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="165" y="241" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<star x="216" y="146" timeout="-1" index="0" />
+<bomb x="95" y="145" bombNumber="first" />
+<grab x="97" y="34" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="true" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bubble x="99" y="210" />
+<bubble x="96" y="337" />
+<bubble x="97" y="273" />
+<bubble x="278" y="274" />
+<pump x="34" y="420" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<hiddenElement x="48" y="96" radius="30" />
+<snowflake x="163" y="182" radius="30" />
+</layer>
+</map>

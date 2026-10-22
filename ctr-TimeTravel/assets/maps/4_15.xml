@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="205" y="65" candyNumber="first" isDriven="true" lasso="false" />
+<candy x="268" y="287" candyNumber="second" isDriven="false" lasso="false" />
+<target x="50" y="365" targetType="special" followTheCandy="none" />
+<target x="160" y="130" targetType="basic" followTheCandy="none" />
+<grab x="280" y="400" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="120" moveVertical="false" moveOffset="120" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<star x="205" y="180" timeout="-1" index="0" />
+<star x="100" y="185" timeout="-1" index="0" />
+<star x="100" y="65" timeout="-1" index="0" />
+<spike4 x="160" y="35" angle="0" size="4" toggled="false" />
+<spike4 x="70" y="125" angle="90" size="4" toggled="false" />
+<spike4 x="160" y="215" angle="0" size="4" toggled="false" />
+<spike4 x="250" y="125" angle="90" size="4" toggled="false" />
+<grab x="190" y="290" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="120" moveVertical="false" moveOffset="30" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bubble x="267" y="286" />
+<hiddenElement x="31" y="132" radius="30" />
+<snowflake x="55" y="299" radius="30" />
+</layer>
+</map>

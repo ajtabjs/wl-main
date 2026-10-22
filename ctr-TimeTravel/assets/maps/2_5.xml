@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="80" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<candy x="195" y="241" candyNumber="first" isDriven="false" lasso="false" />
+<target x="141" y="160" targetType="special" followTheCandy="none" />
+<target x="56" y="160" targetType="basic" followTheCandy="none" />
+<candy x="245" y="337" candyNumber="second" isDriven="false" lasso="false" />
+<pauseSwitcher x="248" y="426" />
+<bubble x="141" y="434" />
+<star x="71" y="375" timeout="0" index="0" />
+<star x="72" y="310" timeout="0" index="0" />
+<star x="142" y="375" timeout="0" index="0" />
+<grab x="53" y="244" length="170" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="102" y="244" length="170" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="199" y="147" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="251" y="242" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bubble x="72" y="433" />
+<hiddenElement x="255" y="95" radius="30" />
+</layer>
+</map>

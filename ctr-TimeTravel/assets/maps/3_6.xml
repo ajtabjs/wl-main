@@ -1,0 +1,66 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="240" y="131" targetType="special" followTheCandy="none" />
+<target x="58" y="378" targetType="basic" followTheCandy="none" />
+<bouncer2 x="63" y="314" angle="0" size="2" />
+<candy x="96" y="251" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="53" y="134" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="53" y="36" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bomb x="40" y="251" bombNumber="first" />
+<grab x="234" y="270" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="60" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="164" y="413" timeout="-1" index="0" />
+<star x="259" y="270" path="RW50" moveSpeed="200" timeout="-1" index="0" />
+<star x="259" y="270" path="RC50" moveSpeed="200" timeout="-1" index="0" />
+<bouncer2 x="165" y="452" angle="0" size="2" />
+<hiddenElement x="240" y="55" radius="30" />
+<snowflake x="176" y="135" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="129" y="327" locale="en" text="Objects will bounce off the platform" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="en" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="145" y="327" locale="nl" text="Objecten stuiteren van het platform af" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="nl" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="129" y="327" locale="ko" text="물체가 발판에 닿으면 튕겨나가요" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="ko" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="129" y="327" locale="es" text="Los objetos rebotarán en la plataforma" width="170" special="0" />
+<tutorial04 x="113" y="358" locale="es" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="130" y="320" locale="br" text="Os objetos quicam para longe da plataforma" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="br" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="145" y="327" locale="ja" text="オブジェクトは*プラットフォームで*バウンドします" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="ja" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="129" y="327" locale="de" text="Objekte prallen von Plattformen ab" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="de" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="129" y="320" locale="ru" text="Объекты будут отскакивать от таких платформ" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="ru" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="140" y="320" locale="it" text="Gli oggetti rimbalzeranno fuori dalla piattaforma" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="it" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="129" y="327" locale="zh" text="物体会从弹床上反弹" width="160" special="0" />
+<tutorial04 x="113" y="358" locale="zh" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="129" y="327" locale="fr" text="Les objets rebondiront sur la plate-forme" width="180" special="0" />
+<tutorial04 x="113" y="358" locale="fr" angle="70" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

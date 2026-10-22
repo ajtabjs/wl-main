@@ -1,0 +1,63 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="bottom" background="Egypt" />
+</layer>
+<layer name="Objects">
+<target x="255" y="383" targetType="special" followTheCandy="none" />
+<candy x="64" y="278" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="65" y="200" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<target x="255" y="60" targetType="basic" followTheCandy="none" />
+<rocket x="65" y="383" angle="-30" impulse="5" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<rocket x="255" y="253" angle="90" impulse="5" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<candy x="65" y="70" candyNumber="second" isDriven="true" lasso="false" />
+<star x="65" y="160" timeout="-1" index="0" />
+<star x="160" y="318" timeout="-1" index="0" />
+<star x="255" y="318" timeout="-1" index="0" />
+<hiddenElement x="160" y="205" radius="30" />
+</layer>
+<layer name="En">
+<tutorial04 x="80" y="435" locale="en" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="110" y="415" locale="en" text="Activate the rocket with the candy" width="160" special="0" />
+</layer>
+<layer name="nl">
+<tutorial04 x="80" y="435" locale="nl" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="110" y="415" locale="nl" text="Activeer de raket met het snoepgoed" width="140" special="0" />
+</layer>
+<layer name="ko">
+<tutorial04 x="80" y="435" locale="ko" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="90" y="415" locale="ko" text="사탕으로 로켓을 작동시키세요" width="140" special="0" />
+</layer>
+<layer name="es">
+<tutorial04 x="80" y="435" locale="es" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="100" y="415" locale="es" text="Activa el cohete con el caramelo" width="140" special="0" />
+</layer>
+<layer name="br">
+<tutorial04 x="80" y="435" locale="br" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="90" y="415" locale="br" text="Ative o foguete com o doce" width="140" special="0" />
+</layer>
+<layer name="ja">
+<tutorial04 x="80" y="435" locale="ja" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="90" y="395" locale="ja" text="キャンディで*ロケットを*起動*させ*ましょう" width="140" special="0" />
+</layer>
+<layer name="de">
+<tutorial04 x="80" y="435" locale="de" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="110" y="415" locale="de" text="Aktiviere die Rakete mit dem Bonbon" width="160" special="0" />
+</layer>
+<layer name="ru">
+<tutorial04 x="80" y="435" locale="ru" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="110" y="415" locale="ru" text="Запустите ракету с помощью леденца" width="148" special="0" />
+</layer>
+<layer name="it">
+<tutorial04 x="80" y="435" locale="it" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="100" y="415" locale="it" text="Attiva il missile con il bonbon" width="130" special="0" />
+</layer>
+<layer name="zh">
+<tutorial04 x="80" y="435" locale="zh" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="110" y="415" locale="zh" text="用糖果*发射*火箭" width="140" special="0" />
+</layer>
+<layer name="fr">
+<tutorial04 x="80" y="435" locale="fr" angle="90" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="90" y="415" locale="fr" text="Active la fusée avec le bonbon" width="140" special="0" />
+</layer>
+</map>

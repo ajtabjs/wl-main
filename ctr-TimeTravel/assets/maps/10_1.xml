@@ -1,0 +1,63 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="bottom" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="56" y="418" targetType="special" followTheCandy="none" />
+<target x="56" y="317" targetType="basic" followTheCandy="none" />
+<candy x="60" y="120" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="60" y="46" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="251" y="418" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="253" y="330" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="60" y="239" timeout="-1" index="0" />
+<star x="198" y="356" timeout="-1" index="0" />
+<star x="160" y="290" timeout="-1" index="0" />
+<p_magnetSwitcher x="253" y="249" />
+<hiddenElement x="255" y="78" radius="30" />
+</layer>
+<layer name="en">
+<tutorialText x="114" y="52" locale="en" text="Candies are attracted to each other when this button is pressed." width="185" special="0" />
+<tutorial04 x="264" y="174" locale="en" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="137" y="34" locale="ru" text="Леденцы притягиваются друг к другу, когда кнопка нажата." width="160" special="0" />
+<tutorial04 x="264" y="174" locale="ru" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="137" y="34" locale="fr" text="Les bonbons sont attirés les uns vers les autres lorsque ce bouton est activé." width="160" special="0" />
+<tutorial04 x="264" y="183" locale="fr" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="137" y="34" locale="de" text="Wenn dieser Knopf gedrückt ist, ziehen sich die Bonbons gegenseitig an." width="160" special="0" />
+<tutorial04 x="264" y="179" locale="de" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="137" y="57" locale="ko" text="이 버튼을 누르면 사탕들이 서로 끌어당겨요." width="160" special="0" />
+<tutorial04 x="264" y="174" locale="ko" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="131" y="52" locale="zh" text="按下此按钮时，糖果会相互吸引。" width="160" special="0" />
+<tutorial04 x="264" y="174" locale="zh" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="122" y="59" locale="ja" text="このボタンが押されると、 キャンディー同士がくっつ きます。" width="160" special="0" />
+<tutorial04 x="264" y="174" locale="ja" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="122" y="40" locale="es" text="Los caramelos se atraen entre ellos cuando presionas este botón." width="160" special="0" />
+<tutorial04 x="264" y="174" locale="es" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="114" y="41" locale="it" text="Le caramelle si attraggono quando questo pulsante viene premuto." width="160" special="0" />
+<tutorial04 x="264" y="174" locale="it" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="119" y="43" locale="nl" text="Bij een druk op deze knop worden snoepjes tot elkaar aangetrokken." width="160" special="0" />
+<tutorial04 x="264" y="174" locale="nl" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="137" y="28" locale="br" text="Os doces são atraídos um ao outro quando este botão é pressionado." width="160" special="0" />
+<tutorial04 x="264" y="174" locale="br" angle="-60" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

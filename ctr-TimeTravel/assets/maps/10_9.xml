@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="140" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="124" y="147" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="199" y="222" candyNumber="second" isDriven="false" lasso="false" />
+<target x="272" y="409" targetType="basic" followTheCandy="none" />
+<target x="277" y="142" targetType="special" followTheCandy="none" />
+<p_magnetSwitcher x="270" y="332" />
+<grab x="126" y="53" length="52" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<bouncer2 x="196" y="269" angle="0" size="2" />
+<rocket x="41" y="422" angle="90" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<grab x="126" y="248" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<rocket x="130" y="421" angle="90" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<star x="204" y="141" timeout="-1" index="0" />
+<star x="41" y="334" timeout="-1" index="0" />
+<star x="203" y="418" timeout="-1" index="0" />
+<hiddenElement x="53" y="147" radius="30" />
+</layer>
+</map>

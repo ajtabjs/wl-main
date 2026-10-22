@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="bottom" background="Egypt" />
+</layer>
+<layer name="Objects">
+<candy x="195" y="187" candyNumber="first" isDriven="true" />
+<candy x="138" y="418" candyNumber="second" isDriven="false" />
+<target x="65" y="302" targetType="special" />
+<target x="59" y="87" targetType="basic" />
+<star x="180" y="315" timeout="-1" index="0" />
+<grab x="137" y="303" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<spike3 x="243" y="240" angle="0" size="3" toggled="false" />
+<spike2 x="153" y="200" angle="90" size="2" toggled="false" />
+<spike4 x="305" y="139" angle="90" size="4" toggled="false" />
+<spike1 x="173" y="134" angle="0" size="1" toggled="false" />
+<spike4 x="229" y="33" angle="0" size="4" toggled="false" />
+<pump x="45" y="429" angle="0" />
+<pump x="252" y="320" angle="180" />
+<star x="253" y="89" timeout="-1" index="0" />
+<star x="174" y="87" timeout="-1" index="0" />
+<bubble x="202" y="417" />
+<spike3 x="76" y="31" angle="0" size="3" toggled="false" />
+<hiddenElement x="274" y="423" radius="30" />
+</layer>
+</map>

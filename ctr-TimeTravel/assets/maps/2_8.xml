@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="50" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<candy x="158" y="110" candyNumber="first" isDriven="false" />
+<target x="264" y="97" targetType="special" />
+<target x="54" y="95" targetType="basic" />
+<candy x="157" y="174" candyNumber="second" isDriven="false" />
+<pauseSwitcher x="249" y="373" />
+<bubble x="154" y="405" />
+<star x="56" y="188" timeout="-1" index="0" />
+<star x="263" y="189" timeout="-1" index="0" />
+<star x="155" y="404" timeout="-1" index="0" />
+<grab x="160" y="33" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bubble x="155" y="349" />
+<pump x="93" y="265" angle="0" />
+<pump x="215" y="265" angle="180" />
+<hiddenElement x="63" y="379" radius="30" />
+</layer>
+</map>

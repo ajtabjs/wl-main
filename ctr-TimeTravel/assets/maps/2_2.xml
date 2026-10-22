@@ -1,0 +1,67 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="2" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<target x="128" y="412" targetType="special" />
+<target x="243" y="336" targetType="basic" />
+<grab x="26" y="135" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="87" y="103" candyNumber="second" isDriven="false" />
+<grab x="270" y="32" length="180" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="51" y="208" candyNumber="first" isDriven="false" />
+<pauseSwitcher x="243" y="428" />
+<star x="89" y="166" timeout="-1" index="0" />
+<star x="133" y="302" timeout="-1" index="0" />
+<star x="247" y="231" timeout="-1" index="0" />
+<grab x="225" y="134" length="180" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="71" y="25" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<spike1 x="288" y="245" angle="90" size="1" toggled="false" />
+<spike1 x="173" y="319" angle="90" size="1" toggled="false" />
+<hiddenElement x="170" y="40" radius="30" />
+</layer>
+<layer name="En">
+<tutorial06 x="154" y="195" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="en" text="Keep the candies away from spikes" width="160" special="0" />
+</layer>
+<layer name="nl">
+<tutorial06 x="154" y="195" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="nl" text="Houd de snoepjes uit de buurt van scherpe randjes" width="163" special="0" />
+</layer>
+<layer name="ko">
+<tutorial06 x="154" y="195" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="ko" text="뾰족 장애물을 조심하세요" width="160" special="0" />
+</layer>
+<layer name="es">
+<tutorial06 x="154" y="195" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="es" text="Mantén los caramelos alejados de los pinchos" width="165" special="0" />
+</layer>
+<layer name="br">
+<tutorial06 x="154" y="195" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="br" text="Mantenha os doces longe dos espetos" width="160" special="0" />
+</layer>
+<layer name="ja">
+<tutorial06 x="154" y="195" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="ja" text="キャンディをトゲに*近づけないようにしましょう" width="160" special="0" />
+</layer>
+<layer name="de">
+<tutorial06 x="161" y="163" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="83" y="174" locale="de" text="Pass auf, dass die Bonbons nicht in die Nähe der Stacheln geraten." width="160" special="0" />
+</layer>
+<layer name="ru">
+<tutorial06 x="154" y="195" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="ru" text="Не дайте леденцам разбиться о шипы" width="160" special="0" />
+</layer>
+<layer name="it">
+<tutorial06 x="154" y="195" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="it" text="Tieni i bonbon lontani dagli aculei" width="160" special="0" />
+</layer>
+<layer name="zh">
+<tutorial06 x="154" y="195" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="zh" text="让糖果*离钉子*远一些" width="160" special="0" />
+</layer>
+<layer name="fr">
+<tutorial06 x="154" y="195" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="76" y="206" locale="fr" text="Garde les bonbons loin des pointes" width="160" special="0" />
+</layer>
+</map>

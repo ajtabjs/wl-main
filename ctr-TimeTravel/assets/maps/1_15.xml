@@ -1,0 +1,25 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="214" y="422" targetType="special" followTheCandy="none" />
+<target x="102" y="420" targetType="basic" followTheCandy="none" />
+<grab x="100" y="172" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<candy x="96" y="274" candyNumber="first" isDriven="false" lasso="false" />
+<grab x="209" y="278" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="201" y="182" candyNumber="second" isDriven="false" lasso="false" />
+<star x="214" y="368" timeout="-1" index="0" />
+<star x="101" y="364" timeout="-1" index="0" />
+<star x="137" y="93" timeout="-1" index="0" />
+<axe x="266" y="106" axeNumber="third" />
+<grab x="269" y="42" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="third" bombsHighPriority="false" breakable="true" />
+<grab x="209" y="278" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="100" y="172" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<bubble x="201" y="182" />
+<grab x="155" y="43" length="160" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="third" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="156" y="234" radius="30" />
+<snowflake x="293" y="340" radius="30" />
+</layer>
+</map>

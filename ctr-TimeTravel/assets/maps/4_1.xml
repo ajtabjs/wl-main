@@ -1,0 +1,63 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="bottom" background="Egypt" />
+</layer>
+<layer name="Objects">
+<target x="235" y="415" targetType="special" followTheCandy="none" />
+<target x="235" y="200" targetType="basic" followTheCandy="none" />
+<grab x="140" y="190" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="235" y="100" timeout="-1" index="0" />
+<bubble x="140" y="70" />
+<candy x="141" y="80" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="139" y="298" candyNumber="second" isDriven="true" lasso="false" />
+<star x="235" y="315" timeout="-1" index="0" />
+<star x="235" y="360" timeout="-1" index="0" />
+<pump x="70" y="70" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<hiddenElement x="79" y="432" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="5" y="310" locale="en" text="Flying candy follows the movements of the other candy" width="125" special="0" />
+<tutorial09 x="60" y="294" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="5" y="310" locale="nl" text="Vliegende snoepjes volgen de bewegingen van andere snoepjes" width="120" special="0" />
+<tutorial09 x="60" y="294" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="5" y="310" locale="ko" text="비행 사탕은 다른 사탕을 따라 움직여요" width="130" special="0" />
+<tutorial09 x="60" y="294" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="5" y="310" locale="es" text="Los caramelos voladores siguen los movimientos de los demás caramelos" width="125" special="0" />
+<tutorial09 x="60" y="294" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="5" y="310" locale="br" text="Os doces voadores seguem os movimentos dos outros doces" width="130" special="0" />
+<tutorial09 x="60" y="294" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="35" y="340" locale="ja" text="空飛ぶキャンディは*他のキャンディの動きに*従います" width="130" special="0" />
+<tutorial09 x="99" y="320" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="5" y="310" locale="de" text="Fliegende Bonbons folgen den Bewegungen anderer Bonbons" width="130" special="0" />
+<tutorial09 x="60" y="294" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="5" y="310" locale="ru" text="Крылатый леденец повторяет движения второго леденца" width="140" special="0" />
+<tutorial09 x="60" y="294" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="5" y="310" locale="it" text="I bonbon volante segue i movimenti dell'altro bonbon" width="130" special="0" />
+<tutorial09 x="60" y="294" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="5" y="310" locale="zh" text="飞动*的*糖果*会*跟随*其它*糖果" width="130" special="0" />
+<tutorial09 x="60" y="294" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="5" y="310" locale="fr" text="Le bonbon volant suit les déplacements de l’autre bonbon" width="130" special="0" />
+<tutorial09 x="60" y="294" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

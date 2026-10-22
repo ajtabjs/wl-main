@@ -1,0 +1,66 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="1" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<grab x="130" y="30" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="131" y="121" candyNumber="first" isDriven="false" lasso="false" />
+<target x="190" y="405" targetType="basic" followTheCandy="none" />
+<target x="130" y="300" targetType="special" followTheCandy="none" />
+<grab x="190" y="120" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="191" y="211" candyNumber="second" isDriven="false" lasso="false" />
+<star x="60" y="290" timeout="-1" index="0" />
+<star x="280" y="310" timeout="-1" index="0" />
+<star x="40" y="210" timeout="-1" index="0" />
+<grab x="130" y="210" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="40" y="120" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="190" y="310" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="280" y="210" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="80" y="75" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="211" y="90" locale="en" text="Collect as many stars as you can" width="100" special="0" />
+<tutorial09 x="260" y="75" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="205" y="90" locale="nl" text="Verzamel zoveel mogelijk sterren" width="100" special="0" />
+<tutorial09 x="255" y="75" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="205" y="90" locale="ko" text="별을 최대한 많이 모으세요" width="105" special="0" />
+<tutorial09 x="255" y="75" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="205" y="85" locale="es" text="Consigue tantas estrellas como puedas" width="97" special="0" />
+<tutorial09 x="250" y="75" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="205" y="87" locale="br" text="Colete o máximo de estrelas que conseguir" width="100" special="0" />
+<tutorial09 x="255" y="75" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="190" y="20" locale="ja" text="できる限り*たくさんのスターを*集めましょう" width="100" special="0" />
+<tutorial09 x="240" y="130" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="200" y="90" locale="de" text="Sammele so viele Sterne, wie du kannst" width="110" special="0" />
+<tutorial09 x="260" y="75" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="211" y="90" locale="ru" text="Старайтесь собрать как можно больше звезд" width="105" special="0" />
+<tutorial09 x="260" y="75" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="205" y="90" locale="it" text="Recupera più stelle possibili" width="105" special="0" />
+<tutorial09 x="260" y="75" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="211" y="90" locale="zh" text="尽可能*多获得*星星" width="100" special="0" />
+<tutorial09 x="260" y="75" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="211" y="90" locale="fr" text="Recueille le plus d'étoiles possible" width="100" special="0" />
+<tutorial09 x="260" y="75" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

@@ -1,0 +1,66 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="120" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<candy x="109" y="111" candyNumber="first" isDriven="false" />
+<target x="160" y="403" targetType="special" />
+<target x="52" y="278" targetType="basic" />
+<candy x="227" y="251" candyNumber="second" isDriven="false" />
+<grab x="230" y="345" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<star x="225" y="410" timeout="-1" index="0" />
+<star x="225" y="437" timeout="-1" index="0" />
+<star x="107" y="282" timeout="-1" index="0" />
+<grab x="110" y="200" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bubble x="109" y="109" />
+<pump x="43" y="104" angle="0" />
+<bubble x="228" y="249" />
+<pump x="159" y="248" angle="0" />
+<hiddenElement x="52" y="380" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="166" y="101" locale="en" text="Tap the air cushion to blow objects" width="120" special="0" />
+<tutorial09 x="228" y="84" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="166" y="101" locale="nl" text="Tik op het luchtkussen om objecten te verplaatsen" width="120" special="0" />
+<tutorial09 x="228" y="84" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="166" y="101" locale="ko" text="공기 주머니를 누르면 물체가 날아가요" width="120" special="0" />
+<tutorial09 x="220" y="84" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="166" y="101" locale="es" text="Aprieta el fuelle para soplar aire y mover objetos" width="110" special="0" />
+<tutorial09 x="220" y="84" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="166" y="101" locale="br" text="Toque na almofada de ar para soprar os objetos" width="120" special="0" />
+<tutorial09 x="228" y="84" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="139" y="125" locale="ja" text="エアクッションをタップして*オブジェクトを吹き飛ばします" width="120" special="0" />
+<tutorial09 x="212" y="107" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="166" y="101" locale="de" text="Tippe Luftkissen an, um Objekte wegzupusten" width="130" special="0" />
+<tutorial09 x="228" y="84" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="166" y="101" locale="ru" text="Нажмите на подушку, чтобы подуть на леденец" width="120" special="0" />
+<tutorial09 x="228" y="84" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="166" y="90" locale="it" text="Tocca il cuscino d'aria per soffiare sugli oggetti e spostarli" width="120" special="0" />
+<tutorial09 x="228" y="75" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="166" y="101" locale="zh" text="点击*气垫*吹动*目标" width="120" special="0" />
+<tutorial09 x="228" y="84" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="166" y="101" locale="fr" text="Touche le coussin d'air pour pousser les objets" width="107" special="0" />
+<tutorial09 x="220" y="84" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

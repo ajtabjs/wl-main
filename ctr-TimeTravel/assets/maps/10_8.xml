@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="1" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Future" />
+</layer>
+<layer name="Objects">
+<target x="260" y="421" targetType="basic" followTheCandy="none" />
+<target x="263" y="189" targetType="special" followTheCandy="none" />
+<sock x="161" y="452" group="0" angle="-90" />
+<sock x="163" y="108" group="0" angle="-90" />
+<grab x="162" y="193" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" bindBasket="false" />
+<candy x="160" y="288" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="62" y="294" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="66" y="197" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="164" y="196" timeout="-1" index="0" />
+<p_magnetSwitcher x="63" y="145" />
+<spike1 x="163" y="159" angle="0" size="1" toggled="false" />
+<pump x="65" y="53" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<grab x="268" y="38" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="45" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="261" y="346" timeout="-1" index="0" />
+<star x="262" y="121" timeout="-1" index="0" />
+<hiddenElement x="116" y="244" radius="30" />
+</layer>
+</map>

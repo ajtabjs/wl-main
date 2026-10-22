@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="157" y="208" candyNumber="first" isDriven="true" lasso="false" />
+<candy x="94" y="208" candyNumber="second" isDriven="false" lasso="false" />
+<target x="229" y="72" targetType="special" targetLook="3" followTheCandy="none" />
+<target x="276" y="423" targetType="basic" targetLook="-1" followTheCandy="none" />
+<star x="227" y="206" timeout="-1" index="0" />
+<star x="219" y="331" timeout="-1" index="0" />
+<star x="155" y="331" timeout="-1" index="0" />
+<bubble x="94" y="209" />
+<bouncer1 x="92" y="150" angle="0" size="1" />
+<bouncer1 x="156" y="151" angle="0" size="1" />
+<pump x="28" y="208" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<bubble x="94" y="327" />
+<bouncer1 x="97" y="376" angle="0" size="1" />
+<bouncer1 x="161" y="377" angle="0" size="1" />
+<pump x="281" y="329" angle="180" attachedToRail="false" railGroup="0" startDelay="0" />
+</layer>
+</map>

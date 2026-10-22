@@ -1,0 +1,21 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="bottom" background="Egypt" />
+</layer>
+<layer name="Objects">
+<candy x="49" y="364" candyNumber="first" isDriven="true" lasso="false" />
+<candy x="48" y="284" candyNumber="second" isDriven="false" lasso="false" />
+<target x="50" y="66" targetType="basic" followTheCandy="none" />
+<target x="51" y="420" targetType="special" followTheCandy="none" />
+<star x="270" y="344" timeout="-1" index="0" />
+<star x="146" y="72" timeout="-1" index="0" />
+<star x="147" y="145" timeout="-1" index="0" />
+<grab x="49" y="176" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="220" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bubble x="268" y="280" />
+<spike2 x="148" y="114" angle="0" size="2" toggled="false" />
+<spike2 x="143" y="324" angle="0" size="2" toggled="false" />
+<hiddenElement x="265" y="417" radius="30" />
+<snowflake x="144" y="239" radius="30" />
+</layer>
+</map>

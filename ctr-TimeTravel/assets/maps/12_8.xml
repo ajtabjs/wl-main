@@ -1,0 +1,19 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Disco" />
+</layer>
+<layer name="Objects">
+<candy x="191" y="55" candyNumber="first" isDriven="true" lasso="false" />
+<candy x="239" y="235" candyNumber="second" isDriven="false" lasso="false" />
+<target x="142" y="407" targetType="special" targetLook="3" followTheCandy="none" />
+<target x="58" y="142" targetType="basic" targetLook="-1" followTheCandy="none" />
+<grab x="248" y="341" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="120" moveVertical="true" moveOffset="120" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="123" y="52" timeout="-1" index="0" />
+<star x="78" y="299" timeout="-1" index="0" />
+<grab x="146" y="223" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="120" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<bubble x="238" y="234" />
+<star x="224" y="134" timeout="-1" index="0" />
+<spike4 x="187" y="179" angle="0" size="4" toggled="false" />
+</layer>
+</map>

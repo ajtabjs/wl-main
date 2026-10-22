@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="110" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Future" />
+</layer>
+<layer name="Objects">
+<candy x="40" y="235" candyNumber="first" isDriven="false" lasso="false" />
+<target x="55" y="90" targetType="special" followTheCandy="first" />
+<target x="283" y="265" targetType="basic" followTheCandy="none" />
+<candy x="276" y="125" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="41" y="160" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<clock x="255" y="424" />
+<bouncer2 x="155" y="342" angle="0" size="2" path="0,0" moveSpeed="60" rotateSpeed="60" />
+<bouncer2 x="250" y="341" angle="0" size="2" path="0,0" moveSpeed="60" rotateSpeed="-60" />
+<pauseSwitcher x="145" y="425" />
+<bouncer2 x="60" y="342" angle="0" size="2" path="0,0" moveSpeed="60" rotateSpeed="-60" />
+<star x="111" y="258" timeout="-1" index="0" />
+<star x="234" y="257" timeout="-1" index="0" />
+<star x="172" y="257" timeout="-1" index="0" />
+<grab x="275" y="45" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="168" y="106" length="38" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<rocket x="169" y="42" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<axe x="166" y="38" axeNumber="first" />
+<hiddenElement x="80" y="423" radius="30" />
+</layer>
+</map>

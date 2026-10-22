@@ -1,0 +1,66 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="65" y="415" targetType="special" />
+<target x="180" y="415" targetType="basic" />
+<grab x="65" y="106" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<candy x="64" y="204" candyNumber="first" isDriven="false" />
+<grab x="181" y="236" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="180" y="325" candyNumber="second" isDriven="false" />
+<star x="104" y="270" path="-68,2," moveSpeed="60" timeout="-1" index="0" />
+<star x="21" y="315" path="96,-3," moveSpeed="90" timeout="-1" index="0" />
+<star x="117" y="356" path="-97,0," moveSpeed="50" timeout="-1" index="0" />
+<grab x="176" y="46" length="120" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="263" y="120" axeNumber="first" />
+<grab x="266" y="45" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="91" y="45" length="220" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="45" y="65" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="214" y="232" locale="en" text="You can restart the level by pressing the   button" width="100" special="0" />
+<tutorial08 x="222" y="353" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="209" y="232" locale="nl" text="Je kunt het level opnieuw starten door op      te drukken" width="100" special="0" />
+<tutorial08 x="259" y="324" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="209" y="232" locale="ko" text="   버튼을 누르면 레벨이 다시 시작됩니다" width="100" special="0" />
+<tutorial08 x="228" y="253" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="200" y="232" locale="es" text="Puedes reiniciar el nivel pulsando el botón  " width="100" special="0" />
+<tutorial08 x="295" y="328" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="200" y="232" locale="br" text="Você pode recomeçar o nível usando o botão  " width="100" special="0" />
+<tutorial08 x="290" y="327" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="174" y="139" locale="ja" text=" ボタンを押すことで*ステージを*やり直すことができます" width="100" special="0" />
+<tutorial08 x="140" y="162" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="198" y="253" locale="de" text="Du kannst das Level neu starten, indem du auf den   -Button tippst" width="115" special="0" />
+<tutorial08 x="186" y="368" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="209" y="232" locale="ru" text="Вы можете перезапустить уровень, нажав кнопку" width="100" special="0" />
+<tutorial08 x="261" y="349" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="200" y="232" locale="it" text="Puoi riavviare il livello premendo il pulsante  " width="107" special="0" />
+<tutorial08 x="298" y="327" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="209" y="232" locale="zh" text="按下@键即可重新开始本关" width="100" special="0" />
+<tutorial08 x="261" y="376" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="200" y="232" locale="fr" text="Tu peux redémarrer le niveau en appuyant sur le bouton  " width="105" special="0" />
+<tutorial08 x="300" y="350" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

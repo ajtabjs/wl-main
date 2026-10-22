@@ -1,0 +1,25 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="20" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="special" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Greece" />
+</layer>
+<layer name="Objects">
+<sock x="44" y="340" group="0" angle="270" />
+<sock x="204" y="400" group="0" angle="270" />
+<sock x="121" y="370" group="1" angle="270" />
+<sock x="279" y="74" group="1" angle="90" />
+<bubble x="279" y="146" />
+<star x="279" y="337" timeout="-1" index="0" />
+<target x="278" y="431" targetType="basic" />
+<target x="131" y="49" targetType="special" />
+<shieldTrigger x="42" y="206" />
+<pump x="279" y="231" angle="160" />
+<star x="205" y="295" timeout="-1" index="0" />
+<star x="121" y="246" timeout="-1" index="0" />
+<grab x="46" y="79" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="45" y="144" candyNumber="first" isDriven="false" />
+<grab x="219" y="74" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="220" y="148" candyNumber="second" isDriven="false" />
+<hiddenElement x="87" y="229" radius="30" />
+</layer>
+</map>

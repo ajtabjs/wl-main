@@ -1,0 +1,63 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="61" y="165" candyNumber="first" isDriven="true" />
+<candy x="61" y="315" candyNumber="second" isDriven="false" />
+<target x="70" y="70" targetType="special" />
+<target x="250" y="70" targetType="basic" />
+<rocket x="60" y="420" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<grab x="60" y="210" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<star x="205" y="110" timeout="-1" index="0" />
+<rocket x="260" y="240" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<star x="115" y="110" timeout="-1" index="0" />
+<star x="160" y="320" timeout="-1" index="0" />
+<hiddenElement x="160" y="65" radius="30" />
+</layer>
+<layer name="en">
+<tutorial09 x="238" y="343" locale="en" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="163" y="363" locale="en" text="You can change the rocket's angle by rotating it" width="160" special="0" />
+</layer>
+<layer name="nl">
+<tutorial09 x="228" y="350" locale="nl" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="147" y="363" locale="nl" text="Je kunt de hoek van de raket wijzigen door eraan te draaien" width="160" special="0" />
+</layer>
+<layer name="ko">
+<tutorial09 x="230" y="350" locale="ko" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="150" y="363" locale="ko" text="로켓을 돌려서 각도를 조절할 수 있어요" width="160" special="0" />
+</layer>
+<layer name="es">
+<tutorial09 x="238" y="343" locale="es" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="163" y="363" locale="es" text="Puedes cambiar el ángulo del cohete girándolo" width="160" special="0" />
+</layer>
+<layer name="br">
+<tutorial09 x="230" y="350" locale="br" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="155" y="363" locale="br" text="Gire o foguete para mudar sua direção" width="160" special="0" />
+</layer>
+<layer name="ja">
+<tutorial09 x="205" y="350" locale="ja" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="125" y="365" locale="ja" text="ロケットの角度は*回転させることによって*調節できます" width="160" special="0" />
+</layer>
+<layer name="de">
+<tutorial09 x="215" y="350" locale="de" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="140" y="363" locale="de" text="Ändere den Winkel der Rakete, indem du sie rotierst" width="160" special="0" />
+</layer>
+<layer name="ru">
+<tutorial09 x="238" y="343" locale="ru" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="155" y="360" locale="ru" text="Направление запуска можно изменить вращением ракеты" width="160" special="0" />
+</layer>
+<layer name="it">
+<tutorial09 x="238" y="343" locale="it" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="163" y="363" locale="it" text="Puoi cambiare l'angolazione del missile ruotandolo" width="160" special="0" />
+</layer>
+<layer name="zh">
+<tutorial09 x="238" y="343" locale="zh" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="163" y="363" locale="zh" text="可以*通过*旋转火箭*来改变*其角度" width="160" special="0" />
+</layer>
+<layer name="fr">
+<tutorial09 x="216" y="345" locale="fr" moveSpeed="100" rotateSpeed="100" />
+<tutorialText x="140" y="355" locale="fr" text="Tu peux changer l'angle emprunté par la fusée en la faisant tourner." width="160" special="0" />
+</layer>
+</map>

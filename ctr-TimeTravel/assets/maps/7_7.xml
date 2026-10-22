@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="30" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Disco" />
+</layer>
+<layer name="Objects">
+<target x="275" y="65" targetType="basic" followTheCandy="none" />
+<target x="110" y="170" targetType="special" followTheCandy="none" />
+<candy x="44" y="100" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="46" y="225" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="45" y="30" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="45" y="150" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<sock x="175" y="295" group="0" angle="89" path="0,0" moveSpeed="50" rotateSpeed="90" />
+<grab x="45" y="275" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="true" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<discoball x="44" y="335" ballNumber="second" />
+<sock x="45" y="450" group="0" angle="-90" />
+<grab x="245" y="200" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="25" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<clock x="245" y="415" />
+<laser x="290" y="260" angle="-90" />
+<star x="45" y="405" timeout="-1" index="0" />
+<star x="230" y="125" timeout="-1" index="0" />
+<star x="130" y="240" timeout="-1" index="0" />
+<hiddenElement x="112" y="63" radius="30" />
+<snowflake x="176" y="126" radius="30" />
+</layer>
+</map>

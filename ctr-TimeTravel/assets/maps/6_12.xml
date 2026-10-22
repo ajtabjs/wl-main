@@ -1,0 +1,27 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Prehistoric" />
+</layer>
+<layer name="Objects">
+<clock x="160" y="422" />
+<target x="160" y="315" targetType="basic" />
+<target x="255" y="320" targetType="special" />
+<grab x="160" y="140" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<candy x="161" y="210" candyNumber="first" isDriven="false" />
+<grab x="250" y="24" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="251" y="89" candyNumber="second" isDriven="false" />
+<star x="160" y="270" timeout="-1" index="0" />
+<star x="250" y="145" timeout="-1" index="0" />
+<star x="250" y="270" timeout="-1" index="0" />
+<sock x="40" y="425" group="0" angle="0" path="0,0" rotateSpeed="60" />
+<sock x="30" y="180" group="1" angle="180" path="0,0" rotateSpeed="-60" />
+<sock x="290" y="180" group="0" angle="-90" path="0,0" rotateSpeed="60" />
+<sock x="30" y="59" group="1" angle="180" path="0,0" rotateSpeed="60" />
+<grab x="40" y="224" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<rocket x="40" y="355" angle="90" impulse="5" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<axe x="41" y="284" axeNumber="first" />
+<pauseSwitcher x="270" y="422" />
+<hiddenElement x="94" y="269" radius="30" />
+</layer>
+</map>

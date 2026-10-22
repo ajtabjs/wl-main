@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Greece" />
+</layer>
+<layer name="Objects">
+<candy x="96" y="120" candyNumber="first" isDriven="false" lasso="false" />
+<target x="95" y="235" targetType="basic" followTheCandy="none" />
+<candy x="225" y="295" candyNumber="second" isDriven="false" lasso="false" />
+<shieldTrigger x="225" y="340" />
+<target x="225" y="55" targetType="special" followTheCandy="none" />
+<bouncer2 x="225" y="380" angle="0" size="2" path="0,0" moveSpeed="100" />
+<bubble x="225" y="245" />
+<star x="95" y="405" timeout="-1" index="0" />
+<star x="95" y="305" timeout="-1" index="0" />
+<star x="225" y="135" timeout="-1" index="0" />
+<pump x="225" y="437" angle="270" attachedToRail="false" railGroup="0" startDelay="0" />
+<bubble x="95" y="355" />
+<grab x="95" y="30" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="39" y="352" radius="30" />
+<snowflake x="94" y="30" radius="30" />
+</layer>
+</map>

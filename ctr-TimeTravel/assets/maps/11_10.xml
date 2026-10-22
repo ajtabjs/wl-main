@@ -1,0 +1,20 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="95" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Future" />
+</layer>
+<layer name="Objects">
+<candy x="260" y="163" candyNumber="first" isDriven="false" lasso="false" />
+<target x="259" y="77" targetType="special" followTheCandy="first" />
+<target x="113" y="422" targetType="basic" followTheCandy="none" />
+<candy x="253" y="256" candyNumber="second" isDriven="false" lasso="false" />
+<clock x="257" y="410" />
+<bubble x="257" y="160" />
+<bouncer2 x="250" y="296" angle="0" size="2" path="0,0" moveSpeed="60" rotateSpeed="60" />
+<star x="181" y="208" timeout="-1" index="0" />
+<star x="107" y="122" timeout="-1" index="0" />
+<star x="115" y="350" timeout="-1" index="0" />
+<bubble x="145" y="266" />
+<hiddenElement x="61" y="65" radius="30" />
+</layer>
+</map>

@@ -1,0 +1,65 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="right" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="65" y="205" targetType="basic" followTheCandy="none" />
+<target x="255" y="205" targetType="special" followTheCandy="none" />
+<grab x="160" y="245" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="true" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bomb x="159" y="330" bombNumber="second" />
+<grab x="160" y="85" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="160" y="85" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="140" y="210" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="180" y="210" candyNumber="second" isDriven="false" lasso="false" />
+<star x="36" y="79" timeout="-1" index="0" />
+<bubble x="160" y="385" />
+<star x="203" y="147" timeout="-1" index="0" />
+<star x="286" y="93" timeout="-1" index="0" />
+<hiddenElement x="160" y="45" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="80" y="405" locale="en" text="Bomb explodes on impact" width="160" special="0" />
+<tutorial09 x="70" y="440" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="80" y="405" locale="nl" text="Bom ontploft bij botsing" width="160" special="0" />
+<tutorial09 x="70" y="440" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="70" y="405" locale="ko" text="충돌하면 폭탄이 터져요" width="200" special="0" />
+<tutorial09 x="65" y="430" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="80" y="395" locale="es" text="Las bombas explotan cuando chocan con otros objetos" width="160" special="0" />
+<tutorial09 x="60" y="440" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="80" y="405" locale="br" text="As bombas explodem ao menor impacto" width="160" special="0" />
+<tutorial09 x="60" y="440" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="85" y="405" locale="ja" text="爆弾は*衝突することで*爆発します" width="160" special="0" />
+<tutorial09 x="65" y="440" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="80" y="405" locale="de" text="Bombe explodiert bei Kollision" width="160" special="0" />
+<tutorial09 x="60" y="440" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="80" y="405" locale="ru" text="Бомба взрывается при столкновении" width="160" special="0" />
+<tutorial09 x="60" y="440" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="80" y="405" locale="it" text="Le bombe esplodono al momento dell'impatto" width="170" special="0" />
+<tutorial09 x="60" y="440" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="80" y="405" locale="zh" text="碰撞后*炸弹*就会*爆炸" width="160" special="0" />
+<tutorial09 x="70" y="440" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="90" y="405" locale="fr" text="La bombe explose lors d’une collision" width="140" special="0" />
+<tutorial09 x="70" y="440" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

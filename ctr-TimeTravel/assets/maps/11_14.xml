@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Future" />
+</layer>
+<layer name="Objects">
+<candy x="239" y="146" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="101" y="261" candyNumber="second" isDriven="false" lasso="false" />
+<target x="245" y="341" targetType="special" followTheCandy="first" />
+<target x="108" y="424" targetType="basic" followTheCandy="none" />
+<grab x="102" y="153" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="140" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="240" y="51" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="140" moveVertical="false" moveOffset="140" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="40" y="52" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="37" y="140" axeNumber="first" />
+<rocket x="40" y="222" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="270" y="223" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<star x="169" y="304" timeout="-1" index="0" />
+<star x="106" y="381" timeout="-1" index="0" />
+<star x="104" y="97" timeout="-1" index="0" />
+<pauseSwitcher x="271" y="439" />
+<hiddenElement x="47" y="426" radius="30" />
+</layer>
+</map>

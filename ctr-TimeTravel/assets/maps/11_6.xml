@@ -1,0 +1,25 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="80" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Future" />
+</layer>
+<layer name="Objects">
+<grab x="67" y="404" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="60" y="180" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="62" y="292" candyNumber="second" isDriven="false" lasso="false" />
+<star x="264" y="244" timeout="-1" index="0" />
+<star x="124" y="187" timeout="-1" index="0" />
+<star x="158" y="374" timeout="-1" index="0" />
+<target x="55" y="102" targetType="special" followTheCandy="second" />
+<target x="158" y="427" targetType="basic" followTheCandy="none" />
+<bubble x="65" y="294" />
+<bouncer2 x="242" y="197" angle="-15" size="2" />
+<bouncer2 x="151" y="222" angle="-15" size="2" />
+<bouncer2 x="59" y="246" angle="-15" size="2" />
+<bubble x="57" y="180" />
+<grab x="27" y="374" length="150" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="303" y="296" length="30" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="221" y="316" axeNumber="first" />
+<hiddenElement x="259" y="417" radius="30" />
+</layer>
+</map>

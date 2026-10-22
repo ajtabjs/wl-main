@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<bouncer1 x="49" y="392" angle="0" size="1" path="0,-170," moveSpeed="130" />
+<target x="268" y="53" targetType="special" followTheCandy="none" />
+<target x="50" y="436" targetType="basic" followTheCandy="none" />
+<star x="201" y="341" timeout="-1" index="0" />
+<star x="276" y="338" timeout="-1" index="0" />
+<grab x="90" y="45" length="35" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="165" moveVertical="false" moveOffset="45" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<candy x="88" y="111" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="49" y="357" candyNumber="second" isDriven="false" lasso="false" />
+<p_magnetSwitcher x="201" y="435" />
+<star x="128" y="431" timeout="-1" index="0" />
+<bouncer1 x="128" y="302" angle="0" size="1" path="0,85,0,-85," moveSpeed="130" />
+<bouncer1 x="202" y="212" angle="0" size="1" path="0,170," moveSpeed="130" />
+<bouncer1 x="276" y="391" angle="0" size="1" path="0,-170," moveSpeed="130" />
+<hiddenElement x="276" y="439" radius="30" />
+</layer>
+</map>

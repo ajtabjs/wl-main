@@ -1,0 +1,21 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="50" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Western" />
+</layer>
+<layer name="Objects">
+<candy x="63" y="144" candyNumber="first" isDriven="false" lasso="true" />
+<candy x="151" y="145" candyNumber="second" isDriven="false" lasso="true" />
+<target x="218" y="288" targetType="special" followTheCandy="none" />
+<target x="117" y="290" targetType="basic" followTheCandy="none" />
+<star x="278" y="283" timeout="-1" index="0" />
+<star x="79" y="235" timeout="-1" index="0" />
+<star x="278" y="173" timeout="-1" index="0" />
+<grab x="64" y="34" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bomb x="39" y="385" bombNumber="first" />
+<grab x="41" y="465" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="true" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="43" y="320" length="30" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="100" moveVertical="true" moveOffset="100" spider="false" bombed="true" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="152" y="34" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="202" y="424" radius="30" />
+</layer>
+</map>

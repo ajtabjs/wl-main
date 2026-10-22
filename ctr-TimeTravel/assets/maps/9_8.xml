@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="60" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="China" />
+</layer>
+<layer name="Layer 1">
+<fan x="136" y="199" angle="90" length="165" angleLength="90" />
+<target x="266" y="257" targetType="basic" followTheCandy="none" />
+<target x="267" y="178" targetType="special" followTheCandy="none" />
+<candy x="133" y="194" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="131" y="313" candyNumber="second" isDriven="false" lasso="false" />
+<star x="129" y="77" timeout="-1" index="0" />
+<star x="75" y="193" timeout="-1" index="0" />
+<bubble x="132" y="312" />
+<bouncer1 x="131" y="141" angle="0" size="1" rotateSpeed="50" />
+<bouncer1 x="132" y="257" angle="0" size="1" rotateSpeed="50" />
+<sock x="137" y="442" group="0" angle="270" />
+<sock x="33" y="201" group="0" angle="0" />
+<star x="203" y="180" timeout="-1" index="0" />
+<bubble x="134" y="191" />
+<hiddenElement x="265" y="378" radius="30" />
+</layer>
+</map>

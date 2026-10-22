@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="60" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="49" y="271" candyNumber="first" isDriven="false" />
+<target x="262" y="432" targetType="basic" />
+<target x="51" y="433" targetType="special" />
+<candy x="273" y="269" candyNumber="second" isDriven="false" />
+<grab x="270" y="109" length="145" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="50" y="109" length="145" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="160" y="199" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="161" y="292" axeNumber="first" />
+<rocket x="162" y="442" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<grab x="220" y="109" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="60" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="28" y="379" path="240,0" moveSpeed="150" timeout="-1" index="0" />
+<star x="60" y="379" path="240,0" moveSpeed="150" timeout="-1" index="0" />
+<grab x="100" y="109" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="60" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<shieldTrigger x="268" y="333" />
+<star x="52" y="329" timeout="-1" index="0" />
+<hiddenElement x="160" y="46" radius="30" />
+</layer>
+</map>

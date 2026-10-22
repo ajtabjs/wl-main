@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="60" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="95" y="110" candyNumber="first" isDriven="false" lasso="false" />
+<target x="95" y="414" targetType="basic" followTheCandy="none" />
+<target x="226" y="413" targetType="special" followTheCandy="none" />
+<candy x="223" y="113" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="226" y="22" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="100" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<grab x="100" y="23" length="100" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="100" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="161" y="323" length="110" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<axe x="163" y="177" axeNumber="first" />
+<rocket x="162" y="171" angle="180" impulse="4" impulseFactor="0.6" time="-1" isRotatable="false" bombsHighPriority="false" />
+<star x="206" y="301" path="RW100" moveSpeed="150" timeout="-1" index="0" />
+<star x="132" y="301" path="RC50" moveSpeed="150" timeout="-1" index="0" />
+<star x="228" y="300" path="RC50" moveSpeed="150" timeout="-1" index="0" />
+<hiddenElement x="35" y="64" radius="30" />
+<snowflake x="33" y="196" radius="30" />
+</layer>
+</map>

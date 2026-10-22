@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="45" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="China" />
+</layer>
+<layer name="Objects">
+<sock x="163" y="172" group="1" angle="-90" />
+<fan x="163" y="227" angle="-90" length="165" angleLength="90" />
+<sock x="163" y="62" group="0" angle="90" />
+<sock x="263" y="432" group="0" angle="-90" />
+<sock x="63" y="388" group="1" angle="-90" />
+<bubble x="165" y="367" />
+<target x="63" y="318" targetType="special" followTheCandy="none" />
+<star x="64" y="211" timeout="-1" index="0" />
+<target x="258" y="76" targetType="basic" followTheCandy="none" />
+<star x="167" y="369" timeout="-1" index="0" />
+<grab x="262" y="142" length="45" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="262" y="223" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="262" y="296" candyNumber="second" isDriven="false" lasso="false" />
+<star x="262" y="174" timeout="-1" index="0" />
+<rocket x="63" y="151" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<hiddenElement x="63" y="448" radius="30" />
+</layer>
+</map>

@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="true" candiesConnectedLength="55" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Disco" />
+</layer>
+<layer name="Objects">
+<grab x="160" y="40" length="120" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<discoball x="204" y="191" ballNumber="first" />
+<laser x="160" y="100" angle="180" />
+<bouncer1 x="100" y="200" angle="90" size="1" />
+<bouncer1 x="220" y="200" angle="-90" size="1" />
+<target x="50" y="420" targetType="basic" followTheCandy="none" />
+<target x="50" y="330" targetType="special" followTheCandy="none" />
+<grab x="100" y="245" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<candy x="200" y="250" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="285" y="250" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="290" y="125" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="290" y="370" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<pauseSwitcher x="250" y="430" />
+<star x="128" y="325" timeout="-1" index="0" />
+<star x="128" y="425" timeout="-1" index="0" />
+<star x="257" y="325" timeout="-1" index="0" />
+<hiddenElement x="45" y="200" radius="30" />
+<snowflake x="249" y="144" radius="30" />
+</layer>
+</map>

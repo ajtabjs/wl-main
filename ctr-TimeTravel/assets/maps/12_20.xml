@@ -1,0 +1,26 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="120" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Disco" />
+</layer>
+<layer name="Objects">
+<candy x="280" y="100" candyNumber="first" isDriven="false" lasso="false" />
+<target x="122" y="54" targetType="special" targetLook="5" followTheCandy="none" />
+<target x="198" y="100" targetType="basic" targetLook="-1" followTheCandy="none" />
+<candy x="40" y="99" candyNumber="second" isDriven="false" lasso="false" />
+<bouncer1 x="40" y="135" angle="0" size="1" path="-80,0," moveSpeed="30" />
+<rocket x="45" y="189" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="45" y="274" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="45" y="359" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="46" y="439" angle="0" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="275" y="189" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="275" y="274" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="275" y="359" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<rocket x="275" y="437" angle="180" impulse="5" impulseFactor="0.6" time="-1" isRotatable="true" bombsHighPriority="false" />
+<star x="161" y="189" timeout="-1" index="0" />
+<star x="160" y="274" timeout="-1" index="0" />
+<star x="160" y="359" timeout="-1" index="0" />
+<clock x="159" y="420" />
+<bouncer1 x="282" y="133" angle="0" size="1" path="80,0," moveSpeed="30" />
+</layer>
+</map>

@@ -1,0 +1,25 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Disco" />
+</layer>
+<layer name="Objects">
+<target x="172" y="69" targetType="basic" targetLook="-1" followTheCandy="none" />
+<target x="92" y="70" targetType="special" targetLook="6" followTheCandy="none" />
+<candy x="165" y="370" candyNumber="first" isDriven="false" lasso="false" />
+<candy x="226" y="290" candyNumber="second" isDriven="false" lasso="false" />
+<discoball x="112" y="325" ballNumber="first" />
+<grab x="112" y="445" length="90" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="true" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<bubble x="112" y="323" />
+<laser x="33" y="199" angle="90" />
+<grab x="231" y="445" length="130" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<grab x="172" y="445" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="128" y="130" path="100,0" moveSpeed="50" timeout="-1" index="0" />
+<bubble x="230" y="289" />
+<bubble x="170" y="372" />
+<star x="231" y="232" timeout="-1" index="0" />
+<pauseSwitcher x="287" y="373" />
+<star x="164" y="271" path="-100,0" moveSpeed="50" timeout="-1" index="0" />
+<pump x="289" y="133" angle="180" attachedToRail="false" railGroup="0" startDelay="0" />
+</layer>
+</map>

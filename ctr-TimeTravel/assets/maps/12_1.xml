@@ -1,0 +1,22 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="top" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="61" y="341" targetType="basic" targetLook="2" followTheCandy="none" />
+<target x="171" y="46" targetType="special" targetLook="2" followTheCandy="none" />
+<candy x="168" y="168" candyNumber="first" isDriven="false" lasso="false" />
+<star x="173" y="97" timeout="-1" index="0" />
+<star x="251" y="386" timeout="-1" index="0" />
+<candy x="168" y="243" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="169" y="328" length="65" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="112" y="411" timeout="-1" index="0" />
+<grab x="168" y="453" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="true" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<bomb x="167" y="379" bombNumber="first" />
+<bubble x="168" y="371" />
+<pump x="97" y="238" angle="0" attachedToRail="false" railGroup="0" startDelay="0" />
+<bubble x="170" y="237" />
+<grab x="171" y="95" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+</layer>
+</map>

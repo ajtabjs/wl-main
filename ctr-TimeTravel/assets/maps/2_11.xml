@@ -1,0 +1,64 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="left" background="Renaissance" />
+</layer>
+<layer name="Objects">
+<candy x="266" y="265" candyNumber="first" isDriven="false" />
+<target x="66" y="82" targetType="special" />
+<target x="265" y="80" targetType="basic" />
+<candy x="65" y="262" candyNumber="second" isDriven="false" />
+<grab x="66" y="317" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="110" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<star x="69" y="150" timeout="-1" index="0" />
+<grab x="67" y="183" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<grab x="265" y="185" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="264" y="319" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="110" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="284" y="185" path="RC35" moveSpeed="70" timeout="-1" index="0" />
+<star x="284" y="185" path="RW35" moveSpeed="70" timeout="-1" index="0" />
+<hiddenElement x="160" y="65" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="94" y="323" locale="en" text="Some rope hooks can be moved with your finger" width="130" special="0" />
+<tutorial09 x="159" y="306" locale="en" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="94" y="323" locale="nl" text="Sommige touwhaken kun je met je vinger verplaatsen" width="130" special="0" />
+<tutorial09 x="159" y="306" locale="nl" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="94" y="323" locale="ko" text="어떤 줄 고리는 손가락으로 움직일 수 있어요" width="140" special="0" />
+<tutorial09 x="159" y="306" locale="ko" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="94" y="323" locale="es" text="Los enganches de algunas cuerdas se pueden mover con el dedo" width="140" special="0" />
+<tutorial09 x="159" y="306" locale="es" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="94" y="323" locale="br" text="Você pode mover alguns ganchos com o dedo" width="140" special="0" />
+<tutorial09 x="159" y="306" locale="br" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="94" y="403" locale="ja" text="ロープフックの中には*指で動かせるものがあります" width="140" special="0" />
+<tutorial09 x="159" y="390" locale="ja" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="94" y="323" locale="de" text="Einige Haken kann man mit dem Finger verschieben" width="140" special="0" />
+<tutorial09 x="159" y="306" locale="de" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="94" y="323" locale="ru" text="Некоторые крепежи можно двигать пальцем" width="130" special="0" />
+<tutorial09 x="159" y="306" locale="ru" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="94" y="323" locale="it" text="Puoi muovere alcuni ganci delle corde con il dito" width="130" special="0" />
+<tutorial09 x="159" y="306" locale="it" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="94" y="323" locale="zh" text="可以*用手指*移动*某些*绳钩" width="140" special="0" />
+<tutorial09 x="159" y="306" locale="zh" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="94" y="323" locale="fr" text="Tu peux déplacer certains crochets de corde avec le doigt" width="140" special="0" />
+<tutorial09 x="159" y="306" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

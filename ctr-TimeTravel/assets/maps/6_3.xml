@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="top" background="Prehistoric" />
+</layer>
+<layer name="Objects">
+<target x="274" y="60" targetType="basic" />
+<target x="179" y="65" targetType="special" />
+<candy x="186" y="185" candyNumber="first" isDriven="false" />
+<clock x="160" y="415" />
+<candy x="281" y="185" candyNumber="second" isDriven="false" />
+<axe x="135" y="260" axeNumber="first" />
+<grab x="185" y="265" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="280" y="265" length="50" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<pump x="35" y="200" angle="45" />
+<bubble x="280" y="185" />
+<bubble x="185" y="185" />
+<bouncer1 x="135" y="330" angle="0" size="1" path="160,0" moveSpeed="60" />
+<star x="175" y="130" timeout="-1" index="0" />
+<star x="290" y="130" timeout="-1" index="0" />
+<star x="265" y="130" path="-65,0" moveSpeed="65" timeout="-1" index="0" />
+<hiddenElement x="65" y="415" radius="30" />
+</layer>
+</map>

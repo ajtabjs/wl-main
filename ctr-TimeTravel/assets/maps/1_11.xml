@@ -1,0 +1,68 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1.0" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<target x="44" y="421" targetType="special" />
+<target x="275" y="69" targetType="basic" />
+<grab x="284" y="426" length="80" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<candy x="280" y="314" candyNumber="first" isDriven="false" />
+<grab x="41" y="227" length="60" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<candy x="40" y="327" candyNumber="second" isDriven="false" />
+<axe x="48" y="118" axeNumber="first" />
+<grab x="51" y="43" length="40" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="true" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<bubble x="283" y="314" />
+<star x="42" y="370" timeout="-1" index="0" />
+<star x="289" y="217" path="RC20" moveSpeed="25" timeout="-1" index="0" />
+<star x="289" y="246" path="RW20" moveSpeed="40" timeout="-1" index="0" />
+<grab x="94" y="181" length="-1" wheel="false" gun="false" kickable="false" kicked="false" radius="40" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="151" y="250" length="-1" wheel="false" gun="false" kickable="false" kicked="false" radius="40" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="206" y="324" length="-1" wheel="false" gun="false" kickable="false" kicked="false" radius="40" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<hiddenElement x="160" y="415" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="70" y="35" locale="en" text="Automatic ropes appear when objects moves into their area" width="160" special="0" />
+<tutorial04 x="156" y="152" locale="en" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="70" y="20" locale="nl" text="Touwen verschijnen automatisch wanneer objecten in de buurt komen" width="160" special="0" />
+<tutorial04 x="158" y="152" locale="nl" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="95" y="33" locale="ko" text="물체가 영역에 들어오면 자동으로 밧줄이 생겨나요" width="145" special="0" />
+<tutorial04 x="158" y="149" locale="ko" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="69" y="20" locale="es" text="Las autocuerdas aparecen cuando los objetos se acercan a ellas" width="160" special="0" />
+<tutorial04 x="156" y="152" locale="es" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="70" y="20" locale="br" text="Cordas automáticas aparecem quando objetos se movem em sua area" width="160" special="0" />
+<tutorial04 x="159" y="151" locale="br" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="70" y="35" locale="ja" text="オブジェクトが*エリアに入ると*自動ロープが*現れます" width="165" special="0" />
+<tutorial04 x="155" y="149" locale="ja" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="80" y="20" locale="de" text="Es erscheinen automatisch Seile, wenn ein Objekt in ihre Nähe kommt" width="155" special="0" />
+<tutorial04 x="156" y="153" locale="de" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="70" y="20" locale="ru" text="Авто-веревки появляются, когда объекты попадают в их радиус" width="160" special="0" />
+<tutorial04 x="156" y="154" locale="ru" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="70" y="40" locale="it" text="Le corde automatiche compaiono quando gli oggetti si avvicinano" width="165" special="0" />
+<tutorial04 x="157" y="152" locale="it" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="70" y="35" locale="zh" text="当物体进入绳子区域时，绳子会自动出现" width="160" special="0" />
+<tutorial04 x="157" y="152" locale="zh" angle="-20" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="80" y="15" locale="fr" text="Des cordes automatiques apparaissent quand des objets entrent dans leur zone" width="155" special="0" />
+<tutorial04 x="161" y="165" locale="fr" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>

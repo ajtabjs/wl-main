@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="60" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="139" y="325" candyNumber="first" isDriven="false" />
+<target x="140" y="40" targetType="basic" />
+<target x="140" y="430" targetType="special" />
+<candy x="141" y="190" candyNumber="second" isDriven="false" />
+<clock x="260" y="415" />
+<bouncer2 x="260" y="175" angle="0" size="2" path="0,0" moveSpeed="30" rotateSpeed="35" />
+<grab x="140" y="240" length="70" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="false" />
+<grab x="140" y="110" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="false" />
+<axe x="259" y="113" axeNumber="first" />
+<pauseSwitcher x="260" y="290" />
+<bouncer2 x="60" y="315" angle="0" size="2" path="0,0" moveSpeed="30" rotateSpeed="35" />
+<bubble x="140" y="245" />
+<star x="219" y="445" path="-60,-60" moveSpeed="45" timeout="-1" index="0" />
+<star x="60" y="445" path="60,-60" moveSpeed="45" timeout="-1" index="0" />
+<star x="30" y="90" path="110,0" moveSpeed="55" timeout="-1" index="0" />
+<hiddenElement x="49" y="193" radius="30" />
+</layer>
+</map>

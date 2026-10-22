@@ -1,0 +1,23 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="90" candiesConnectedBreakable="false" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="no" background="Medieval" />
+</layer>
+<layer name="Objects">
+<candy x="31" y="125" candyNumber="first" isDriven="false" lasso="false" />
+<target x="275" y="415" targetType="basic" followTheCandy="none" />
+<target x="45" y="415" targetType="special" followTheCandy="none" />
+<candy x="289" y="125" candyNumber="second" isDriven="false" lasso="false" />
+<grab x="30" y="35" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<sock x="225" y="245" group="0" angle="270" path="-190,0" moveSpeed="95" />
+<clock x="160" y="415" />
+<sock x="290" y="245" group="0" angle="270" path="-190,0" moveSpeed="95" />
+<grab x="290" y="35" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="true" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" bindBasket="false" />
+<star x="90" y="145" timeout="-1" index="0" />
+<star x="161" y="35" path="0,120" moveSpeed="60" timeout="-1" index="0" />
+<star x="230" y="143" timeout="-1" index="0" />
+<pauseSwitcher x="160" y="315" />
+<hiddenElement x="160" y="414" radius="30" />
+<snowflake x="192" y="146" radius="30" />
+</layer>
+</map>

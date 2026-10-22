@@ -1,0 +1,24 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="false" chatAllowedAboutBasicOmNom="no" background="Pirates" />
+</layer>
+<layer name="Objects">
+<target x="160" y="425" targetType="special" />
+<target x="87" y="250" targetType="basic" />
+<candy x="161" y="163" candyNumber="first" isDriven="false" />
+<star x="261" y="207" timeout="-1" index="0" />
+<candy x="161" y="288" candyNumber="second" isDriven="false" />
+<grab x="160" y="205" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<bomb x="134" y="54" bombNumber="first" />
+<bouncer2 x="85" y="370" angle="50" size="2" />
+<bouncer2 x="235" y="370" angle="-50" size="2" />
+<star x="160" y="369" timeout="-1" index="0" />
+<bubble x="136" y="57" />
+<bouncer2 x="100" y="40" angle="130" size="2" />
+<bouncer2 x="220" y="40" angle="-130" size="2" />
+<grab x="160" y="83" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<star x="160" y="210" timeout="-1" index="0" />
+<hiddenElement x="50" y="205" radius="30" />
+</layer>
+</map>

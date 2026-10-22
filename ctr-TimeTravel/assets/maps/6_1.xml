@@ -1,0 +1,65 @@
+<map>
+<layer name="settings">
+<map width="320" height="480" gridSize="32" />
+<gameDesign special="0" twoParts="false" ropePhysicsSpeed="1" water="0" waterSpeed="0" candiesConnected="false" candiesConnectedLength="100" candiesConnectedBreakable="true" shieldOmNom="basic" drawPathForElement="true" chatAllowedAboutBasicOmNom="top" background="Prehistoric" />
+</layer>
+<layer name="Objects">
+<target x="130" y="55" targetType="special" followTheCandy="none" />
+<target x="130" y="429" targetType="basic" followTheCandy="none" />
+<grab x="130" y="240" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="first" bombsHighPriority="false" breakable="true" />
+<grab x="130" y="240" length="55" wheel="false" gun="false" kickable="false" kicked="false" radius="-1" invisible="false" moveLength="-1" moveVertical="false" moveOffset="0" spider="false" bombed="false" axed="false" disco="false" candyNumber="second" bombsHighPriority="false" breakable="true" />
+<candy x="129" y="154" candyNumber="first" isDriven="false" lasso="false" />
+<bubble x="128" y="153" />
+<candy x="131" y="320" candyNumber="second" isDriven="false" lasso="false" />
+<clock x="243" y="418" />
+<star x="20" y="50" path="95,50" moveSpeed="50" timeout="-1" index="0" />
+<star x="240" y="50" path="-95,50" moveSpeed="50" timeout="-1" index="0" />
+<star x="155" y="325" path="RC50" moveSpeed="38" timeout="-1" index="0" />
+<spike2 x="130" y="110" angle="0" size="2" path="100,0" moveSpeed="50" toggled="false" />
+<hiddenElement x="60" y="240" radius="30" />
+</layer>
+<layer name="En">
+<tutorialText x="165" y="193" locale="en" text="Rotate the hands on the clocks to change the position of objects" width="140" special="0" />
+<tutorial04 x="280" y="320" locale="en" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="nl">
+<tutorialText x="173" y="154" locale="nl" text="Draai aan de wijzers op de klokken om de positie van objecten te bepalen" width="135" special="0" />
+<tutorial04 x="274" y="325" locale="nl" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ko">
+<tutorialText x="170" y="218" locale="ko" text="시계 바늘을 돌려 물체의 위치를 조정하세요" width="140" special="0" />
+<tutorial04 x="282" y="318" locale="ko" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="es">
+<tutorialText x="165" y="180" locale="es" text="Gira las manecillas de los relojes para controlar la posición de los objetos" width="140" special="0" />
+<tutorial04 x="271" y="325" locale="es" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="br">
+<tutorialText x="165" y="184" locale="br" text="Gire os ponteiros dos relógios para mudar a posição dos objetos" width="135" special="0" />
+<tutorial04 x="280" y="309" locale="br" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ja">
+<tutorialText x="165" y="151" locale="ja" text="時計*の*矢印*を*回転させて*オブジェクト*の*位置*を*コントロール*します" width="140" special="0" />
+<tutorial04 x="264" y="319" locale="ja" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="de">
+<tutorialText x="165" y="180" locale="de" text="Rotiere die Zeiger dieser Uhren, um die Position von Objekten zu kontrollieren" width="140" special="0" />
+<tutorial04 x="283" y="329" locale="de" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="ru">
+<tutorialText x="193" y="172" locale="ru" text="Вращая стрелку часов, Вы можете управлять положением объектов" width="100" special="0" />
+<tutorial04 x="295" y="321" locale="ru" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="it">
+<tutorialText x="165" y="177" locale="it" text="Ruota le lancette dell'orologio per controllare la posizione degli oggetti" width="140" special="0" />
+<tutorial04 x="269" y="323" locale="it" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="zh">
+<tutorialText x="165" y="180" locale="zh" text="转动*时钟*箭头*就可*控制*物体*的*位置" width="140" special="0" />
+<tutorial04 x="305" y="315" locale="zh" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+<layer name="fr">
+<tutorialText x="183" y="152" locale="fr" text="Fais tourner la flèche des horloges pour modifier la position des objets" width="120" special="0" />
+<tutorial04 x="277" y="322" locale="fr" angle="-45" moveSpeed="100" rotateSpeed="100" />
+</layer>
+</map>
