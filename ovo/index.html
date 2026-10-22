@@ -129,7 +129,20 @@
 			if (!navigator.serviceWorker)
 				return;		// no SW support, ignore call
 			
+			// Service workers must be registered from the same origin.
+			// If we're in a cross-origin iframe (e.g. game embedded on another site),
+			// registration will fail with a SecurityError. Skip registration in that case.
 			try {
+				if (window.self !== window.top) {
+					// We're in an iframe - check if same origin
+					try {
+						window.top.location.origin;
+					} catch (e) {
+						console.log("Cross-origin iframe detected, skipping service worker registration");
+						return;
+					}
+				}
+				
 				navigator.serviceWorker.register("sw.js", { scope: "./" })
 				.then(function (reg)
 				{
