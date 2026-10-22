@@ -1,0 +1,41 @@
+{
+    "name": "ctr2experiment",
+    "version": "2",
+    "symbols": "1",
+    "origin": "c++",
+    "engineVersion": "",
+    "runtime": {
+        "aspect": [0.66, 0.66],
+        "orientation": "portrait",
+        "res": [
+            {
+                "glob": "emscripten/**",
+                "root": "emscripten/"
+            }
+        ]
+    },
+    "backendVersion": 27,
+    "tinyLoaderScript": "scripts/tiny-loader.js",
+    "sdkScripts": ["scripts/sdk.js", "scripts/gamepix-adapter.js"],
+    "workerScripts": {
+        "browserImageLoader": "scripts/browser-image-loader.js",
+        "wasmImageLoader": {
+            "wasm": "scripts/wasm-image-loader.wasm",
+            "wasmJs": "scripts/wasm-image-loader.js"
+        }
+    },
+    "sizes": {
+        "br/bin.data.js.br": 4355,
+        "br/bin.data._.js.br": 1735711,
+        "br/wbin.js.br": 43694,
+        "br/wbin._.js.br": 331864,
+        "gz/bin.data.js.gz": 6446,
+        "gz/bin.data._.js.gz": 1763961,
+        "gz/wbin.js.gz": 50601,
+        "gz/wbin._.js.gz": 443364,
+        "bin.data._.js": 2186239,
+        "bin.data.js": 30573,
+        "wbin._.js": 1327710,
+        "wbin.js": 198377
+    }
+}

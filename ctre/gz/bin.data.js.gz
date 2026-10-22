@@ -1,0 +1,177 @@
+
+  if (!Module.expectedDataFileDownloads) {
+    Module.expectedDataFileDownloads = 0;
+  }
+
+  Module.expectedDataFileDownloads++;
+  (function() {
+    // When running as a pthread, FS operations are proxied to the main thread, so we don't need to
+    // fetch the .data bundle on the worker
+    if (Module['ENVIRONMENT_IS_PTHREAD']) return;
+    var loadPackage = function(metadata) {
+
+      var PACKAGE_PATH = '';
+      if (typeof window === 'object') {
+        PACKAGE_PATH = window['encodeURIComponent'](window.location.pathname.toString().substring(0, window.location.pathname.toString().lastIndexOf('/')) + '/');
+      } else if (typeof process === 'undefined' && typeof location !== 'undefined') {
+        // web worker
+        PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
+      }
+      var PACKAGE_NAME = 'bin.data._.js';
+      var REMOTE_PACKAGE_BASE = 'bin.data._.js';
+      if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
+        Module['locateFile'] = Module['locateFilePackage'];
+        err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
+      }
+      var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
+var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
+
+      function fetchRemotePackage(packageName, packageSize, callback, errback) {
+        if (typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string') {
+          require('fs').readFile(packageName, function(err, contents) {
+            if (err) {
+              errback(err);
+            } else {
+              callback(contents.buffer);
+            }
+          });
+          return;
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', packageName, true);
+        xhr.responseType = 'arraybuffer';
+        xhr.onprogress = function(event) {
+          var url = packageName;
+          var size = packageSize;
+          if (event.total) size = event.total;
+          if (event.loaded) {
+            if (!xhr.addedTotal) {
+              xhr.addedTotal = true;
+              if (!Module.dataFileDownloads) Module.dataFileDownloads = {};
+              Module.dataFileDownloads[url] = {
+                loaded: event.loaded,
+                total: size
+              };
+            } else {
+              Module.dataFileDownloads[url].loaded = event.loaded;
+            }
+            var total = 0;
+            var loaded = 0;
+            var num = 0;
+            for (var download in Module.dataFileDownloads) {
+            var data = Module.dataFileDownloads[download];
+              total += data.total;
+              loaded += data.loaded;
+              num++;
+            }
+            total = Math.ceil(total * Module.expectedDataFileDownloads/num);
+            if (Module['setStatus']) Module['setStatus']('Downloading data... (' + loaded + '/' + total + ')');
+          } else if (!Module.dataFileDownloads) {
+            if (Module['setStatus']) Module['setStatus']('Downloading data...');
+          }
+        };
+        xhr.onerror = function(event) {
+          throw new Error("NetworkError for: " + packageName);
+        }
+        xhr.onload = function(event) {
+          if (xhr.status == 200 || xhr.status == 304 || xhr.status == 206 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
+            var packageData = xhr.response;
+            callback(packageData);
+          } else {
+            throw new Error(xhr.statusText + " : " + xhr.responseURL);
+          }
+        };
+        xhr.send(null);
+      };
+
+      function handleError(error) {
+        console.error('package error:', error);
+      };
+
+      var fetchedCallback = null;
+      var fetched = Module['getPreloadedPackage'] ? Module['getPreloadedPackage'](REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE) : null;
+
+      if (!fetched) fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE, function(data) {
+        if (fetchedCallback) {
+          fetchedCallback(data);
+          fetchedCallback = null;
+        } else {
+          fetched = data;
+        }
+      }, handleError);
+
+    function runWithFS() {
+
+      function assert(check, msg) {
+        if (!check) throw msg + new Error().stack;
+      }
+
+      /** @constructor */
+      function DataRequest(start, end, audio) {
+        this.start = start;
+        this.end = end;
+        this.audio = audio;
+      }
+      DataRequest.prototype = {
+        requests: {},
+        open: function(mode, name) {
+          this.name = name;
+          this.requests[name] = this;
+          Module['addRunDependency']('fp ' + this.name);
+        },
+        send: function() {},
+        onload: function() {
+          var byteArray = this.byteArray.subarray(this.start, this.end);
+          this.finish(byteArray);
+        },
+        finish: function(byteArray) {
+          var that = this;
+          // canOwn this data in the filesystem, it is a slide into the heap that will never change
+          Module['FS_createDataFile'](this.name, null, byteArray, true, true, true);
+          Module['removeRunDependency']('fp ' + that.name);
+          this.requests[this.name] = null;
+        }
+      };
+
+      var files = metadata['files'];
+      for (var i = 0; i < files.length; ++i) {
+        new DataRequest(files[i]['start'], files[i]['end'], files[i]['audio'] || 0).open('GET', files[i]['filename']);
+      }
+
+      function processPackageData(arrayBuffer) {
+        assert(arrayBuffer, 'Loading data file failed.');
+        assert(arrayBuffer.constructor.name === ArrayBuffer.name, 'bad input to processPackageData');
+        var byteArray = new Uint8Array(arrayBuffer);
+        var curr;
+        // Reuse the bytearray from the XHR as the source for file reads.
+          DataRequest.prototype.byteArray = byteArray;
+          var files = metadata['files'];
+          for (var i = 0; i < files.length; ++i) {
+            DataRequest.prototype.requests[files[i].filename].onload();
+          }          Module['removeRunDependency']('datafile_bin.data._.js');
+
+      };
+      Module['addRunDependency']('datafile_bin.data._.js');
+
+      if (!Module.preloadResults) Module.preloadResults = {};
+
+      Module.preloadResults[PACKAGE_NAME] = {fromCache: false};
+      if (fetched) {
+        processPackageData(fetched);
+        fetched = null;
+      } else {
+        fetchedCallback = processPackageData;
+      }
+
+    }
+    if (Module['calledRun']) {
+      runWithFS();
+    } else {
+      if (!Module['preRun']) Module['preRun'] = [];
+      Module["preRun"].push(runWithFS); // FS is not initialized yet, wait for it
+    }
+
+    }
+    loadPackage({"files": [{"filename": "/1_1.xml", "start": 0, "end": 10306}, {"filename": "/1_10.xml", "start": 10306, "end": 19061}, {"filename": "/1_11.xml", "start": 19061, "end": 22843}, {"filename": "/1_12.xml", "start": 22843, "end": 23627}, {"filename": "/1_13.xml", "start": 23627, "end": 27610}, {"filename": "/1_14.xml", "start": 27610, "end": 28554}, {"filename": "/1_15.xml", "start": 28554, "end": 32129}, {"filename": "/1_16.xml", "start": 32129, "end": 33250}, {"filename": "/1_17.xml", "start": 33250, "end": 34784}, {"filename": "/1_18.xml", "start": 34784, "end": 38290}, {"filename": "/1_19.xml", "start": 38290, "end": 39827}, {"filename": "/1_2.xml", "start": 39827, "end": 43345}, {"filename": "/1_20.xml", "start": 43345, "end": 47211}, {"filename": "/1_21.xml", "start": 47211, "end": 51054}, {"filename": "/1_22.xml", "start": 51054, "end": 51885}, {"filename": "/1_23.xml", "start": 51885, "end": 52995}, {"filename": "/1_24.xml", "start": 52995, "end": 53818}, {"filename": "/1_25.xml", "start": 53818, "end": 54818}, {"filename": "/1_3.xml", "start": 54818, "end": 60897}, {"filename": "/1_4.xml", "start": 60897, "end": 64846}, {"filename": "/1_5.xml", "start": 64846, "end": 68503}, {"filename": "/1_6.xml", "start": 68503, "end": 71775}, {"filename": "/1_7.xml", "start": 71775, "end": 75984}, {"filename": "/1_8.xml", "start": 75984, "end": 79220}, {"filename": "/1_9.xml", "start": 79220, "end": 83074}, {"filename": "/2_1.xml", "start": 83074, "end": 86881}, {"filename": "/2_10.xml", "start": 86881, "end": 87938}, {"filename": "/2_11.xml", "start": 87938, "end": 89316}, {"filename": "/2_12.xml", "start": 89316, "end": 90123}, {"filename": "/2_13.xml", "start": 90123, "end": 91165}, {"filename": "/2_14.xml", "start": 91165, "end": 92165}, {"filename": "/2_15.xml", "start": 92165, "end": 93186}, {"filename": "/2_16.xml", "start": 93186, "end": 94572}, {"filename": "/2_17.xml", "start": 94572, "end": 95531}, {"filename": "/2_18.xml", "start": 95531, "end": 96539}, {"filename": "/2_19.xml", "start": 96539, "end": 97959}, {"filename": "/2_2.xml", "start": 97959, "end": 101467}, {"filename": "/2_20.xml", "start": 101467, "end": 102549}, {"filename": "/2_21.xml", "start": 102549, "end": 104277}, {"filename": "/2_22.xml", "start": 104277, "end": 105533}, {"filename": "/2_23.xml", "start": 105533, "end": 106763}, {"filename": "/2_24.xml", "start": 106763, "end": 107874}, {"filename": "/2_25.xml", "start": 107874, "end": 110299}, {"filename": "/2_3.xml", "start": 110299, "end": 111601}, {"filename": "/2_4.xml", "start": 111601, "end": 112738}, {"filename": "/2_5.xml", "start": 112738, "end": 113663}, {"filename": "/2_6.xml", "start": 113663, "end": 114922}, {"filename": "/2_7.xml", "start": 114922, "end": 115869}, {"filename": "/2_8.xml", "start": 115869, "end": 117328}, {"filename": "/2_9.xml", "start": 117328, "end": 118929}, {"filename": "/3_1.xml", "start": 118929, "end": 122457}, {"filename": "/3_10.xml", "start": 122457, "end": 123253}, {"filename": "/3_11.xml", "start": 123253, "end": 123995}, {"filename": "/3_12.xml", "start": 123995, "end": 124815}, {"filename": "/3_13.xml", "start": 124815, "end": 126141}, {"filename": "/3_14.xml", "start": 126141, "end": 127212}, {"filename": "/3_15.xml", "start": 127212, "end": 128312}, {"filename": "/3_16.xml", "start": 128312, "end": 129188}, {"filename": "/3_17.xml", "start": 129188, "end": 130092}, {"filename": "/3_18.xml", "start": 130092, "end": 131213}, {"filename": "/3_19.xml", "start": 131213, "end": 132245}, {"filename": "/3_2.xml", "start": 132245, "end": 133396}, {"filename": "/3_20.xml", "start": 133396, "end": 134310}, {"filename": "/3_21.xml", "start": 134310, "end": 135335}, {"filename": "/3_22.xml", "start": 135335, "end": 137367}, {"filename": "/3_23.xml", "start": 137367, "end": 138377}, {"filename": "/3_24.xml", "start": 138377, "end": 139258}, {"filename": "/3_25.xml", "start": 139258, "end": 142841}, {"filename": "/3_3.xml", "start": 142841, "end": 143866}, {"filename": "/3_4.xml", "start": 143866, "end": 144555}, {"filename": "/3_5.xml", "start": 144555, "end": 145343}, {"filename": "/3_6.xml", "start": 145343, "end": 146231}, {"filename": "/3_7.xml", "start": 146231, "end": 147245}, {"filename": "/3_8.xml", "start": 147245, "end": 148037}, {"filename": "/3_9.xml", "start": 148037, "end": 148974}, {"filename": "/4_1.xml", "start": 148974, "end": 152584}, {"filename": "/4_10.xml", "start": 152584, "end": 154351}, {"filename": "/4_11.xml", "start": 154351, "end": 158180}, {"filename": "/4_12.xml", "start": 158180, "end": 159038}, {"filename": "/4_13.xml", "start": 159038, "end": 160063}, {"filename": "/4_14.xml", "start": 160063, "end": 161196}, {"filename": "/4_15.xml", "start": 161196, "end": 162080}, {"filename": "/4_16.xml", "start": 162080, "end": 163727}, {"filename": "/4_17.xml", "start": 163727, "end": 165220}, {"filename": "/4_18.xml", "start": 165220, "end": 165990}, {"filename": "/4_19.xml", "start": 165990, "end": 168152}, {"filename": "/4_2.xml", "start": 168152, "end": 169579}, {"filename": "/4_20.xml", "start": 169579, "end": 170645}, {"filename": "/4_21.xml", "start": 170645, "end": 171768}, {"filename": "/4_22.xml", "start": 171768, "end": 173187}, {"filename": "/4_23.xml", "start": 173187, "end": 174347}, {"filename": "/4_24.xml", "start": 174347, "end": 175380}, {"filename": "/4_25.xml", "start": 175380, "end": 176337}, {"filename": "/4_3.xml", "start": 176337, "end": 177268}, {"filename": "/4_4.xml", "start": 177268, "end": 178396}, {"filename": "/4_5.xml", "start": 178396, "end": 179429}, {"filename": "/4_6.xml", "start": 179429, "end": 180185}, {"filename": "/4_7.xml", "start": 180185, "end": 181571}, {"filename": "/4_8.xml", "start": 181571, "end": 182529}, {"filename": "/4_9.xml", "start": 182529, "end": 183771}, {"filename": "/5_1.xml", "start": 183771, "end": 186639}, {"filename": "/5_10.xml", "start": 186639, "end": 187949}, {"filename": "/5_11.xml", "start": 187949, "end": 189092}, {"filename": "/5_12.xml", "start": 189092, "end": 189732}, {"filename": "/5_13.xml", "start": 189732, "end": 190568}, {"filename": "/5_14.xml", "start": 190568, "end": 191852}, {"filename": "/5_15.xml", "start": 191852, "end": 193194}, {"filename": "/5_16.xml", "start": 193194, "end": 194582}, {"filename": "/5_17.xml", "start": 194582, "end": 195515}, {"filename": "/5_18.xml", "start": 195515, "end": 196920}, {"filename": "/5_19.xml", "start": 196920, "end": 197831}, {"filename": "/5_2.xml", "start": 197831, "end": 198524}, {"filename": "/5_20.xml", "start": 198524, "end": 199355}, {"filename": "/5_21.xml", "start": 199355, "end": 200467}, {"filename": "/5_22.xml", "start": 200467, "end": 201619}, {"filename": "/5_23.xml", "start": 201619, "end": 202835}, {"filename": "/5_24.xml", "start": 202835, "end": 203943}, {"filename": "/5_25.xml", "start": 203943, "end": 205400}, {"filename": "/5_3.xml", "start": 205400, "end": 205985}, {"filename": "/5_4.xml", "start": 205985, "end": 206683}, {"filename": "/5_5.xml", "start": 206683, "end": 207809}, {"filename": "/5_6.xml", "start": 207809, "end": 208731}, {"filename": "/5_7.xml", "start": 208731, "end": 209876}, {"filename": "/5_8.xml", "start": 209876, "end": 213867}, {"filename": "/5_9.xml", "start": 213867, "end": 214917}, {"filename": "/6_1.xml", "start": 214917, "end": 218116}, {"filename": "/6_10.xml", "start": 218116, "end": 219448}, {"filename": "/6_11.xml", "start": 219448, "end": 221130}, {"filename": "/6_12.xml", "start": 221130, "end": 222638}, {"filename": "/6_13.xml", "start": 222638, "end": 224673}, {"filename": "/6_14.xml", "start": 224673, "end": 225515}, {"filename": "/6_15.xml", "start": 225515, "end": 226488}, {"filename": "/6_16.xml", "start": 226488, "end": 227348}, {"filename": "/6_17.xml", "start": 227348, "end": 228978}, {"filename": "/6_18.xml", "start": 228978, "end": 230451}, {"filename": "/6_19.xml", "start": 230451, "end": 231904}, {"filename": "/6_2.xml", "start": 231904, "end": 235235}, {"filename": "/6_20.xml", "start": 235235, "end": 237152}, {"filename": "/6_21.xml", "start": 237152, "end": 238313}, {"filename": "/6_22.xml", "start": 238313, "end": 239200}, {"filename": "/6_23.xml", "start": 239200, "end": 240961}, {"filename": "/6_24.xml", "start": 240961, "end": 242946}, {"filename": "/6_25.xml", "start": 242946, "end": 244803}, {"filename": "/6_3.xml", "start": 244803, "end": 245465}, {"filename": "/6_4.xml", "start": 245465, "end": 246270}, {"filename": "/6_5.xml", "start": 246270, "end": 247198}, {"filename": "/6_6.xml", "start": 247198, "end": 248278}, {"filename": "/6_7.xml", "start": 248278, "end": 249765}, {"filename": "/6_8.xml", "start": 249765, "end": 251087}, {"filename": "/6_9.xml", "start": 251087, "end": 251899}, {"filename": "/7_1.xml", "start": 251899, "end": 254905}, {"filename": "/7_10.xml", "start": 254905, "end": 255854}, {"filename": "/7_11.xml", "start": 255854, "end": 257024}, {"filename": "/7_12.xml", "start": 257024, "end": 258270}, {"filename": "/7_13.xml", "start": 258270, "end": 259346}, {"filename": "/7_14.xml", "start": 259346, "end": 260305}, {"filename": "/7_15.xml", "start": 260305, "end": 261365}, {"filename": "/7_16.xml", "start": 261365, "end": 262323}, {"filename": "/7_17.xml", "start": 262323, "end": 263586}, {"filename": "/7_18.xml", "start": 263586, "end": 264842}, {"filename": "/7_19.xml", "start": 264842, "end": 265957}, {"filename": "/7_2.xml", "start": 265957, "end": 269033}, {"filename": "/7_20.xml", "start": 269033, "end": 269773}, {"filename": "/7_21.xml", "start": 269773, "end": 270699}, {"filename": "/7_22.xml", "start": 270699, "end": 271855}, {"filename": "/7_23.xml", "start": 271855, "end": 272852}, {"filename": "/7_24.xml", "start": 272852, "end": 273940}, {"filename": "/7_25.xml", "start": 273940, "end": 275059}, {"filename": "/7_3.xml", "start": 275059, "end": 275820}, {"filename": "/7_4.xml", "start": 275820, "end": 276399}, {"filename": "/7_5.xml", "start": 276399, "end": 277337}, {"filename": "/7_6.xml", "start": 277337, "end": 278560}, {"filename": "/7_7.xml", "start": 278560, "end": 280057}, {"filename": "/7_8.xml", "start": 280057, "end": 280852}, {"filename": "/7_9.xml", "start": 280852, "end": 281863}, {"filename": "/8_1.xml", "start": 281863, "end": 282790}, {"filename": "/8_10.xml", "start": 282790, "end": 284498}, {"filename": "/8_11.xml", "start": 284498, "end": 285764}, {"filename": "/8_12.xml", "start": 285764, "end": 287283}, {"filename": "/8_13.xml", "start": 287283, "end": 288490}, {"filename": "/8_14.xml", "start": 288490, "end": 289483}, {"filename": "/8_15.xml", "start": 289483, "end": 290486}, {"filename": "/8_16.xml", "start": 290486, "end": 291879}, {"filename": "/8_17.xml", "start": 291879, "end": 293171}, {"filename": "/8_18.xml", "start": 293171, "end": 293830}, {"filename": "/8_19.xml", "start": 293830, "end": 294600}, {"filename": "/8_2.xml", "start": 294600, "end": 295510}, {"filename": "/8_20.xml", "start": 295510, "end": 297210}, {"filename": "/8_21.xml", "start": 297210, "end": 297847}, {"filename": "/8_22.xml", "start": 297847, "end": 299204}, {"filename": "/8_23.xml", "start": 299204, "end": 300501}, {"filename": "/8_24.xml", "start": 300501, "end": 301577}, {"filename": "/8_25.xml", "start": 301577, "end": 302585}, {"filename": "/8_3.xml", "start": 302585, "end": 303438}, {"filename": "/8_4.xml", "start": 303438, "end": 304819}, {"filename": "/8_5.xml", "start": 304819, "end": 306101}, {"filename": "/8_6.xml", "start": 306101, "end": 307250}, {"filename": "/8_7.xml", "start": 307250, "end": 308247}, {"filename": "/8_8.xml", "start": 308247, "end": 309092}, {"filename": "/8_9.xml", "start": 309092, "end": 310229}, {"filename": "/bgr_01_480_800.jpeg", "start": 310229, "end": 311254}, {"filename": "/bgr_02_480_800.jpeg", "start": 311254, "end": 313227}, {"filename": "/bgr_03_480_800.jpeg", "start": 313227, "end": 314428}, {"filename": "/bgr_04_480_800.jpeg", "start": 314428, "end": 316243}, {"filename": "/bgr_05_480_800.jpeg", "start": 316243, "end": 318162}, {"filename": "/bgr_06_480_800.jpeg", "start": 318162, "end": 320550}, {"filename": "/bgr_07_480_800.jpeg", "start": 320550, "end": 322371}, {"filename": "/bgr_08_480_800.jpeg", "start": 322371, "end": 323377}, {"filename": "/big_font_480_800.png", "start": 323377, "end": 452043}, {"filename": "/candy_bar_480_800.raw", "start": 452043, "end": 469955}, {"filename": "/challenge_480_800.raw", "start": 469955, "end": 491191}, {"filename": "/char_animations2_480_800.raw", "start": 491191, "end": 518667}, {"filename": "/char_animations3_480_800.raw", "start": 518667, "end": 539531}, {"filename": "/char_animations_480_800.raw", "start": 539531, "end": 600557}, {"filename": "/char_support_01_480_800.raw", "start": 600557, "end": 607067}, {"filename": "/char_support_02_480_800.raw", "start": 607067, "end": 613861}, {"filename": "/char_support_03_480_800.raw", "start": 613861, "end": 619229}, {"filename": "/char_support_04_480_800.raw", "start": 619229, "end": 626491}, {"filename": "/char_support_05_480_800.raw", "start": 626491, "end": 640333}, {"filename": "/char_support_06_480_800.raw", "start": 640333, "end": 647123}, {"filename": "/char_support_07_480_800.raw", "start": 647123, "end": 658933}, {"filename": "/char_support_08_480_800.raw", "start": 658933, "end": 671639}, {"filename": "/confetti_particles_480_800.raw", "start": 671639, "end": 687571}, {"filename": "/conveyor_480_800.raw", "start": 687571, "end": 689521}, {"filename": "/drawing_01_480_800.jpeg", "start": 689521, "end": 690967}, {"filename": "/drawing_02_480_800.jpeg", "start": 690967, "end": 692433}, {"filename": "/drawing_03_480_800.jpeg", "start": 692433, "end": 693892}, {"filename": "/drawing_04_480_800.jpeg", "start": 693892, "end": 695355}, {"filename": "/drawing_05_480_800.jpeg", "start": 695355, "end": 696738}, {"filename": "/drawing_06_480_800.jpeg", "start": 696738, "end": 698062}, {"filename": "/drawing_08_480_800.jpeg", "start": 698062, "end": 699344}, {"filename": "/drawing_09_480_800.jpeg", "start": 699344, "end": 700781}, {"filename": "/drawing_10_480_800.jpeg", "start": 700781, "end": 702044}, {"filename": "/drawing_canvas_480_800.raw", "start": 702044, "end": 708866}, {"filename": "/drawing_facebook_480_800.raw", "start": 708866, "end": 720482}, {"filename": "/drawing_hidden_480_800.raw", "start": 720482, "end": 734840}, {"filename": "/drawings_menu_markers_480_800.raw", "start": 734840, "end": 734908}, {"filename": "/drawings_particles_480_800.raw", "start": 734908, "end": 741644}, {"filename": "/drawings_thumbnails_480_800.raw", "start": 741644, "end": 756066}, {"filename": "/everyday_prize_480_800.raw", "start": 756066, "end": 773708}, {"filename": "/font_numbers_big_480_800.png", "start": 773708, "end": 776513}, {"filename": "/gpx.resources", "start": 776513, "end": 786199}, {"filename": "/hand_480_800.raw", "start": 786199, "end": 804663}, {"filename": "/hole_480_800.raw", "start": 804663, "end": 808305}, {"filename": "/hud_buttons_480_800.raw", "start": 808305, "end": 818473}, {"filename": "/hud_buttons_en_480_800.raw", "start": 818473, "end": 831703}, {"filename": "/hud_buttons_es_480_800.raw", "start": 831703, "end": 844632}, {"filename": "/hud_buttons_gr_480_800.raw", "start": 844632, "end": 858139}, {"filename": "/hud_buttons_ja_480_800.raw", "start": 858139, "end": 869572}, {"filename": "/hud_buttons_ko_480_800.raw", "start": 869572, "end": 881048}, {"filename": "/hud_buttons_ru_480_800.raw", "start": 881048, "end": 895026}, {"filename": "/hud_buttons_sp_480_800.raw", "start": 895026, "end": 901608}, {"filename": "/hud_buttons_zh_480_800.raw", "start": 901608, "end": 917043}, {"filename": "/hud_star_480_800.raw", "start": 917043, "end": 927887}, {"filename": "/iap_popup_480_800.raw", "start": 927887, "end": 959353}, {"filename": "/loaderbar_empty_480_800.png", "start": 959353, "end": 960931}, {"filename": "/loaderbar_full_480_800.png", "start": 960931, "end": 964472}, {"filename": "/menu_agepopup_480_800.raw", "start": 964472, "end": 982536}, {"filename": "/menu_agepopup_bgr_480_800.jpeg", "start": 982536, "end": 983385}, {"filename": "/menu_audio_icons_480_800.raw", "start": 983385, "end": 997513}, {"filename": "/menu_bamboo_lock_480_800.raw", "start": 997513, "end": 1016751}, {"filename": "/menu_banner_480_800.raw", "start": 1016751, "end": 1018723}, {"filename": "/menu_bgr_480_800.jpeg", "start": 1018723, "end": 1019681}, {"filename": "/menu_button_achievements_480_800.raw", "start": 1019681, "end": 1032795}, {"filename": "/menu_button_album_icon_480_800.raw", "start": 1032795, "end": 1039862}, {"filename": "/menu_button_crystal_480_800.raw", "start": 1039862, "end": 1046075}, {"filename": "/menu_button_default_480_800.raw", "start": 1046075, "end": 1058837}, {"filename": "/menu_button_icons_480_800.raw", "start": 1058837, "end": 1064687}, {"filename": "/menu_button_leaderboards_480_800.raw", "start": 1064687, "end": 1076104}, {"filename": "/menu_button_scores_480_800.raw", "start": 1076104, "end": 1080288}, {"filename": "/menu_button_short_2_480_800.raw", "start": 1080288, "end": 1090338}, {"filename": "/menu_button_short_480_800.raw", "start": 1090338, "end": 1100636}, {"filename": "/menu_challenge_popup_480_800.raw", "start": 1100636, "end": 1118864}, {"filename": "/menu_drawings_bgr_480_800.png", "start": 1118864, "end": 1130399}, {"filename": "/menu_drawings_thumb_page_480_800.raw", "start": 1130399, "end": 1136667}, {"filename": "/menu_extra_buttons_480_800.raw", "start": 1136667, "end": 1163553}, {"filename": "/menu_extra_buttons_br_480_800.raw", "start": 1163553, "end": 1173837}, {"filename": "/menu_extra_buttons_en_480_800.raw", "start": 1173837, "end": 1183177}, {"filename": "/menu_extra_buttons_es_480_800.raw", "start": 1183177, "end": 1194409}, {"filename": "/menu_extra_buttons_fr_480_800.raw", "start": 1194409, "end": 1205549}, {"filename": "/menu_extra_buttons_gr_480_800.raw", "start": 1205549, "end": 1215913}, {"filename": "/menu_extra_buttons_it_480_800.raw", "start": 1215913, "end": 1225974}, {"filename": "/menu_extra_buttons_ja_480_800.raw", "start": 1225974, "end": 1235445}, {"filename": "/menu_extra_buttons_ko_480_800.raw", "start": 1235445, "end": 1246274}, {"filename": "/menu_extra_buttons_nl_480_800.raw", "start": 1246274, "end": 1256861}, {"filename": "/menu_extra_buttons_ru_480_800.raw", "start": 1256861, "end": 1270658}, {"filename": "/menu_extra_buttons_zh_480_800.raw", "start": 1270658, "end": 1280365}, {"filename": "/menu_free_480_800.raw", "start": 1280365, "end": 1285612}, {"filename": "/menu_gallery_480_800.raw", "start": 1285612, "end": 1306621}, {"filename": "/menu_level_selection_480_800.raw", "start": 1306621, "end": 1318873}, {"filename": "/menu_loading_480_800.raw", "start": 1318873, "end": 1343515}, {"filename": "/menu_loading_bgr_480_800.raw", "start": 1343515, "end": 1350799}, {"filename": "/menu_logo_480_800.raw", "start": 1350799, "end": 1363175}, {"filename": "/menu_main_bgr_480_800.jpeg", "start": 1363175, "end": 1364161}, {"filename": "/menu_more_games_480_800.raw", "start": 1364161, "end": 1379715}, {"filename": "/menu_native_ad_480_800.raw", "start": 1379715, "end": 1396125}, {"filename": "/menu_pack_icons_480_800.raw", "start": 1396125, "end": 1411252}, {"filename": "/menu_pack_selection_480_800.raw", "start": 1411252, "end": 1428553}, {"filename": "/menu_pause_480_800.raw", "start": 1428553, "end": 1437189}, {"filename": "/menu_pl_exp_480_800.raw", "start": 1437189, "end": 1453530}, {"filename": "/menu_player_2_480_800.raw", "start": 1453530, "end": 1459710}, {"filename": "/menu_popup_bamboo_480_800.raw", "start": 1459710, "end": 1486270}, {"filename": "/menu_popup_noads_480_800.raw", "start": 1486270, "end": 1516912}, {"filename": "/menu_processing_480_800.raw", "start": 1516912, "end": 1528852}, {"filename": "/menu_promo_480_800.raw", "start": 1528852, "end": 1547524}, {"filename": "/menu_promo_banner_480_800.jpeg", "start": 1547524, "end": 1548810}, {"filename": "/menu_result_480_800.raw", "start": 1548810, "end": 1563069}, {"filename": "/menu_result_br_480_800.raw", "start": 1563069, "end": 1572962}, {"filename": "/menu_result_en_480_800.raw", "start": 1572962, "end": 1585352}, {"filename": "/menu_result_es_480_800.raw", "start": 1585352, "end": 1595247}, {"filename": "/menu_result_fr_480_800.raw", "start": 1595247, "end": 1607099}, {"filename": "/menu_result_gr_480_800.raw", "start": 1607099, "end": 1619358}, {"filename": "/menu_result_it_480_800.raw", "start": 1619358, "end": 1628900}, {"filename": "/menu_result_ja_480_800.raw", "start": 1628900, "end": 1636055}, {"filename": "/menu_result_ko_480_800.raw", "start": 1636055, "end": 1644139}, {"filename": "/menu_result_nl_480_800.raw", "start": 1644139, "end": 1653572}, {"filename": "/menu_result_ru_480_800.raw", "start": 1653572, "end": 1664953}, {"filename": "/menu_result_zh_480_800.raw", "start": 1664953, "end": 1673077}, {"filename": "/menu_shadow_480_800.raw", "start": 1673077, "end": 1688153}, {"filename": "/menu_strings.xml", "start": 1688153, "end": 1812598}, {"filename": "/obj_blue_star_480_800.raw", "start": 1812598, "end": 1819780}, {"filename": "/obj_bouncer_01_480_800.raw", "start": 1819780, "end": 1828452}, {"filename": "/obj_bouncer_02_480_800.raw", "start": 1828452, "end": 1839382}, {"filename": "/obj_bubble_attached_480_800.raw", "start": 1839382, "end": 1841752}, {"filename": "/obj_bubble_flight_480_800.raw", "start": 1841752, "end": 1848797}, {"filename": "/obj_bubble_pop_480_800.raw", "start": 1848797, "end": 1856719}, {"filename": "/obj_candy_01_480_800.raw", "start": 1856719, "end": 1874431}, {"filename": "/obj_gun_480_800.raw", "start": 1874431, "end": 1884723}, {"filename": "/obj_hook_01_480_800.raw", "start": 1884723, "end": 1889894}, {"filename": "/obj_hook_02_480_800.raw", "start": 1889894, "end": 1894944}, {"filename": "/obj_hook_auto_480_800.raw", "start": 1894944, "end": 1902883}, {"filename": "/obj_hook_movable_480_800.raw", "start": 1902883, "end": 1910317}, {"filename": "/obj_pollen_480_800.raw", "start": 1910317, "end": 1910939}, {"filename": "/obj_pump_480_800.raw", "start": 1910939, "end": 1915750}, {"filename": "/obj_robohand_480_800.raw", "start": 1915750, "end": 1926220}, {"filename": "/obj_rocket_480_800.raw", "start": 1926220, "end": 1947642}, {"filename": "/obj_snail_480_800.raw", "start": 1947642, "end": 1953168}, {"filename": "/obj_spider_480_800.raw", "start": 1953168, "end": 1956344}, {"filename": "/obj_spikes_01_480_800.raw", "start": 1956344, "end": 1963877}, {"filename": "/obj_spikes_02_480_800.raw", "start": 1963877, "end": 1975976}, {"filename": "/obj_spikes_03_480_800.raw", "start": 1975976, "end": 1991993}, {"filename": "/obj_spikes_04_480_800.raw", "start": 1991993, "end": 2012310}, {"filename": "/obj_star_disappear_480_800.raw", "start": 2012310, "end": 2024862}, {"filename": "/obj_star_idle_480_800.raw", "start": 2024862, "end": 2033341}, {"filename": "/obj_sticker_480_800.raw", "start": 2033341, "end": 2039355}, {"filename": "/obj_tube_480_800.raw", "start": 2039355, "end": 2047907}, {"filename": "/promo_ctr2_480_800.raw", "start": 2047907, "end": 2064633}, {"filename": "/red_cross_480_800.raw", "start": 2064633, "end": 2071819}, {"filename": "/remove_ads_480_800.raw", "start": 2071819, "end": 2078023}, {"filename": "/small_font_480_800.png", "start": 2078023, "end": 2099445}, {"filename": "/super_powers_480_800.raw", "start": 2099445, "end": 2113105}, {"filename": "/tutorial_signs_480_800.raw", "start": 2113105, "end": 2125419}, {"filename": "/water_tile_480_800.raw", "start": 2125419, "end": 2137191}, {"filename": "/zepto_startup.xml", "start": 2137191, "end": 2174297}, {"filename": "/zepto_startup_480_800.raw", "start": 2174297, "end": 2186239}], "remote_package_size": 2186239});
+
+  })();
