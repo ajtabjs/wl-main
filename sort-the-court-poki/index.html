@@ -82,11 +82,33 @@
 				return response;
 			};
 
+			const streamingassetsurl = new URL('StreamingAssets/', document.baseURI);
+			const pageorigin = window.location.origin;
+			const rootprefix = pageorigin + '/StreamingAssets/';
+
+			const fixstreamingassets = (url) => {
+				const absolute = new URL(url, document.URL);
+				if (absolute.origin !== pageorigin) {
+					return url;
+				}
+				const href = absolute.href;
+				if (href.indexOf(rootprefix) !== 0) {
+					return url;
+				}
+				const suffix = href.slice(rootprefix.length);
+				const search = absolute.search + absolute.hash;
+				return streamingassetsurl.href + suffix.slice(0, suffix.length - search.length) + search;
+			};
+
 			window.fetch = async (input, init) => {
 				const requesturl = typeof input === 'string' ? input : (input.url || String(input));
 				const cleanurl = requesturl.split(/[?#]/)[0];
 
 				if (!cleanurl.endsWith(wasmname)) {
+					const fixedurl = fixstreamingassets(requesturl);
+					if (fixedurl !== requesturl) {
+						return originalfetch(fixedurl, init);
+					}
 					return originalfetch(input, init);
 				}
 
