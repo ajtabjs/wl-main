@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Sort the Court! - Poki</title>
+	<base href="https://cdn.jsdelivr.net/gh/ajtabjs/wl-main@master/sort-the-court-poki/">
+	<script>
+	window.config = {
+		loader: 'unity-2020',
+		debug: false,
+		maxRatio: 24 / 9,
+		minRatio: 9 / 24,
+
+		title: 'Sort the Court!',
+		thumbnail: 'https:\/\/img.poki-cdn.com\/4db98e10c6b684ae745734866bbe0800.png',
+		numScreenshots:  2 ,
+
+		unityVersion: '6000.2.6f2',
+		unityWebglBuildUrl: '',
+
+		fileSize:  17 ,
+		cachedDecompressedFileSizes: {
+			'305b62f41a266d9eed9a172a63b2f5f9.loader.js':  8037 ,
+			'3fa4bb694e2e32ad3519008d63430465.framework.js':  78448 ,
+			'7ad09f94d3e04d52845f29ef8c32df77.data':  11615101 ,
+			'e0ca40d7ef6a9e4bdeaee6dc35e22b99.wasm':  6124417 ,
+		},
+		"metadata": {"poki_template_version":1,"background_color":"#231F20","code_filename":"e0ca40d7ef6a9e4bdeaee6dc35e22b99.wasm","company_name":"graebor","data_filename":"7ad09f94d3e04d52845f29ef8c32df77.data","development_player":"false","framework_filename":"3fa4bb694e2e32ad3519008d63430465.framework.js","height":"540","loader_filename":"305b62f41a266d9eed9a172a63b2f5f9.loader.js","product_name":"Sort the Court!","product_version":"2.5.2","splash_screen_style":"Dark","unity_version":"6000.2.6f2","use_data_caching":"true","use_threads":"false","use_wasm":"true","use_webgl_1_0":"false","use_webgl_2_0":"true","width":"960"}
+	};
+	</script>
+	<script>
+		(() => {
+			const originalfetch = window.fetch.bind(window);
+			const wasmname = window.config.metadata.code_filename;
+			const cachename = 'sort-the-court-wasm';
+			const maxparts = 1000;
+
+			const loadparts = async (wasmurl) => {
+				const buffers = [];
+				for (let index = 0; index < maxparts; index++) {
+					const parturl = wasmurl + '.part' + index;
+					const response = await originalfetch(parturl);
+					const contenttype = response.headers.get('Content-Type') || '';
+					if (!response.ok || contenttype.indexOf('text/html') !== -1) {
+						break;
+					}
+					buffers.push(await response.arrayBuffer());
+				}
+				if (buffers.length === 0) {
+					throw new Error('No split parts found for ' + wasmurl);
+				}
+				const blob = new Blob(buffers, { type: 'application/wasm' });
+				return new Response(blob, {
+					status: 200,
+					headers: {
+						'Content-Type': 'application/wasm',
+						'Content-Length': String(blob.size)
+					}
+				});
+			};
+
+			const mergefiles = async (wasmurl, cachekey) => {
+				let cache = null;
+				try {
+					cache = window.caches ? await caches.open(cachename) : null;
+					const cached = cache ? await cache.match(cachekey) : null;
+					if (cached) {
+						return cached;
+					}
+				} catch (error) {
+					cache = null;
+				}
+
+				const response = await loadparts(wasmurl);
+				if (cache) {
+					try {
+						await cache.put(cachekey, response.clone());
+					} catch (error) {}
+				}
+				return response;
+			};
+
+			window.fetch = async (input, init) => {
+				const requesturl = typeof input === 'string' ? input : (input.url || String(input));
+				const cleanurl = requesturl.split(/[?#]/)[0];
+
+				if (!cleanurl.endsWith(wasmname)) {
+					return originalfetch(input, init);
+				}
+
+				const method = ((init && init.method) || input.method || 'GET').toUpperCase();
+				const wasmurl = new URL(cleanurl, document.baseURI).href;
+				const response = await mergefiles(wasmurl, wasmurl);
+
+				if (method === 'HEAD') {
+					return new Response(null, { status: response.status, headers: response.headers });
+				}
+				return response;
+			};
+		})();
+	</script>
+<!-- will be copied to the resulting head //-->
+</head>
+<body>
+	<script src="./loaders/master-loader.js"></script>
+<!-- will be copied to the resulting body //-->
+<!-- will also be copied to the resulting body //-->
+</body>
+</html>
