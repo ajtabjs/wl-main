@@ -1,0 +1,2687 @@
+{
+	"textures": [
+		{
+			"image": "spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 530,
+				"h": 124
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "background.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 90
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 160,
+						"h": 90
+					}
+				},
+				{
+					"filename": "logo.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 6,
+						"w": 148,
+						"h": 51
+					},
+					"frame": {
+						"x": 163,
+						"y": 1,
+						"w": 148,
+						"h": 51
+					}
+				},
+				{
+					"filename": "grave.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 20,
+						"h": 30
+					},
+					"frame": {
+						"x": 1,
+						"y": 93,
+						"w": 20,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_closed_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 23,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_closed_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 41,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_closed_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 59,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_closed_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 77,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_open_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 95,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_open_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 113,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_open_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 131,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "portal_open_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 149,
+						"y": 93,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "skull_pile.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 28
+					},
+					"frame": {
+						"x": 313,
+						"y": 1,
+						"w": 32,
+						"h": 28
+					}
+				},
+				{
+					"filename": "emote_kill_bat.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 20
+					},
+					"frame": {
+						"x": 163,
+						"y": 54,
+						"w": 32,
+						"h": 20
+					}
+				},
+				{
+					"filename": "emote_kill_bunny.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 20
+					},
+					"frame": {
+						"x": 313,
+						"y": 31,
+						"w": 32,
+						"h": 20
+					}
+				},
+				{
+					"filename": "emote_kill_human.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 20
+					},
+					"frame": {
+						"x": 347,
+						"y": 1,
+						"w": 32,
+						"h": 20
+					}
+				},
+				{
+					"filename": "emote_kill_rat.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 20
+					},
+					"frame": {
+						"x": 197,
+						"y": 54,
+						"w": 32,
+						"h": 20
+					}
+				},
+				{
+					"filename": "reaper_girl_love_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 25
+					},
+					"frame": {
+						"x": 347,
+						"y": 23,
+						"w": 16,
+						"h": 25
+					}
+				},
+				{
+					"filename": "reaper_girl_love_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 14,
+						"h": 25
+					},
+					"frame": {
+						"x": 365,
+						"y": 23,
+						"w": 14,
+						"h": 25
+					}
+				},
+				{
+					"filename": "portal_closed_alt_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 24
+					},
+					"frame": {
+						"x": 381,
+						"y": 1,
+						"w": 16,
+						"h": 24
+					}
+				},
+				{
+					"filename": "portal_closed_alt_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 24
+					},
+					"frame": {
+						"x": 381,
+						"y": 1,
+						"w": 16,
+						"h": 24
+					}
+				},
+				{
+					"filename": "portal_closed_alt_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 24
+					},
+					"frame": {
+						"x": 399,
+						"y": 1,
+						"w": 16,
+						"h": 24
+					}
+				},
+				{
+					"filename": "portal_closed_alt_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 24
+					},
+					"frame": {
+						"x": 399,
+						"y": 1,
+						"w": 16,
+						"h": 24
+					}
+				},
+				{
+					"filename": "reaper_girl_love_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 23
+					},
+					"frame": {
+						"x": 417,
+						"y": 1,
+						"w": 16,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 23
+					},
+					"frame": {
+						"x": 435,
+						"y": 1,
+						"w": 16,
+						"h": 23
+					}
+				},
+				{
+					"filename": "plant_equipped.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 453,
+						"y": 1,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 470,
+						"y": 1,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 487,
+						"y": 1,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_run_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 15,
+						"h": 25
+					},
+					"frame": {
+						"x": 504,
+						"y": 1,
+						"w": 15,
+						"h": 25
+					}
+				},
+				{
+					"filename": "human_jump_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 381,
+						"y": 27,
+						"w": 16,
+						"h": 21
+					}
+				},
+				{
+					"filename": "human_jump_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 399,
+						"y": 27,
+						"w": 16,
+						"h": 21
+					}
+				},
+				{
+					"filename": "human_jump_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 417,
+						"y": 26,
+						"w": 16,
+						"h": 21
+					}
+				},
+				{
+					"filename": "human_run_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 435,
+						"y": 26,
+						"w": 16,
+						"h": 21
+					}
+				},
+				{
+					"filename": "arrow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 13
+					},
+					"frame": {
+						"x": 521,
+						"y": 1,
+						"w": 8,
+						"h": 13
+					}
+				},
+				{
+					"filename": "human_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 231,
+						"y": 54,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "human_idle_outline_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 453,
+						"y": 26,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "human_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 249,
+						"y": 54,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "human_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 471,
+						"y": 26,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "bunny_jump_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 163,
+						"y": 76,
+						"w": 16,
+						"h": 15
+					}
+				},
+				{
+					"filename": "reaper_run_scythe_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 14,
+						"h": 25
+					},
+					"frame": {
+						"x": 167,
+						"y": 93,
+						"w": 14,
+						"h": 25
+					}
+				},
+				{
+					"filename": "human_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 267,
+						"y": 54,
+						"w": 16,
+						"h": 19
+					}
+				},
+				{
+					"filename": "human_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 285,
+						"y": 54,
+						"w": 16,
+						"h": 19
+					}
+				},
+				{
+					"filename": "reaper_run_scythe_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 13,
+						"h": 23
+					},
+					"frame": {
+						"x": 489,
+						"y": 26,
+						"w": 13,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 504,
+						"y": 28,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "arrow_red.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 13
+					},
+					"frame": {
+						"x": 521,
+						"y": 16,
+						"w": 8,
+						"h": 13
+					}
+				},
+				{
+					"filename": "bunny_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 181,
+						"y": 76,
+						"w": 16,
+						"h": 15
+					}
+				},
+				{
+					"filename": "reaper_girl_angry.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 183,
+						"y": 93,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_scythe_flash_05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 183,
+						"y": 93,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 199,
+						"y": 76,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_worried.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 216,
+						"y": 76,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_blink_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 233,
+						"y": 76,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_blink_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 233,
+						"y": 76,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_blink_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 249,
+						"y": 76,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "music_off.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 16
+					},
+					"frame": {
+						"x": 199,
+						"y": 101,
+						"w": 18,
+						"h": 16
+					}
+				},
+				{
+					"filename": "sound_on.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 16
+					},
+					"frame": {
+						"x": 219,
+						"y": 101,
+						"w": 18,
+						"h": 16
+					}
+				},
+				{
+					"filename": "music_on.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 16
+					},
+					"frame": {
+						"x": 239,
+						"y": 101,
+						"w": 17,
+						"h": 16
+					}
+				},
+				{
+					"filename": "human_idle_outline_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 303,
+						"y": 54,
+						"w": 16,
+						"h": 19
+					}
+				},
+				{
+					"filename": "human_idle_outline_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 321,
+						"y": 53,
+						"w": 16,
+						"h": 19
+					}
+				},
+				{
+					"filename": "bullet.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 8
+					},
+					"frame": {
+						"x": 521,
+						"y": 31,
+						"w": 8,
+						"h": 8
+					}
+				},
+				{
+					"filename": "heart.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 8
+					},
+					"frame": {
+						"x": 521,
+						"y": 41,
+						"w": 8,
+						"h": 8
+					}
+				},
+				{
+					"filename": "human_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 339,
+						"y": 53,
+						"w": 16,
+						"h": 19
+					}
+				},
+				{
+					"filename": "reaper_girl_love_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 357,
+						"y": 50,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_scythe_flash_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 373,
+						"y": 50,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_scythe_flash_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 389,
+						"y": 50,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_scythe_flash_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 405,
+						"y": 50,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_girl_scythe_flash_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 421,
+						"y": 49,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_idle_scythe_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 437,
+						"y": 49,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_idle_scythe_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 453,
+						"y": 48,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_run_scythe_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 469,
+						"y": 48,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "human_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 485,
+						"y": 51,
+						"w": 16,
+						"h": 18
+					}
+				},
+				{
+					"filename": "box.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 503,
+						"y": 53,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "red_particle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 8
+					},
+					"frame": {
+						"x": 521,
+						"y": 51,
+						"w": 8,
+						"h": 8
+					}
+				},
+				{
+					"filename": "white_particle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 8
+					},
+					"frame": {
+						"x": 521,
+						"y": 61,
+						"w": 8,
+						"h": 8
+					}
+				},
+				{
+					"filename": "reaper_run_scythe_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 12,
+						"h": 23
+					},
+					"frame": {
+						"x": 265,
+						"y": 76,
+						"w": 12,
+						"h": 23
+					}
+				},
+				{
+					"filename": "human_idle_outline_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 279,
+						"y": 75,
+						"w": 16,
+						"h": 18
+					}
+				},
+				{
+					"filename": "human_jump_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 297,
+						"y": 75,
+						"w": 16,
+						"h": 18
+					}
+				},
+				{
+					"filename": "emote_angry.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 258,
+						"y": 101,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "plant.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 13
+					},
+					"frame": {
+						"x": 279,
+						"y": 95,
+						"w": 20,
+						"h": 13
+					}
+				},
+				{
+					"filename": "bunny_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 13
+					},
+					"frame": {
+						"x": 276,
+						"y": 110,
+						"w": 16,
+						"h": 13
+					}
+				},
+				{
+					"filename": "bunny_idle_outline_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 13
+					},
+					"frame": {
+						"x": 294,
+						"y": 110,
+						"w": 16,
+						"h": 13
+					}
+				},
+				{
+					"filename": "bat_fly_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 12,
+						"h": 13
+					},
+					"frame": {
+						"x": 301,
+						"y": 95,
+						"w": 12,
+						"h": 13
+					}
+				},
+				{
+					"filename": "leaf.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 14,
+						"h": 13
+					},
+					"frame": {
+						"x": 312,
+						"y": 110,
+						"w": 14,
+						"h": 13
+					}
+				},
+				{
+					"filename": "reaper_run_naked_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 8,
+						"w": 11,
+						"h": 17
+					},
+					"frame": {
+						"x": 315,
+						"y": 75,
+						"w": 11,
+						"h": 17
+					}
+				},
+				{
+					"filename": "bunny_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 315,
+						"y": 94,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "bunny_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 315,
+						"y": 94,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "emote_happy.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 328,
+						"y": 74,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "bat_fly_outline_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 12,
+						"h": 13
+					},
+					"frame": {
+						"x": 328,
+						"y": 110,
+						"w": 12,
+						"h": 13
+					}
+				},
+				{
+					"filename": "emote_idea.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 333,
+						"y": 92,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "sidearrows.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 346,
+						"y": 75,
+						"w": 16,
+						"h": 15
+					}
+				},
+				{
+					"filename": "emote_sad.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 364,
+						"y": 75,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fullscreen_icon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 382,
+						"y": 75,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "bunny_idle_black_outline.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 400,
+						"y": 75,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "reaper_idle_naked_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 9,
+						"w": 11,
+						"h": 16
+					},
+					"frame": {
+						"x": 351,
+						"y": 92,
+						"w": 11,
+						"h": 16
+					}
+				},
+				{
+					"filename": "bunny_idle_outline_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 364,
+						"y": 93,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "bunny_jump_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 364,
+						"y": 109,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "bunny_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 364,
+						"y": 109,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "bunny_run_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 15,
+						"h": 15
+					},
+					"frame": {
+						"x": 382,
+						"y": 93,
+						"w": 15,
+						"h": 15
+					}
+				},
+				{
+					"filename": "sound_off.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 18,
+						"h": 12
+					},
+					"frame": {
+						"x": 342,
+						"y": 110,
+						"w": 18,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bat_fly_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 12
+					},
+					"frame": {
+						"x": 382,
+						"y": 110,
+						"w": 16,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bat_fly_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 11
+					},
+					"frame": {
+						"x": 485,
+						"y": 71,
+						"w": 16,
+						"h": 11
+					}
+				},
+				{
+					"filename": "bat_fly_outline_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 11
+					},
+					"frame": {
+						"x": 503,
+						"y": 71,
+						"w": 16,
+						"h": 11
+					}
+				},
+				{
+					"filename": "bat_fly_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 9
+					},
+					"frame": {
+						"x": 400,
+						"y": 91,
+						"w": 16,
+						"h": 9
+					}
+				},
+				{
+					"filename": "smoke.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 400,
+						"y": 102,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "reaper_run_naked_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 9,
+						"w": 11,
+						"h": 16
+					},
+					"frame": {
+						"x": 418,
+						"y": 75,
+						"w": 11,
+						"h": 16
+					}
+				},
+				{
+					"filename": "bat_fly_outline_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 12
+					},
+					"frame": {
+						"x": 431,
+						"y": 74,
+						"w": 16,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bat_fly_outline_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 9
+					},
+					"frame": {
+						"x": 431,
+						"y": 88,
+						"w": 16,
+						"h": 9
+					}
+				},
+				{
+					"filename": "reaper_girl_icon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 12,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 11,
+						"h": 12
+					},
+					"frame": {
+						"x": 418,
+						"y": 93,
+						"w": 11,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bunny_jump_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 12
+					},
+					"frame": {
+						"x": 431,
+						"y": 99,
+						"w": 16,
+						"h": 12
+					}
+				},
+				{
+					"filename": "heart_broken.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 12,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 10
+					},
+					"frame": {
+						"x": 417,
+						"y": 107,
+						"w": 12,
+						"h": 10
+					}
+				},
+				{
+					"filename": "pointing_arrow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 10
+					},
+					"frame": {
+						"x": 431,
+						"y": 113,
+						"w": 16,
+						"h": 10
+					}
+				},
+				{
+					"filename": "reaper_idle_naked_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 10,
+						"w": 11,
+						"h": 15
+					},
+					"frame": {
+						"x": 449,
+						"y": 74,
+						"w": 11,
+						"h": 15
+					}
+				},
+				{
+					"filename": "reaper_run_naked_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 10,
+						"w": 11,
+						"h": 15
+					},
+					"frame": {
+						"x": 449,
+						"y": 74,
+						"w": 11,
+						"h": 15
+					}
+				},
+				{
+					"filename": "rat_run_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					},
+					"frame": {
+						"x": 462,
+						"y": 73,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "reaper_run_naked_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 11,
+						"w": 11,
+						"h": 14
+					},
+					"frame": {
+						"x": 449,
+						"y": 91,
+						"w": 11,
+						"h": 14
+					}
+				},
+				{
+					"filename": "rat_run_outline_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					},
+					"frame": {
+						"x": 462,
+						"y": 86,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "skull.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 449,
+						"y": 107,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "rat_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 15,
+						"h": 10
+					},
+					"frame": {
+						"x": 462,
+						"y": 99,
+						"w": 15,
+						"h": 10
+					}
+				},
+				{
+					"filename": "rat_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 15,
+						"h": 9
+					},
+					"frame": {
+						"x": 462,
+						"y": 111,
+						"w": 15,
+						"h": 9
+					}
+				},
+				{
+					"filename": "rat_idle_outline_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 15,
+						"h": 10
+					},
+					"frame": {
+						"x": 479,
+						"y": 84,
+						"w": 15,
+						"h": 10
+					}
+				},
+				{
+					"filename": "rat_run_outline_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 15,
+						"h": 10
+					},
+					"frame": {
+						"x": 479,
+						"y": 84,
+						"w": 15,
+						"h": 10
+					}
+				},
+				{
+					"filename": "rat_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 10
+					},
+					"frame": {
+						"x": 479,
+						"y": 96,
+						"w": 15,
+						"h": 10
+					}
+				},
+				{
+					"filename": "rat_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 15,
+						"h": 10
+					},
+					"frame": {
+						"x": 496,
+						"y": 84,
+						"w": 15,
+						"h": 10
+					}
+				},
+				{
+					"filename": "rat_run_outline_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 10
+					},
+					"frame": {
+						"x": 479,
+						"y": 108,
+						"w": 15,
+						"h": 10
+					}
+				},
+				{
+					"filename": "rat_idle_outline_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 15,
+						"h": 9
+					},
+					"frame": {
+						"x": 496,
+						"y": 96,
+						"w": 15,
+						"h": 9
+					}
+				},
+				{
+					"filename": "spikes.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					},
+					"frame": {
+						"x": 513,
+						"y": 84,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "skull_purple.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 496,
+						"y": 107,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "reaper_icon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 12,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 11,
+						"h": 10
+					},
+					"frame": {
+						"x": 513,
+						"y": 94,
+						"w": 11,
+						"h": 10
+					}
+				},
+				{
+					"filename": "blood.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 6,
+						"h": 6
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 6,
+						"h": 6
+					},
+					"frame": {
+						"x": 521,
+						"y": 71,
+						"w": 6,
+						"h": 6
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:eeea866efcbdbb6c1faf9eda63c43eec:35680cf3cfc3cd2cf8b2870e5dd6a9fe:729adc6043343cfda41c447ce8f464d6$"
+	}
+}
