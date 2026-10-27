@@ -1,0 +1,3359 @@
+{
+	"textures": [
+		{
+			"image": "spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 482,
+				"h": 435
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "background_ingame.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 480,
+						"h": 270
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 480,
+						"h": 270
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 480,
+						"h": 270
+					}
+				},
+				{
+					"filename": "background.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 90
+					},
+					"frame": {
+						"x": 1,
+						"y": 273,
+						"w": 160,
+						"h": 90
+					}
+				},
+				{
+					"filename": "logo.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 6,
+						"w": 151,
+						"h": 53
+					},
+					"frame": {
+						"x": 1,
+						"y": 365,
+						"w": 151,
+						"h": 53
+					}
+				},
+				{
+					"filename": "keys_move.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 125,
+						"h": 32
+					},
+					"frame": {
+						"x": 163,
+						"y": 273,
+						"w": 125,
+						"h": 32
+					}
+				},
+				{
+					"filename": "keys_action.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 8,
+						"w": 104,
+						"h": 18
+					},
+					"frame": {
+						"x": 163,
+						"y": 307,
+						"w": 104,
+						"h": 18
+					}
+				},
+				{
+					"filename": "grave.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 19,
+						"h": 30
+					},
+					"frame": {
+						"x": 290,
+						"y": 273,
+						"w": 19,
+						"h": 30
+					}
+				},
+				{
+					"filename": "smoke.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 1,
+						"y": 420,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "twitter.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 7,
+						"w": 24,
+						"h": 21
+					},
+					"frame": {
+						"x": 163,
+						"y": 327,
+						"w": 24,
+						"h": 21
+					}
+				},
+				{
+					"filename": "fire_red.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 17,
+						"h": 27
+					},
+					"frame": {
+						"x": 311,
+						"y": 273,
+						"w": 17,
+						"h": 27
+					}
+				},
+				{
+					"filename": "enemy_green_run_scythe_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 330,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_initial_open_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 348,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_initial_open_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 366,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_open_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 384,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_open_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 402,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_open_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 420,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_open_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 438,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_open_05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 456,
+						"y": 273,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "enemy_green_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 16,
+						"h": 23
+					},
+					"frame": {
+						"x": 189,
+						"y": 327,
+						"w": 16,
+						"h": 23
+					}
+				},
+				{
+					"filename": "portal_initial_open_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 7,
+						"w": 16,
+						"h": 23
+					},
+					"frame": {
+						"x": 207,
+						"y": 327,
+						"w": 16,
+						"h": 23
+					}
+				},
+				{
+					"filename": "portal_open_06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 225,
+						"y": 327,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "portal_open_07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 243,
+						"y": 327,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "enemy_blue_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 269,
+						"y": 307,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_blue_idle_06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 269,
+						"y": 307,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_green_run_scythe_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 14,
+						"h": 27
+					},
+					"frame": {
+						"x": 154,
+						"y": 365,
+						"w": 14,
+						"h": 27
+					}
+				},
+				{
+					"filename": "enemy_green_run_scythe_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 15,
+						"h": 27
+					},
+					"frame": {
+						"x": 154,
+						"y": 394,
+						"w": 15,
+						"h": 27
+					}
+				},
+				{
+					"filename": "bunny_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 13
+					},
+					"frame": {
+						"x": 163,
+						"y": 350,
+						"w": 16,
+						"h": 13
+					}
+				},
+				{
+					"filename": "portal_open_08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 170,
+						"y": 365,
+						"w": 16,
+						"h": 27
+					}
+				},
+				{
+					"filename": "enemy_green_run_scythe_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 26
+					},
+					"frame": {
+						"x": 171,
+						"y": 394,
+						"w": 14,
+						"h": 26
+					}
+				},
+				{
+					"filename": "reaper_girl_love_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 25
+					},
+					"frame": {
+						"x": 261,
+						"y": 329,
+						"w": 16,
+						"h": 25
+					}
+				},
+				{
+					"filename": "sound_off.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 18,
+						"h": 12
+					},
+					"frame": {
+						"x": 171,
+						"y": 422,
+						"w": 18,
+						"h": 12
+					}
+				},
+				{
+					"filename": "player_nohead_jump_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 9,
+						"w": 7,
+						"h": 11
+					},
+					"frame": {
+						"x": 474,
+						"y": 273,
+						"w": 7,
+						"h": 11
+					}
+				},
+				{
+					"filename": "reaper_girl_love_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 14,
+						"h": 25
+					},
+					"frame": {
+						"x": 279,
+						"y": 329,
+						"w": 14,
+						"h": 25
+					}
+				},
+				{
+					"filename": "enemy_blue_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 287,
+						"y": 307,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_green_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 295,
+						"y": 329,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "enemy_white_love_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 22
+					},
+					"frame": {
+						"x": 305,
+						"y": 305,
+						"w": 14,
+						"h": 22
+					}
+				},
+				{
+					"filename": "reaper_girl_love_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 23
+					},
+					"frame": {
+						"x": 321,
+						"y": 302,
+						"w": 16,
+						"h": 23
+					}
+				},
+				{
+					"filename": "enemy_green_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 5,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 339,
+						"y": 302,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "enemy_white_run_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 22
+					},
+					"frame": {
+						"x": 356,
+						"y": 302,
+						"w": 16,
+						"h": 22
+					}
+				},
+				{
+					"filename": "enemy_white_run_bunny_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 22
+					},
+					"frame": {
+						"x": 374,
+						"y": 302,
+						"w": 16,
+						"h": 22
+					}
+				},
+				{
+					"filename": "enemy_white_run_bunny_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 392,
+						"y": 302,
+						"w": 16,
+						"h": 21
+					}
+				},
+				{
+					"filename": "enemy_white_run_bunny_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 410,
+						"y": 302,
+						"w": 16,
+						"h": 21
+					}
+				},
+				{
+					"filename": "enemy_blue_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 428,
+						"y": 302,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_blue_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 446,
+						"y": 302,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "bunny.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 17,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 16
+					},
+					"frame": {
+						"x": 464,
+						"y": 302,
+						"w": 17,
+						"h": 16
+					}
+				},
+				{
+					"filename": "music_on.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 16
+					},
+					"frame": {
+						"x": 464,
+						"y": 320,
+						"w": 17,
+						"h": 16
+					}
+				},
+				{
+					"filename": "enemy_green_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 311,
+						"y": 329,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 327,
+						"y": 327,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "enemy_green_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 344,
+						"y": 327,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "reaper_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 360,
+						"y": 326,
+						"w": 15,
+						"h": 23
+					}
+				},
+				{
+					"filename": "granny_blink_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 377,
+						"y": 326,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "granny_blink_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 377,
+						"y": 326,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "granny_flash_05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 377,
+						"y": 326,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "granny_blink_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 393,
+						"y": 325,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "granny_flash_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 409,
+						"y": 325,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "player_nohead_run_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 10,
+						"w": 7,
+						"h": 10
+					},
+					"frame": {
+						"x": 474,
+						"y": 286,
+						"w": 7,
+						"h": 10
+					}
+				},
+				{
+					"filename": "bunny_zombie_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 12
+					},
+					"frame": {
+						"x": 18,
+						"y": 420,
+						"w": 16,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bunny_zombie_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 16,
+						"h": 11
+					},
+					"frame": {
+						"x": 36,
+						"y": 420,
+						"w": 16,
+						"h": 11
+					}
+				},
+				{
+					"filename": "granny_flash_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 425,
+						"y": 325,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "granny_flash_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 441,
+						"y": 324,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "spike.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					},
+					"frame": {
+						"x": 54,
+						"y": 420,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "granny_flash_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 188,
+						"y": 352,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "player_blink_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 204,
+						"y": 352,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "player_blink_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 204,
+						"y": 352,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "music_off.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 16
+					},
+					"frame": {
+						"x": 188,
+						"y": 377,
+						"w": 18,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_blink_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 187,
+						"y": 395,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "enemy_blue_idle_05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 220,
+						"y": 356,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_purple_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 238,
+						"y": 356,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_purple_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 256,
+						"y": 356,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_purple_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 274,
+						"y": 356,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "player_attack_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 208,
+						"y": 377,
+						"w": 10,
+						"h": 17
+					}
+				},
+				{
+					"filename": "sound_on.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 16
+					},
+					"frame": {
+						"x": 220,
+						"y": 378,
+						"w": 18,
+						"h": 16
+					}
+				},
+				{
+					"filename": "bunny_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 17,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 17,
+						"h": 15
+					},
+					"frame": {
+						"x": 240,
+						"y": 378,
+						"w": 17,
+						"h": 15
+					}
+				},
+				{
+					"filename": "emote_angry.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 259,
+						"y": 378,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "enemy_green_run_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 6,
+						"w": 15,
+						"h": 21
+					},
+					"frame": {
+						"x": 203,
+						"y": 396,
+						"w": 15,
+						"h": 21
+					}
+				},
+				{
+					"filename": "enemy_white_run_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 15,
+						"h": 21
+					},
+					"frame": {
+						"x": 220,
+						"y": 396,
+						"w": 15,
+						"h": 21
+					}
+				},
+				{
+					"filename": "sidearrows.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 203,
+						"y": 419,
+						"w": 16,
+						"h": 15
+					}
+				},
+				{
+					"filename": "player_attack_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 10,
+						"h": 15
+					},
+					"frame": {
+						"x": 221,
+						"y": 419,
+						"w": 10,
+						"h": 15
+					}
+				},
+				{
+					"filename": "skull_pole_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 10,
+						"h": 12
+					},
+					"frame": {
+						"x": 191,
+						"y": 420,
+						"w": 10,
+						"h": 12
+					}
+				},
+				{
+					"filename": "enemy_green_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 8,
+						"w": 14,
+						"h": 20
+					},
+					"frame": {
+						"x": 277,
+						"y": 378,
+						"w": 14,
+						"h": 20
+					}
+				},
+				{
+					"filename": "portal_closed_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 23,
+						"w": 16,
+						"h": 7
+					},
+					"frame": {
+						"x": 72,
+						"y": 420,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "enemy_green_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 7,
+						"w": 14,
+						"h": 21
+					},
+					"frame": {
+						"x": 237,
+						"y": 396,
+						"w": 14,
+						"h": 21
+					}
+				},
+				{
+					"filename": "enemy_white_run_bunny_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 16,
+						"h": 20
+					},
+					"frame": {
+						"x": 253,
+						"y": 396,
+						"w": 16,
+						"h": 20
+					}
+				},
+				{
+					"filename": "fire_blue_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 253,
+						"y": 418,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "reaper_girl_love_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 271,
+						"y": 400,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "skull_pole_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 12,
+						"h": 9
+					},
+					"frame": {
+						"x": 271,
+						"y": 425,
+						"w": 12,
+						"h": 9
+					}
+				},
+				{
+					"filename": "enemy_white_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 14,
+						"h": 21
+					},
+					"frame": {
+						"x": 287,
+						"y": 400,
+						"w": 14,
+						"h": 21
+					}
+				},
+				{
+					"filename": "leaf.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 12,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 233,
+						"y": 419,
+						"w": 12,
+						"h": 12
+					}
+				},
+				{
+					"filename": "player_head.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 287,
+						"y": 423,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "skull.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 300,
+						"y": 423,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "enemy_purple_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 20
+					},
+					"frame": {
+						"x": 292,
+						"y": 356,
+						"w": 15,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_white_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 14,
+						"h": 20
+					},
+					"frame": {
+						"x": 293,
+						"y": 378,
+						"w": 14,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_white_idle_bunny_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 15,
+						"h": 19
+					},
+					"frame": {
+						"x": 309,
+						"y": 354,
+						"w": 15,
+						"h": 19
+					}
+				},
+				{
+					"filename": "enemy_white_idle_bunny_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 15,
+						"h": 18
+					},
+					"frame": {
+						"x": 309,
+						"y": 375,
+						"w": 15,
+						"h": 18
+					}
+				},
+				{
+					"filename": "enemy_white_love_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 13,
+						"h": 20
+					},
+					"frame": {
+						"x": 303,
+						"y": 400,
+						"w": 13,
+						"h": 20
+					}
+				},
+				{
+					"filename": "skull_pole_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 313,
+						"y": 422,
+						"w": 12,
+						"h": 12
+					}
+				},
+				{
+					"filename": "player_fall_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 20
+					},
+					"frame": {
+						"x": 318,
+						"y": 395,
+						"w": 10,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_white_idle_bunny_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 15,
+						"h": 17
+					},
+					"frame": {
+						"x": 327,
+						"y": 417,
+						"w": 15,
+						"h": 17
+					}
+				},
+				{
+					"filename": "player_jump_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 20
+					},
+					"frame": {
+						"x": 326,
+						"y": 354,
+						"w": 10,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_white_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 5,
+						"w": 14,
+						"h": 17
+					},
+					"frame": {
+						"x": 326,
+						"y": 376,
+						"w": 14,
+						"h": 17
+					}
+				},
+				{
+					"filename": "player_run_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 20
+					},
+					"frame": {
+						"x": 330,
+						"y": 395,
+						"w": 10,
+						"h": 20
+					}
+				},
+				{
+					"filename": "enemy_white_idle_bunny_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 15,
+						"h": 18
+					},
+					"frame": {
+						"x": 338,
+						"y": 352,
+						"w": 15,
+						"h": 18
+					}
+				},
+				{
+					"filename": "enemy_white_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 12,
+						"h": 19
+					},
+					"frame": {
+						"x": 342,
+						"y": 372,
+						"w": 12,
+						"h": 19
+					}
+				},
+				{
+					"filename": "enemy_white_love_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 14,
+						"h": 19
+					},
+					"frame": {
+						"x": 342,
+						"y": 393,
+						"w": 14,
+						"h": 19
+					}
+				},
+				{
+					"filename": "enemy_white_love_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 14,
+						"h": 19
+					},
+					"frame": {
+						"x": 344,
+						"y": 414,
+						"w": 14,
+						"h": 19
+					}
+				},
+				{
+					"filename": "enemy_white_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 4,
+						"w": 12,
+						"h": 18
+					},
+					"frame": {
+						"x": 355,
+						"y": 352,
+						"w": 12,
+						"h": 18
+					}
+				},
+				{
+					"filename": "fire_blue.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 12,
+						"h": 19
+					},
+					"frame": {
+						"x": 356,
+						"y": 372,
+						"w": 12,
+						"h": 19
+					}
+				},
+				{
+					"filename": "fire_blue_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 369,
+						"y": 351,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 10,
+						"h": 19
+					},
+					"frame": {
+						"x": 358,
+						"y": 393,
+						"w": 10,
+						"h": 19
+					}
+				},
+				{
+					"filename": "fire_blue_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 370,
+						"y": 369,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_blue_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 370,
+						"y": 387,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 10,
+						"h": 19
+					},
+					"frame": {
+						"x": 360,
+						"y": 414,
+						"w": 10,
+						"h": 19
+					}
+				},
+				{
+					"filename": "skull_pole.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 13,
+						"h": 18
+					},
+					"frame": {
+						"x": 372,
+						"y": 405,
+						"w": 13,
+						"h": 18
+					}
+				},
+				{
+					"filename": "player_nohead_idle_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 11,
+						"w": 7,
+						"h": 9
+					},
+					"frame": {
+						"x": 372,
+						"y": 425,
+						"w": 7,
+						"h": 9
+					}
+				},
+				{
+					"filename": "player_nohead_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 11,
+						"w": 7,
+						"h": 9
+					},
+					"frame": {
+						"x": 381,
+						"y": 425,
+						"w": 7,
+						"h": 9
+					}
+				},
+				{
+					"filename": "fire_green_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 387,
+						"y": 351,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_green_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 405,
+						"y": 350,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_green_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 423,
+						"y": 350,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_green_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 388,
+						"y": 369,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_purple_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 388,
+						"y": 387,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "enemy_white_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 4,
+						"w": 12,
+						"h": 18
+					},
+					"frame": {
+						"x": 387,
+						"y": 405,
+						"w": 12,
+						"h": 18
+					}
+				},
+				{
+					"filename": "fire_purple_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 406,
+						"y": 368,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_purple_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 406,
+						"y": 386,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fire_purple_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 424,
+						"y": 368,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "fullscreen_icon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 424,
+						"y": 386,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "wind_up_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 16
+					},
+					"frame": {
+						"x": 441,
+						"y": 349,
+						"w": 15,
+						"h": 16
+					}
+				},
+				{
+					"filename": "wind_up_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 16
+					},
+					"frame": {
+						"x": 442,
+						"y": 367,
+						"w": 15,
+						"h": 16
+					}
+				},
+				{
+					"filename": "wind_up_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 442,
+						"y": 385,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 10,
+						"h": 18
+					},
+					"frame": {
+						"x": 401,
+						"y": 405,
+						"w": 10,
+						"h": 18
+					}
+				},
+				{
+					"filename": "wind_up_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 16
+					},
+					"frame": {
+						"x": 413,
+						"y": 404,
+						"w": 14,
+						"h": 16
+					}
+				},
+				{
+					"filename": "scythe.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 13,
+						"h": 16
+					},
+					"frame": {
+						"x": 429,
+						"y": 404,
+						"w": 13,
+						"h": 16
+					}
+				},
+				{
+					"filename": "skull_pole_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 413,
+						"y": 422,
+						"w": 12,
+						"h": 12
+					}
+				},
+				{
+					"filename": "skull_pole_06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 4,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 427,
+						"y": 422,
+						"w": 12,
+						"h": 12
+					}
+				},
+				{
+					"filename": "skull_pole_08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 441,
+						"y": 422,
+						"w": 12,
+						"h": 12
+					}
+				},
+				{
+					"filename": "player_attack_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 10,
+						"h": 16
+					},
+					"frame": {
+						"x": 444,
+						"y": 403,
+						"w": 10,
+						"h": 16
+					}
+				},
+				{
+					"filename": "arrow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 13
+					},
+					"frame": {
+						"x": 455,
+						"y": 421,
+						"w": 8,
+						"h": 13
+					}
+				},
+				{
+					"filename": "player_jump_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 10,
+						"h": 16
+					},
+					"frame": {
+						"x": 456,
+						"y": 403,
+						"w": 10,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 10,
+						"h": 16
+					},
+					"frame": {
+						"x": 456,
+						"y": 403,
+						"w": 10,
+						"h": 16
+					}
+				},
+				{
+					"filename": "skull_pole_07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 4,
+						"w": 12,
+						"h": 10
+					},
+					"frame": {
+						"x": 90,
+						"y": 420,
+						"w": 12,
+						"h": 10
+					}
+				},
+				{
+					"filename": "skull_blue.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 104,
+						"y": 420,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "skull_dark.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 117,
+						"y": 420,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "skull_green.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 130,
+						"y": 420,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "skull_pole_05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 4,
+						"w": 9,
+						"h": 12
+					},
+					"frame": {
+						"x": 143,
+						"y": 420,
+						"w": 9,
+						"h": 12
+					}
+				},
+				{
+					"filename": "skull_purple.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 154,
+						"y": 423,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "player_nohead_idle_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 12,
+						"w": 7,
+						"h": 8
+					},
+					"frame": {
+						"x": 390,
+						"y": 425,
+						"w": 7,
+						"h": 8
+					}
+				},
+				{
+					"filename": "player_nohead_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 12,
+						"w": 7,
+						"h": 8
+					},
+					"frame": {
+						"x": 390,
+						"y": 425,
+						"w": 7,
+						"h": 8
+					}
+				},
+				{
+					"filename": "player_nohead_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 12,
+						"w": 7,
+						"h": 8
+					},
+					"frame": {
+						"x": 399,
+						"y": 425,
+						"w": 7,
+						"h": 8
+					}
+				},
+				{
+					"filename": "player_run_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 10,
+						"h": 19
+					},
+					"frame": {
+						"x": 458,
+						"y": 338,
+						"w": 10,
+						"h": 19
+					}
+				},
+				{
+					"filename": "skull_red.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 470,
+						"y": 338,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "player_idle_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 10,
+						"h": 18
+					},
+					"frame": {
+						"x": 459,
+						"y": 359,
+						"w": 10,
+						"h": 18
+					}
+				},
+				{
+					"filename": "player_jump_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 10,
+						"h": 18
+					},
+					"frame": {
+						"x": 471,
+						"y": 351,
+						"w": 10,
+						"h": 18
+					}
+				},
+				{
+					"filename": "player_run_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 10,
+						"h": 18
+					},
+					"frame": {
+						"x": 471,
+						"y": 351,
+						"w": 10,
+						"h": 18
+					}
+				},
+				{
+					"filename": "player_nohead_idle_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 12,
+						"w": 7,
+						"h": 8
+					},
+					"frame": {
+						"x": 471,
+						"y": 371,
+						"w": 7,
+						"h": 8
+					}
+				},
+				{
+					"filename": "player_nohead_jump_02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 12,
+						"w": 7,
+						"h": 8
+					},
+					"frame": {
+						"x": 471,
+						"y": 371,
+						"w": 7,
+						"h": 8
+					}
+				},
+				{
+					"filename": "player_nohead_jump_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 14,
+						"w": 7,
+						"h": 6
+					},
+					"frame": {
+						"x": 465,
+						"y": 421,
+						"w": 7,
+						"h": 6
+					}
+				},
+				{
+					"filename": "player_nohead_run_04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 14,
+						"w": 7,
+						"h": 6
+					},
+					"frame": {
+						"x": 465,
+						"y": 421,
+						"w": 7,
+						"h": 6
+					}
+				},
+				{
+					"filename": "skull_simple.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 6,
+						"h": 6
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 6,
+						"h": 6
+					},
+					"frame": {
+						"x": 460,
+						"y": 379,
+						"w": 6,
+						"h": 6
+					}
+				},
+				{
+					"filename": "skull_simple_blue.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 6,
+						"h": 6
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 6,
+						"h": 6
+					},
+					"frame": {
+						"x": 460,
+						"y": 387,
+						"w": 6,
+						"h": 6
+					}
+				},
+				{
+					"filename": "skull_simple_green.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 6,
+						"h": 6
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 6,
+						"h": 6
+					},
+					"frame": {
+						"x": 460,
+						"y": 395,
+						"w": 6,
+						"h": 6
+					}
+				},
+				{
+					"filename": "skull_simple_purple.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 6,
+						"h": 6
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 6,
+						"h": 6
+					},
+					"frame": {
+						"x": 468,
+						"y": 381,
+						"w": 6,
+						"h": 6
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:dc5b53ce67b9ae172355245d044cb482:6916d283b70379325ad2607b18810c31:729adc6043343cfda41c447ce8f464d6$"
+	}
+}
