@@ -1,58 +1,8 @@
 <!DOCTYPE html>
-
-
 <html>
     <head>
         <title>Rookie Bowman</title>
         <base href="https://cdn.jsdelivr.net/gh/ajtabjs/wl-main@432e7cdbff364ce38518364e76bacb41af68749b/rookie-bowman/" />
-        <script>
-        window["GD_OPTIONS"] = {
-            "gameId": "03ea76ffb4294a0391077e374903bf22",
-            "onEvent": function(event) {
-                switch (event.name) {
-                    case "SDK_GAME_START":
-                        app.adEnded()
-                        // advertisement done, resume game logic and unmute audio
-                        break;
-                    case "SDK_GAME_PAUSE":
-                        app.adStarted()
-                        // pause game logic / mute audio
-                        break;
-                    case "SDK_GDPR_TRACKING":
-                        // this event is triggered when your user doesn't want to be tracked
-                        break;
-                    case "SDK_GDPR_TARGETING":
-                        // this event is triggered when your user doesn't want personalised targeting of ads and such
-                        break;
-                }
-            },
-        };
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://html5.api.gamedistribution.com/main.min.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'gamedistribution-jssdk'));
-        
-        function showAd(){
-            if(window.app){
-                if(app.currentSceneName=="menu" && app.currentScene.creditsOpened){
-                    return;
-                }
-                if(app.adShowedTime && new Date().getTime()-app.adShowedTime<20000){
-                    return;
-                }
-            } 
-            
-            console.log("call show banner");
-            if (typeof gdsdk !== 'undefined' && gdsdk.showBanner !== 'undefined') {
-                 gdsdk.showBanner();
-            }
-        }
-            
-        </script>
     </head>
     
     <body style="margin: 0;padding: 0;width:100%;height: 100vh"><script src="js/phaser.min.js"></script><script src="js/main.js"></script><script>
