@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <title>Rookie Bowman</title>
         <base href="https://cdn.jsdelivr.net/gh/ajtabjs/wl-main@4960fd7154ea3cb3879e1e4b6143d5b2edb501b5/rookie-bowman/" />
@@ -11,10 +10,10 @@
         "onEvent": function(event) {
             switch (event.name) {
                 case "SDK_GAME_START":
-                    app.adEnded();
+                    if (window.app && typeof app.adEnded === "function") app.adEnded();
                     break;
                 case "SDK_GAME_PAUSE":
-                    app.adStarted();
+                    if (window.app && typeof app.adStarted === "function") app.adStarted();
                     break;
                 case "SDK_GDPR_TRACKING":
                     break;
@@ -78,46 +77,56 @@
             fire("SDK_GDPR_TARGETING");
         }, 0);
     })();
-</script>
+
+    function showAd() {
+        if (window.app) {
+            if (app.currentSceneName == "menu" && app.currentScene && app.currentScene.creditsOpened) {
+                return;
+            }
+            if (app.adShowedTime && new Date().getTime() - app.adShowedTime < 20000) {
+                return;
+            }
+        }
+
+        console.log("call show banner");
+        if (typeof gdsdk !== "undefined" && typeof gdsdk.showBanner === "function") {
+            gdsdk.showBanner();
+        }
+    }
+    </script>
     <body style="margin: 0;padding: 0;width:100%;height: 100vh"><script src="js/phaser.min.js"></script><script src="js/main.js"></script><script>
-        var isLinkClick=false;
+        var isLinkClick = false;
         var linkAdress;
         var linkTime;
 
-        function linkWaitTime(){
-            isLinkClick=false;
+        function linkWaitTime() {
+            isLinkClick = false;
         }
 
-
-        function visitLink(adress){
-            isLinkClick=true;
-            linkAdress=adress;
-            linkTime=setTimeout(linkWaitTime,250);
+        function visitLink(adress) {
+            isLinkClick = true;
+            linkAdress = adress;
+            linkTime = setTimeout(linkWaitTime, 250);
         }
 
-        var timeout=setTimeout(checkCanvas,500);
+        var timeout = setTimeout(checkCanvas, 500);
 
-        function checkCanvas(){
-            var c=document.getElementsByTagName("canvas")[0];
-            c.style.height="100%";
-            c.style.display="block";
-            c.style.margin="auto";
-            if(!c){
-                timeout=setTimeout(checkCanvas,500);
-            }else{
-                c.onclick=function(e){
-                    if(isLinkClick){
-                        window.open(linkAdress,"_blank");
-                        clearTimeout(linkWaitTime);
-                        isLinkClick=false;
-                    }
-                }
+        function checkCanvas() {
+            var c = document.getElementsByTagName("canvas")[0];
+            if (!c) {
+                timeout = setTimeout(checkCanvas, 500);
+                return;
             }
+            c.style.height = "100%";
+            c.style.display = "block";
+            c.style.margin = "auto";
+            c.onclick = function (e) {
+                if (isLinkClick) {
+                    window.open(linkAdress, "_blank");
+                    clearTimeout(linkTime);
+                    isLinkClick = false;
+                }
+            };
         }
-        
-        
     </script></body>
-
-    
 </html>
-
