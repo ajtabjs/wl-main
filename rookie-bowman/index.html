@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <title>Rookie Bowman</title>
         <base href="https://cdn.jsdelivr.net/gh/ajtabjs/wl-main@52360e7d02d3fa1f4d3c7da8a882c9f5d8c35033/rookie-bowman/" />
     </head>
-    
+    <script>
+    window["GD_OPTIONS"] = {
+        "gameId": "03ea76ffb4294a0391077e374903bf22",
+        "onEvent": function(event) {
+            switch (event.name) {
+                case "SDK_GAME_START":
+                    app.adEnded();
+                    break;
+                case "SDK_GAME_PAUSE":
+                    app.adStarted();
+                    break;
+                case "SDK_GDPR_TRACKING":
+                    break;
+                case "SDK_GDPR_TARGETING":
+                    break;
+            }
+        },
+    };
+
+    (function () {
+        var opts = window["GD_OPTIONS"] || {};
+
+        function fire(name) {
+            if (typeof opts.onEvent === "function") {
+                opts.onEvent({ name: name });
+            }
+        }
+
+        var adInProgress = false;
+
+        function simulateAd(kind) {
+            return new Promise(function (resolve) {
+                if (adInProgress) { resolve({ success: false, reason: "busy" }); return; }
+                adInProgress = true;
+                console.log("[GD stub] ad start: " + kind);
+                fire("SDK_GAME_PAUSE");
+
+                var ms = (kind === "rewarded") ? 5000 : 3000;
+                setTimeout(function () {
+                    adInProgress = false;
+                    console.log("[GD stub] ad end: " + kind);
+                    if (kind === "rewarded") fire("SDK_REWARDED_WATCH_COMPLETE");
+                    fire("SDK_GAME_START");
+                    resolve({ success: true, name: kind });
+                }, ms);
+            });
+        }
+
+        window.gdsdk = {
+            showBanner: function () {
+                console.log("[GD stub] showBanner()");
+                return Promise.resolve();
+            },
+            showAd: function (type) {
+                return simulateAd(type || "interstitial");
+            },
+            preloadAd: function (type) {
+                console.log("[GD stub] preloadAd(" + type + ")");
+                return Promise.resolve();
+            },
+            showRewardedAd: function () {
+                return simulateAd("rewarded");
+            },
+            openConsole: function () {
+                console.log("[GD stub] openConsole()");
+            }
+        };
+
+        setTimeout(function () {
+            fire("SDK_GDPR_TRACKING");
+            fire("SDK_GDPR_TARGETING");
+        }, 0);
+    })();
+</script>
     <body style="margin: 0;padding: 0;width:100%;height: 100vh"><script src="js/phaser.min.js"></script><script src="js/main.js"></script><script>
         var isLinkClick=false;
         var linkAdress;
