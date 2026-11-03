@@ -23,7 +23,7 @@ function init() {
 	dom_overlay_container = document.getElementById("dom_overlay_container");
 	var comp=AdobeAn.getComposition("F61B0854050C4F409C99D4E5D39144A3");
 	var lib=comp.getLibrary();
-	var loader = new createjs.LoadQueue(false);
+	var loader = new createjs.LoadQueue(false, null, "anonymous");
 	loader.installPlugin(createjs.Sound);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
 	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
