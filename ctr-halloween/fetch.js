@@ -6,14 +6,26 @@ import { setLoadingProgress } from "./loading-progress.js";
 
 const stash = new Map();
 
-export async function fetchBytes(url) {
+const RETRY_DELAY_MS = 2000;
+
+async function fetchBytesOnce(url, key = url) {
     const response = await fetch(url);
     if (!response.ok) {
         return -1;
     }
     const bytes = new Uint8Array(await response.arrayBuffer());
-    stash.set(url, bytes);
+    stash.set(key, bytes);
     return bytes.length;
+}
+
+export async function fetchBytes(url) {
+    const loaded = await fetchBytesOnce(url);
+    if (loaded >= 0) {
+        return loaded;
+    }
+    await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
+    const bypass = `${url}${url.includes("?") ? "&" : "?"}ctrdxRetry=1`;
+    return fetchBytesOnce(bypass, url);
 }
 
 export function takeStashed(url, destination) {

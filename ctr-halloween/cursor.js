@@ -70,6 +70,7 @@ function build(image, src) {
 
 for (const [name, src] of Object.entries(sources)) {
     const image = new Image();
+    image.crossOrigin = "anonymous";
     image.decoding = "async";
     image.addEventListener("load", () => {
         values[name] = build(image, src);
