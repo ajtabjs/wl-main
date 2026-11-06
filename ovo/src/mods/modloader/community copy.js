@@ -281,6 +281,7 @@
         else
         {
           frameobj.texture_img = new Image();
+          frameobj.texture_img.crossOrigin = "anonymous";
           frameobj.texture_img.cr_src = frame[0];
           frameobj.texture_img.cr_filesize = frame[1];
           frameobj.texture_img.c2webGL_texture = null;
