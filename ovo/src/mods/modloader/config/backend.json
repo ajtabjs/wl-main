@@ -1,0 +1,1377 @@
+{
+    "version": "2.2.2",
+    "settings": {
+        
+        "maxspeed": {
+            "name": "Max Speed",
+            "desc": "The maximum speed of the player.",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["player"],
+            "setting": {
+                "type": "slider",
+                "min": 0,
+                "max": 10000,
+                "increment": 10
+            },
+            "defaultSettings": {
+                "value": 330
+            }
+        },
+        "jumpstrength": {
+            "name": "Jump Strength",
+            "desc": "The strength of the player's jump.",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["player"],
+            "setting": {
+                "type": "slider",
+                "min": 0,
+                "max": 100,
+                "increment": 1
+            },
+            "defaultSettings": {
+                "value": 10
+            }
+        },
+        "deceleration": {
+            "name": "Deceleration",
+            "desc": "The deceleration of the player..",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["player"],
+            "setting": {
+                "type": "slider",
+                "min": 1,
+                "max": 100,
+                "increment": 1
+            },
+            "defaultSettings": {
+                "value": 10
+            }
+        },
+        "maxfallspeed": {
+            "name": "Max Fall Speed",
+            "desc": "The maximum fall speed of the player.",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["player"],
+            "setting": {
+                "type": "slider",
+                "min": 1,
+                "max": 100,
+                "increment": 1
+            },
+            "defaultSettings": {
+                "value": 10
+            }
+        }
+    },
+    "skins": {
+        "": {
+            "name": "Default",
+            "author": "skymen",
+            "desc": "The default skin.",
+            "url": "../src/skins/default.png",
+            "icon": "../src/skins/icons/default.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "default",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "elec": {
+            "name": "Electrical",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/electrical.png",
+            "icon": "../src/skins/icons/electrical.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "elec",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "pole": {
+            "name": "Pole",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/pole.png",
+            "icon": "../src/skins/icons/pole.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "pole",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "frank": {
+            "name": "Pink Guy",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/frank.png",
+            "icon": "../src/skins/icons/frank.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "frank",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "ovo+": {
+            "name": "OvO+",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/ovoplus.png",
+            "icon": "../src/skins/icons/ovoplus.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "ovo++",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "knight": {
+            "name": "Knight",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/knight.png",
+            "icon": "../src/skins/icons/knight.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "knight",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "dknight": {
+            "name": "Dark Knight",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/dknight.png",
+            "icon": "../src/skins/icons/dknight.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "dknight",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "lknight": {
+            "name": "Light Knight",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/lknight.png",
+            "icon": "../src/skins/icons/lknight.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "lknight",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "astronaut": {
+            "name": "Astronaut",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/astronaut.png",
+            "icon": "../src/skins/icons/astronaut.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "astronaut",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "alien": {
+            "name": "Alien",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/alien.png",
+            "icon": "../src/skins/icons/alien.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "alien",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "erigato": {
+            "name": "Erigato",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/erigato.png",
+            "icon": "../src/skins/icons/erigato.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "erigato",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "batter": {
+            "name": "Batter",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/batter.png",
+            "icon": "../src/skins/icons/batter.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "batter",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "ada": {
+            "name": "Adalich",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/ada.png",
+            "icon": "../src/skins/icons/ada.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "ada",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "thefall": {
+            "name": "The Fallen",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/thefall.png",
+            "icon": "../src/skins/icons/thefall.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "thefall",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "pulse": {
+            "name": "Pulse",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/pulse.png",
+            "icon": "../src/skins/icons/pulse.png",
+            "version": ["1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "pulse",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "materwelon": {
+            "name": "MaterWelon",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/materwelon.png",
+            "icon": "../src/skins/icons/materwelon.png",
+            "version": ["1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "materwelon",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "fl1ckd": {
+            "name": "Fl1ckd",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/fl1ckd.png",
+            "icon": "../src/skins/icons/fl1ckd.png",
+            "version": [ "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "fl1ckd",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "theliljoker": {
+            "name": "TheLilJoker",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/theliljoker.png",
+            "icon": "../src/skins/icons/theliljoker.png",
+            "version": ["1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "theliljoker",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "amongus": {
+            "name": "Among Us",
+            "author": "skymen",
+            "desc": "",
+            "url": "../src/skins/amongus.png",
+            "icon": "../src/skins/icons/amongus.png",
+            "version": ["1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "amongus",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "french": {
+            "name": "French",
+            "author": "NicoBros",
+            "desc": "",
+            "url": "../src/skins/french.png",
+            "icon": "../src/skins/icons/french.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "french",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "english": {
+            "name": "English",
+            "author": "NicoBros",
+            "desc": "",
+            "url": "../src/skins/english.png",
+            "icon": "../src/skins/icons/english.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "english",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "spanish": {
+            "name": "Spanish",
+            "author": "NicoBros",
+            "desc": "",
+            "url": "../src/skins/spanish.png",
+            "icon": "../src/skins/icons/spanish.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "spanish",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "brazilian": {
+            "name": "Brazilian",
+            "author": "NicoBros",
+            "desc": "",
+            "url": "../src/skins/brazilian.png",
+            "icon": "../src/skins/icons/brazilian.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "brazilian",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "cmg": {
+            "name": "Cool Math Games",
+            "author": "NicoBros",
+            "desc": "",
+            "url": "../src/skins/cmg.png",
+            "icon": "../src/skins/icons/cmg.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "cmg",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "shyguy": {
+            "name": "Shy Guy",
+            "author": "NicoBros",
+            "desc": "",
+            "url": "../src/skins/shyguy.png",
+            "icon": "../src/skins/icons/shyguy.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["official"],
+            "replaces": "shyguy",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "ctd": {
+            "name": "CoolTasDude",
+            "author": "CoolTasDude",
+            "desc": "",
+            "url": "../src/skins/ctd.png",
+            "icon": "../src/skins/icons/ctd.png",
+            "version": ["1.4.5"],
+            "tags": ["official"],
+            "replaces": "ctd",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "annihilazer": {
+            "name": "Annihilazer",
+            "author": "Annihilazer",
+            "desc": "",
+            "url": "../src/skins/annihilazer.png",
+            "icon": "../src/skins/icons/annihilazer.png",
+            "version": ["1.4.5"],
+            "tags": ["official"],
+            "replaces": "annihilazer",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "ov": {
+            "name": "Ov",
+            "author": "CoolTasDude",
+            "desc": "",
+            "url": "../src/skins/ov.png",
+            "icon": "../src/skins/icons/ov.png",
+            "version": ["1.4.5"],
+            "tags": ["official"],
+            "replaces": "ov",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },   
+        "xmaselec": {
+            "name": "Xmas Electrical",
+            "author": "Awesovven",
+            "desc": "Christmas Electric made for @Plant",
+            "url": "../src/skins/xmaselec.png",
+            "icon": "../src/skins/icons/xmaselec.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "english",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "grunt": {
+            "name": "Grunt",
+            "author": "RelishDog",
+            "desc": "",
+            "url": "../src/skins/grunt.png",
+            "icon": "../src/skins/icons/grunt.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "cmg",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "dream": {
+            "name": "Dream",
+            "author": "Awesomeguy",
+            "desc": "Speedrun!",
+            "url": "../src/skins/dream.png",
+            "icon": "../src/skins/icons/dream.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "shyguy",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "technoblade": {
+            "name": "Technoblade",
+            "author": "Awesomeguy",
+            "desc": "Legends never die.",
+            "url": "../src/skins/technoblade.png",
+            "icon": "../src/skins/icons/technoblade.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "erigato",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "skeppyplant": {
+            "name": "SkeppyPlant",
+            "author": "OvOPlant",
+            "desc": "",
+            "url": "../src/skins/skeppyplant.png",
+            "icon": "../src/skins/icons/skeppyplant.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "shyguy",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "mario": {
+            "name": "Mario",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/mario.png",
+            "icon": "../src/skins/icons/mario.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "erigato",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "goldenpole": {
+            "name": "Golden Pole",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/goldenpole.png",
+            "icon": "../src/skins/icons/goldenpole.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "pole",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "goldenovo+": {
+            "name": "Golden OvO+",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/goldenovoplus.png",
+            "icon": "../src/skins/icons/goldenovoplus.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "ovo+",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "goldenerigato": {
+            "name": "Golden Erigato",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/goldenerigato.png",
+            "icon": "../src/skins/icons/goldenerigato.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "erigato",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "goldenknight": {
+            "name": "Golden Knight",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/goldenknight.png",
+            "icon": "../src/skins/icons/goldenknight.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "knight",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "kirby": {
+            "name": "Kirby",
+            "author": "Meltrix",
+            "desc": "",
+            "url": "../src/skins/kirby.png",
+            "icon": "../src/skins/icons/kirby.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "ada",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "goldenfrank": {
+            "name": "Golden Frank",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/goldenfrank.png",
+            "icon": "../src/skins/icons/goldenfrank.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "frank",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "earth": {
+            "name": "Earth",
+            "author": "Saturnb",
+            "desc": "",
+            "url": "../src/skins/earth.png",
+            "icon": "../src/skins/icons/earth.png",
+            "version": ["1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "pulse",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "coffee": {
+            "name": "Coffee",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/coffee.png",
+            "icon": "../src/skins/icons/coffee.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "pole",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "chronos": {
+            "name": "Chronos",
+            "author": "Awesovven",
+            "desc": "",
+            "url": "../src/skins/chronos.png",
+            "icon": "../src/skins/icons/chronos.png",
+            "version": ["1.4", "1.4.2", "1.4.3", "1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "pole",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        },
+        "minecraftsteve": {
+            "name": "STEVE",
+            "author": "Newkem",
+            "desc": "with help from GCube and BlueFan77",
+            "url": "../src/skins/minecraftsteve.png",
+            "icon": "../src/skins/icons/minecraftsteve.png",
+            "version": ["1.4.4", "1.4.5"],
+            "tags": ["community"],
+            "replaces": "french",
+            "defaultSettings": {
+                "favorite": false,
+                "using": false
+            }
+        }
+        
+        
+    },
+    "mods": 
+    {        
+        "leveleditor": {
+            "name": "Editor",
+            "author": "Awesomeguy",
+            "desc": "For debugging without devtools.",
+            "url": "../src/mods/modloader/custom-ovo-level-editor.js",
+            "icon": "../src/img/mods/terminal.png",
+            "platform": ["mobile", "pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "console": {
+            "name": "Console",
+            "author": "Awesomeguy",
+            "desc": "For debugging without devtools.",
+            "url": "../src/mods/modloader/mobileconsole.js",
+            "icon": "../src/img/mods/terminal.png",
+            "platform": ["mobile", "pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "keystrokes": {
+            "name": "Keystrokes",
+            "author": "Awesomeguy",
+            "desc": "Shows your keystrokes on screen.",
+            "url": "../src/mods/modloader/keystrokes.js",
+            "icon": "../src/img/mods/keystrokes.png",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": {
+                "position": {
+                    "name": "Position",
+                    "desc": "",
+                    "type": "guiPosition"
+                },
+                "border": {
+                    "name": "Border",
+                    "desc": "",
+                    "type": "checkbox"
+                },
+                "activecolor": {
+                    "name": "Active Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "inactivecolor": {
+                    "name": "Inactive Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "activetextcolor": {
+                    "name": "Active Text Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "inactivetextcolor": {
+                    "name": "Inactive Text Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "scale": {
+                    "name": "Scale",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 5,
+                    "increment": 0.05
+                },
+                "opacity": {
+                    "name": "Opacity",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 1,
+                    "increment": 0.01
+                }
+
+            },
+            "defaultSettings": {
+                "settings": {
+                    "position": "100 100",
+                    "border": true,
+                    "activecolor": "black",
+                    "inactivecolor": "white",
+                    "activetextcolor": "white",
+                    "inactivetextcolor": "black",
+                    "scale": 1,
+                    "opacity": 1
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "fpsGUI": {
+            "name": "FPS",
+            "author": "Awesomeguy",
+            "desc": "Shows your FPS on screen.",
+            "url": "../src/mods/modloader/fpsGUI.js",
+            "icon": "../src/img/mods/fpsGUI.png",
+            "platform": ["mobile", "pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": {
+                "position": {
+                    "name": "Position",
+                    "desc": "",
+                    "type": "guiPosition"
+                },
+                "border": {
+                    "name": "Border",
+                    "desc": "",
+                    "type": "checkbox"
+                },
+                "backgroundcolor": {
+                    "name": "Background Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "textcolor": {
+                    "name": "Text Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "scale": {
+                    "name": "Scale",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 5,
+                    "increment": 0.05
+                },
+                "opacity": {
+                    "name": "Opacity",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 1,
+                    "increment": 0.01
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "position": "225 100",
+                    "border": true,
+                    "backgroundcolor": "white",
+                    "textcolor": "black",
+                    "scale": 1,
+                    "opacity": 1
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "positionGUI": {
+            "name": "Position",
+            "author": "Awesomeguy",
+            "desc": "Shows your position on screen.",
+            "url": "../src/mods/modloader/positionGUI.js",
+            "icon": "../src/img/mods/positionGUI.png",
+            "platform": ["mobile", "pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": {
+                "position": {
+                    "name": "Position",
+                    "desc": "",
+                    "type": "guiPosition"
+                },
+                "border": {
+                    "name": "Border",
+                    "desc": "",
+                    "type": "checkbox"
+                },
+                "backgroundcolor": {
+                    "name": "Background Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "textcolor": {
+                    "name": "Text Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "scale": {
+                    "name": "Scale",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 5,
+                    "increment": 0.05
+                },
+                "opacity": {
+                    "name": "Opacity",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 1,
+                    "increment": 0.01
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "position": "100 400",
+                    "border": true,
+                    "backgroundcolor": "white",
+                    "textcolor": "black",
+                    "scale": 1,
+                    "opacity": 1
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "stateGUI": {
+            "name": "State",
+            "author": "Awesomeguy",
+            "desc": "Shows your state on screen.",
+            "url": "../src/mods/modloader/stateGUI.js",
+            "icon": "../src/img/mods/stateGUI.png",
+            "platform": ["mobile", "pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": {
+                "position": {
+                    "name": "Position",
+                    "desc": "",
+                    "type": "guiPosition"
+                },
+                "border": {
+                    "name": "Border",
+                    "desc": "",
+                    "type": "checkbox"
+                },
+                "backgroundcolor": {
+                    "name": "Background Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "textcolor": {
+                    "name": "Text Color",
+                    "desc": "",
+                    "type": "color"
+                },
+                "scale": {
+                    "name": "Scale",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 5,
+                    "increment": 0.05
+                },
+                "opacity": {
+                    "name": "Opacity",
+                    "desc": "",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 1,
+                    "increment": 0.01
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "position": "100 250",
+                    "border": true,
+                    "backgroundcolor": "white",
+                    "textcolor": "black",
+                    "scale": 1,
+                    "opacity": 1
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "flymod": {
+            "name": "Fly",
+            "author": "drakeerv",
+            "desc": "Use [activator key] + [arrows] to fly around!<br/><br/>Use the settings to change the speed and activator keybind.",
+            "url": "../src/mods/modloader/flymod.js",
+            "icon": "../src/img/mods/fly.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["hacks"],
+            "reload": false,
+            "settings": {
+                "speed": {
+                    "name": "Speed",
+                    "desc": "How fast you fly",
+                    "type": "slider",
+                    "min": 1,
+                    "max": 25,
+                    "increment": 1
+                },
+                "activatorkeybind": {
+                    "name": "Activate fly",
+                    "desc": "Activates fly mode.",
+                    "type": "keybind"
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "speed": 10,
+                    "activatorkeybind": ["shift"]
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "chaos": {
+            "name": "Chaos",
+            "author": "drakeerv",
+            "desc": "Pure chaos. Use at your own risk.",
+            "url": "../src/mods/modloader/chaos.js",
+            "icon": "../src/img/mods/chaos.png",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": true,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "hurricane": {
+            "name": "Hurricane",
+            "author": "Toadi",
+            "desc": "Creates random wind for you to suffer in.",
+            "url": "../src/mods/modloader/hurricane.js",
+            "icon": "../src/img/mods/hurricane.png",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": false,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        }, 
+        "levelselector": {
+            "name": "Selector",
+            "author": "drakeerv",
+            "desc": "Pick from all the levels and more!",
+            "url": "../src/mods/modloader/levelselector.js",
+            "icon": "../src/img/mods/levelselector.png",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": false,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "randomlevel": {
+            "name": "Random Level",
+            "author": "drakeerv",
+            "desc": "Use 'shift + y' to be taken to a random level.",
+            "url": "../src/mods/modloader/randomlevel.js",
+            "icon": "../src/img/mods/randomlevel.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": false,
+            "settings": {
+                "randomlevelkeybind": {
+                    "name": "Move to Random Level",
+                    "desc": "Go to a random level",
+                    "type": "keybind"
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "randomlevelkeybind": ["shift", "y"]
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        }, 
+        "savestate": {
+            "name": "Save State",
+            "author": "skymen",
+            "desc": "<u><b>Features</b></u><br/>Create Checkpoint <br/>Reset Checkpoint<br/>Bypass to next level<br/>Bypass to previous level<br/>Move to end flag<br/>Move to coin<br/><br/>View settings to change keybinds.",
+            "url": "../src/mods/modloader/savestate.js",
+            "icon": "../src/img/mods/savestate.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["hacks"],
+            "reload": false,
+            "settings": {
+                "createcheckpointkeybind": {
+                    "name": "Create Checkpoint",
+                    "desc": "Create a checkpoint.",
+                    "type": "keybind"
+                },
+                "resetcheckpointkeybind": {
+                    "name": "Reset Checkpoint",
+                    "desc": "Reset checkpoints.",
+                    "type": "keybind"
+                },
+                "nextlevelkeybind": {
+                    "name": "Next Level",
+                    "desc": "Bypass to next level.",
+                    "type": "keybind"
+                },
+                "prevlevelkeybind": {
+                    "name": "Previous Level",
+                    "desc": "Bypass to previous level.",
+                    "type": "keybind"
+                },
+                "flagkeybind": {
+                    "name": "Teleport to Flag",
+                    "desc": "Teleport to the end flag.",
+                    "type": "keybind"
+                },
+                "coinkeybind": {
+                    "name": "Teleport to  Coin",
+                    "desc": "Teleport to the coin.",
+                    "type": "keybind"
+                }
+
+            },
+            "defaultSettings": {
+                "settings": {
+                    "createcheckpointkeybind": ["shift", "s"],
+                    "resetcheckpointkeybind": ["shift", "r"],
+                    "nextlevelkeybind": ["shift", "n"],
+                    "prevlevelkeybind": ["shift", "b"],
+                    "flagkeybind": ["shift", "m"],
+                    "coinkeybind": ["shift", "c"]
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "randomkeys": {
+            "name": "Random Keys",
+            "author": "Awesomeguy",
+            "desc": "Randomizes your keybinds every minute.<br/><br/>'Ctrl + k': Toggle randomization on/off<br/>'Shift + k': Show current keybinds",
+            "url": "../src/mods/modloader/randomkeys.js",
+            "icon": "../src/img/mods/randomkeys.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": false,
+            "settings": {
+                "randomkeyskeybind": {
+                    "name": "Toggle Randomization",
+                    "desc": "Toggle randomization on/off",
+                    "type": "keybind"
+                },
+                "showkeyskeybind": {
+                    "name": "Show Current Keybinds",
+                    "desc": "Shows current keybinds.",
+                    "type": "keybind"
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "randomkeyskeybind": ["ctrl", "k"],
+                    "showkeyskeybind": ["shift", "k"]
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "modapi": {
+            "name": "Mod API",
+            "author": "drakeerv",
+            "desc": "Open in devtools to use manipulate game mechanics.",
+            "url": "../src/mods/modloader/modapi.js",
+            "icon": "../src/img/mods/modapi.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["hacks"],
+            "reload": true,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+            
+        }, 
+        "darkmode": {
+            "name": "Dark Mode",
+            "author": null,
+            "desc": "Ease your eyes with a dark theme.",
+            "url": "../src/mods/modloader/darkmode.js",
+            "icon": "../src/img/mods/darkmode.png",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["visual"],
+            "reload": false,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "tas": {
+            "name": "TAS Tools",
+            "author": "skymen",
+            "desc": "Perfect speedruns with frame advance, savestates, and more! <br/><br/>Join the <a href='https://discord.gg/ovo-speedrunning-community-645935373368688650' target='_blank'>Discord<a> for more info & help.",
+            "url": "../src/mods/modloader/tasv5.js",
+            "icon": "../src/img/mods/tas.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["hacks"],
+            "reload": true,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "taskeybinds": {
+            "name": "TAS Keybinds",
+            "author": "CoolTasDude",
+            "desc": "A mod for changing the game's timescale without having to put commands in devtools. <br/><br/><b><u>Load ovo tas tools before attempting to use this mod</u></b><br/><br/> Keybinds positioned relative to the R key.",
+            "url": "../src/mods/modloader/taskeybinds.js",
+            "icon": "../src/img/mods/taskeybinds.png",
+            "platform": ["pc"],
+            "version": ["1.4", "1.4.4", "CTLE"],
+            "tags": ["hacks"],
+            "reload": false,
+            "settings": {
+                "timescale1keybind": {
+                    "name": "Timescale 1",
+                    "desc": "Sets timescale to 1",
+                    "type": "keybind"
+                },
+                "timescale0.5keybind": {
+                    "name": "Timescale 0.5",
+                    "desc": "Sets timescale to 0.5",
+                    "type": "keybind"
+                },
+                "timescale0.02keybind": {
+                    "name": "Timescale 0.02",
+                    "desc": "Sets timescale to 0.02.",
+                    "type": "keybind"
+                },
+                "timescale0.2keybind": {
+                    "name": "Timescale 0.2",
+                    "desc": "Sets timescale to 0.2",
+                    "type": "keybind"
+                },
+                "timescale0.07keybind": {
+                    "name": "Timescale 0.07",
+                    "desc": "Sets timescale to 0.07",
+                    "type": "keybind"
+                },
+                "timescale0.05keybind": {
+                    "name": "Timescale 0.05",
+                    "desc": "Sets timescale to 0.05",
+                    "type": "keybind"
+                },
+                "timescale0.1keybind": {
+                    "name": "Timescale 0.1",
+                    "desc": "Sets timescale to 0.1",
+                    "type": "keybind"
+                },
+                "timescalex2keybind": {
+                    "name": "Timescale x2",
+                    "desc": "Multiplies timescale by 2",
+                    "type": "keybind"
+                },
+                "timescalex5keybind": {
+                    "name": "Timescale x5",
+                    "desc": "Multiplies timescale by 5",
+                    "type": "keybind"
+                },
+                "timescale/2keybind": {
+                    "name": "Timescale /2",
+                    "desc": "Divides timescale by 2",
+                    "type": "keybind"
+                },
+                "timescale/5keybind": {
+                    "name": "Timescale /5",
+                    "desc": "Divides timescale by 5",
+                    "type": "keybind"
+                },
+                "automjkeybind": {
+                    "name": "Auto MJ",
+                    "desc": "Performs an MJ",
+                    "type": "keybind"
+                },
+                "autojumpkeybind": {
+                    "name": "Auto Jump",
+                    "desc": "Performs an auto jump.",
+                    "type": "keybind"
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "timescale1keybind": ["q"],
+                    "timescale0.5keybind": ["w"],
+                    "timescale0.02keybind": ["e"],
+                    "timescale0.2keybind": ["a"],
+                    "timescale0.07keybind": ["shift", "d"],
+                    "timescale0.05keybind": ["d"],
+                    "timescale0.1keybind": ["s"],
+                    "timescalex2keybind": ["x"],
+                    "timescalex5keybind": ["z"],
+                    "timescale/2keybind": ["c"],
+                    "timescale/5keybind": ["v"],
+                    "automjkeybind": ["shift", "f"],
+                    "autojumpkeybind": ["f"]
+                },
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "multiplayer": {
+            "name": "Multiplayer",
+            "author": "skymen",
+            "desc": "Play or speedrun against your friends!",
+            "url": "../src/mods/modloader/multiplayerREALREAL.js",
+            "icon": "../src/img/mods/multiplayer.png",
+            "platform": ["pc"],
+            "version": ["1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": true,
+            "settings": null,
+            "defaultSettings": {
+                "settings": null,
+                "favorite": false,
+                "enabled": false
+            }
+        },
+        "community": {
+            "name": "Community",
+            "author": "Awesomeguy",
+            "desc": "Play custom levels made by the community!<br/><br/> 'Shift + l' to open the level menu",
+            "url": "../src/mods/modloader/community.js",
+            "icon": "../src/img/mods/community.png",
+            "platform": ["pc", "mobile"],
+            "version": ["1.4.4", "CTLE"],
+            "tags": ["fun"],
+            "reload": false,
+            "settings": {
+                "openlevelmenukeybind": {
+                    "name": "Open Level Menu",
+                    "desc": "Open the level menu.",
+                    "type": "keybind"
+                }
+            },
+            "defaultSettings": {
+                "settings": {
+                    "openlevelmenukeybind": ["shift", "l"]
+                },
+                "favorite": false,
+                "enabled": true
+            }
+
+        }
+    }
+}
+
+
+
+    

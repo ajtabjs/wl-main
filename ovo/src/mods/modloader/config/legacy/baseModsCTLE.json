@@ -1,0 +1,12 @@
+{
+    "community": {
+        "name": "Community Levels",
+        "desc": "By Awesomeguy<br/><br/>Play custom levels made by the community!<br/><br/> 'Shift + l' to open the level menu",
+        "enabled": true,
+        "url": "../src/mods/modloader/community.js"
+    }
+}
+
+
+
+    

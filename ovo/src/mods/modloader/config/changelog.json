@@ -1,0 +1,89 @@
+{
+    "2.0.0": {
+        "changes": [
+            "Completely new UI"
+        ]
+    },
+    "2.0.1": {
+        "changes": [
+            "Search bar for mods",
+            "Bug fixes"
+        ]
+    },
+    "2.0.2": {
+        "changes": [
+            "Ability to add/delete your custom mods",
+            "Bug fixes"
+        ]
+    },
+    "2.0.3": {
+        "changes": [
+            "Ability to modify settings of mods (keybinds, etc.)",
+            "Reduced lag caused by modloader",
+            "Bug fixes"
+        ]
+    },
+    "2.0.4": {
+        "changes": [
+            "Mod menu button now appears only when it should (in menus & pause)",
+            "TAS Keybinds mod keybinds are now customizable"
+
+        ]
+    },
+    "2.0.5": {
+        "changes": [
+            "Upgraded the Community Levels mod, courtesy of skymen. Available in Crash Test Level Editor",
+            "Fixed cards overflowing the rows in the mod menu",
+            "Disabling mods that require a reload, and choosing to reload later, will change the mod's state to 'Reload Required'"
+
+        ]
+    },
+    "2.0.6": {
+        "changes": [
+            "Edit custom mods' settings",
+            "Error messages for custom mods that fail to load"
+        ]
+    },
+    "2.1.0": {
+        "changes": [
+            "Skins menu! Play with custom skins from the community.",
+            "Note: some skins are not available across all versions due default skins availablitity per version."
+        ]
+    },
+    "2.1.1": {
+        "changes": [
+            "Deprecated GUI mod. You can enable the same GUI elements as mods in the menu",
+            "They are listed as FPS, keystrokes, position, and state",
+            "Added mobile support and customization for these GUI elements"
+        ]
+    },
+    "2.1.11": {
+        "changes": [
+            "Removed keystrokes mod from mobile due to bugs",
+            "It will be back in the future"
+        ]
+    },
+    "2.1.12": {
+        "changes": [
+            "Added keystrokes mod for mobile"
+        ]
+    },
+    "2.2.0": {
+        "changes": [
+            "Added the replay system!",
+            "Save your replays, view them, race against them, and compare them against each other"
+        ]
+    },
+    "2.2.1": {
+        "changes": [
+            "Fixed bugs with the replay system"
+        ]
+    }, 
+    "2.2.2": {
+        "changes": [
+            "Fixed bugs with the custom skin system",
+            "Added the skin STEVE from the Minecraft Movie! (1.4.4+)"
+        ]
+    }
+
+}

@@ -1,0 +1,12 @@
+{ 
+    "multiplayer": {
+        "name": "Multiplayer Mod",
+        "desc": "By skymen<br/><br/>Play or speedrun against your friends!",
+        "enabled": false,
+        "url": "../src/mods/modloader/multiplayerREALSKY.js"
+    }
+}
+
+
+
+    
