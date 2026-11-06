@@ -268,21 +268,21 @@ document.body.appendChild = function(el) {
     if(!(modsConfig.hasOwnProperty(currentlySelectedMod) || currentlySelectedMod === 'none' || currentlySelectedMod === null)) {
       const errMessage = `Bad value of snakeChosenMod: ${currentlySelectedMod}. The current allowed values are ${Object.keys(modsConfig)}. Changing this to the "None" setting for next time.`;
       localStorage.setItem('snakeChosenMod', 'none');
-      if(confirm('Disallowed choice of mod. Changing this to none. Refresh the page?')) {location.reload();}
+      if(confirm('Disallowed choice of mod. Changing this to none. Refresh the page?')) {reloadPage();}
       throw new Error(errMessage);
     }
 
     if(window.isSnakeMobileVersion && modsConfig[currentlySelectedMod].mobile && modsConfig[currentlySelectedMod].mobile.support === false) {
       const errMessage = `This value of snakeChosenMod does not support mobile: ${currentlySelectedMod}. Changing this to the "None" setting for next time.`;
       localStorage.setItem('snakeChosenMod', 'none');
-      if(confirm(`Chosen mod (${currentlySelectedMod}) does not work on mobile. Changing this to none. Refresh the page?`)) {location.reload();}
+      if(confirm(`Chosen mod (${currentlySelectedMod}) does not work on mobile. Changing this to none. Refresh the page?`)) {reloadPage();}
       throw new Error(errMessage);
     }
 
     if(!WEB_VERSION && modsConfig[currentlySelectedMod].gsmOnly) {
       const errMessage = `This value of snakeChosenMod is only supported on the googlesnakemods.com website: ${currentlySelectedMod}. Changing this to the "None" setting for next time.`;
       localStorage.setItem('snakeChosenMod', 'none');
-      if(confirm(`Chosen mod (${currentlySelectedMod}) only works on the googlesnakemods.com website. Changing the mod to "none". Refresh the page?`)) {location.reload();}
+      if(confirm(`Chosen mod (${currentlySelectedMod}) only works on the googlesnakemods.com website. Changing the mod to "none". Refresh the page?`)) {reloadPage();}
       throw new Error(errMessage);
     }
 
@@ -1241,7 +1241,7 @@ let addModSelectorPopup = function() {
         (advancedSettings.hasOwnProperty('customUrl') && advancedSettings.customUrl !== advancedSettingsOriginal.customUrl) ||
         (WEB_VERSION && advancedSettings.hasOwnProperty('useMobileWebsite') && advancedSettings.useMobileWebsite !== advancedSettingsOriginal.useMobileWebsite)
       ) {
-      location.reload();
+      reloadPage();
     } else {
       //Apply dark/pudding mod theme setting if toggled.
       applyModLoaderThemeClasses();
@@ -2046,21 +2046,62 @@ function getGameVersionFromUrl() {
     throw new Error('This function should only be used on the web version');
   }
 
-  let thisUrl = window.location.href;
+  let urls = [window.location.href, document.baseURI];
 
-  if(thisUrl.includes('v/current')) {
-    return webLatestVersion
+  for(let thisUrl of urls) {
+    if(thisUrl.includes('v/current')) {
+      return webLatestVersion;
+    }
+
+    let versionMatch = thisUrl.match(/v\/(\d+)/);
+
+    if(versionMatch) {
+      return parseInt(versionMatch[1]);
+    }
+  }
+
+  return webLatestVersion;
+}
+
+function navigateToGamePage(url) {
+  let link = document.createElement('a');
+  link.href = url;
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+function getPageUrl(path) {
+  try {
+    return new URL(path, document.baseURI).href;
+  } catch(err) {
+    return null;
+  }
+}
+
+function reloadPage() {
+  let pageUrl = WEB_VERSION ? getPageUrl('index.html') : null;
+
+  if(pageUrl) {
+    navigateToGamePage(pageUrl);
   } else {
-    return parseInt(thisUrl.match(/v\/(\d+)/)[1]);
+    location.reload();
   }
 }
 
 function redirectToSpecificGameVersion(gameVersion) {
-  if(gameVersion === webLatestVersion) {
+  let versionName = gameVersion === webLatestVersion ? 'current' : gameVersion;
+  let pageUrl = getPageUrl(`../${versionName}/index.html`);
+
+  if(pageUrl) {
+    navigateToGamePage(pageUrl);
+  } else if(gameVersion === webLatestVersion) {
     window.location.href = '../../v/current/index.html';
   } else {
     window.location.href = `../../v/${gameVersion}/index.html`;
   }
+
   console.log('Redirecting to ' + gameVersion);
 }
 
