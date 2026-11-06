@@ -1,0 +1,119 @@
+body {
+  padding: 1em;
+  background-color: #212026;
+}
+
+nav {
+  display:flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+}
+
+a {
+  color: aqua;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/*Use gradient text effect*/
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  font-family: Roboto, Arial, sans-serif;
+  background: -webkit-linear-gradient(45deg, #4774ea, #00fffb 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.fake-button {
+  margin: auto;
+  margin-top: 2.5em;
+  display: block;
+  width: 115px;
+  padding: 10px;
+  text-align: center;
+  line-height: 25px;
+}
+
+p {
+  color: white;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* CSS from https://getcssscan.com/css-buttons-examples*/
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #555555;
+  padding: 10px;
+  border-radius: 5px;
+  right: 0;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid white;
+}
+
+.thin-dropdown {
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 550px) {
+  .thin-dropdown {
+    display: block;
+  }
+
+  .wide-only {
+    display:none;
+  }
+}
+
+.thin-dropdown:hover .dropdown-content {
+  display: flex;
+}
