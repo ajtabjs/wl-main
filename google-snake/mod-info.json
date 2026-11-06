@@ -1,0 +1,539 @@
+{
+  "version": "1.1.1",
+  "startMessage": {
+    "showToEveryone": false,
+    "showIfUpdateNeeded": false,
+    "excludeFbx": false,
+    "excludeSearch": false,
+    "showUpdatePrompt": true,
+    "explanatoryText": "Message from devs...",
+    "showMoreInfoLink": false,
+    "moreInfoLink": "about_update.md"
+  },
+  "modsConfig": {
+    "moreMenu": {
+      "displayName": "More Menu Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/main/modloadercode.js",
+      "modDescription": {
+        "descriptionName": "More Menu Mod",
+        "authors": [
+          {
+            "name": "Fizhes",
+            "url": "https://www.youtube.com/@Fizhes"
+          },
+          {
+            "name": "ScienceCrafter",
+            "url": "https://www.youtube.com/@sciencecrafter2676"
+          }
+        ],
+        "description": "The most popular mod. Adds options to the menu for more speeds, apple counts and map sizes. Other contributors: BrightyLighty, CarL"
+      },
+      "web": [
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/arrow/modloadercode.js"
+        },
+        {
+          "version": 4,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/daily_challenge/modloadercode.js"
+        },
+        {
+          "version": 5,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/mobile_touchpad/modloadercode.js"
+        },
+        {
+          "version": 6,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/hotdog/modloadercode.js"
+        },
+        {
+          "version": 7,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/magnet/modloadercode.js"
+        },
+        {
+          "version": 8,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/gate/modloadercode.js"
+        },
+        {
+          "version": 9,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/new_foods/modloadercode.js"
+        },
+        {
+          "version": 10,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/new_counts_pause/modloadercode.js"
+        },
+        {
+          "version": 11,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/bridge/modloadercode.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/tally/modloadercode.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCustomMenuStuff/v13/modloadercode.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Full support"
+      }
+    },
+    "levelEditorMod": {
+      "displayName": "Level Editor Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeLevelEditor/main/modloadercode.js",
+      "modDescription": {
+        "descriptionName": "Level Editor Mod",
+        "authors": [
+          {
+            "name": "TF2Llama",
+            "url": "https://www.youtube.com/@TF2Llama"
+          }
+        ],
+        "description": "Click on the board to place walls/fruit etc. Play pre-made levels. Make your own levels. Try the challenge levels."
+      },
+      "web": [
+        {
+          "version": 2,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeLevelEditor/stable_shield/modloadercode.js"
+        },
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeLevelEditor/stable_arrow/modloadercode.js"
+        },
+        {
+          "version": 4,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeLevelEditor/stable_daily_challenge/modloadercode.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeLevelEditor/v12/modloadercode.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeLevelEditor/v13/modloadercode.js"
+        }
+      ],
+      "mobile": {
+        "support": false,
+        "description": "No support for mobile"
+      }
+    },
+    "mouseMode": {
+      "displayName": "Mouse Mode",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/main/MouseMod.js",
+      "modDescription": {
+        "descriptionName": "Mouse Mode",
+        "authors": [
+          {
+            "name": "TF2Llama",
+            "url": "https://www.youtube.com/@TF2Llama"
+          }
+        ],
+        "description": "Control the snake with your mouse. Slightly buggy. Includes Remix Mod."
+      },
+      "web": [
+        {
+          "version": 2,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/stable_shield/modloadercode.js"
+        },
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/arrow/MouseMod.js"
+        },
+        {
+          "version": 4,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/v5/MouseMod.js"
+        },
+        {
+          "version": 5,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/v5/MouseMod.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/v12/MouseMod.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeMouseMode/main/MouseMod.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Full support"
+      }
+    },
+    "SpeedrunMod": {
+      "displayName": "Speedrun Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/main/SpeedrunMod.js",
+      "modDescription": {
+        "descriptionName": "Speedrun Mod",
+        "authors": [
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "A mod dedicated to speedrunning and competition."
+      },
+      "web": [
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/v12/SpeedrunMod.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/main/SpeedrunMod.js"
+        }
+      ],
+      "mobile": {
+        "support": false,
+        "description": "No support for mobile"
+      }
+    },
+    "PuddingMod": {
+      "displayName": "Pudding Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/main/PuddingMod.js",
+      "modDescription": {
+        "descriptionName": "Pudding Mod",
+        "authors": [
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "A visual and quality-of-life mod for speedrunning. Adds extra fruit, snake colors and board themes. Tracks PBs, stats, timers/splits and has a settings panel. Rare golden fruits can appear, including a 1 in a million Golden Apple. And does a lot more!"
+      },
+      "web": [
+        {
+          "version": 1,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/dice_added_version/PuddingMod.js"
+        },
+        {
+          "version": 2,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/shield_stable/PuddingMod.js"
+        },
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/arrow/PuddingMod.js"
+        },
+        {
+          "version": 4,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/pre_dpad/PuddingMod.js"
+        },
+        {
+          "version": 5,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/pre_hotdog/PuddingMod.js"
+        },
+        {
+          "version": 6,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/hotdog/PuddingMod.js"
+        },
+        {
+          "version": 7,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/magnet/PuddingMod.js"
+        },
+        {
+          "version": 8,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/broken_gate/PuddingMod.js"
+        },
+        {
+          "version": 9,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/v9/PuddingMod.js"
+        },
+        {
+          "version": 10,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/v10/PuddingMod.js"
+        },
+        {
+          "version": 11,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/v11/PuddingMod.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/v12/PuddingMod.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/main/PuddingMod.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Works, no input display or speedinfo"
+      }
+    },
+    "MultiplayerMod": {
+      "displayName": "Multiplayer Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeOnline/main/MultiplayerMod.js",
+      "gsmOnly": true,
+      "modDescription": {
+        "descriptionName": "Multiplayer Mod",
+        "authors": [
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "Remix Mod with online multiplayer. Play co-op or against each other, or spectate. Requires a dedicated server to be online."
+      },
+      "web": [
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeOnline/main/MultiplayerMod.js"
+        }
+      ],
+      "mobile": {
+        "support": false,
+        "description": "No support for mobile"
+      }
+    },
+    "MorePudding": {
+      "displayName": "More Pudding Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/main/MorePudding.js",
+      "modDescription": {
+        "descriptionName": "More Pudding Mod",
+        "authors": [
+          {
+            "name": "Fizhes",
+            "url": "https://www.youtube.com/@Fizhes"
+          },
+          {
+            "name": "TF2Llama",
+            "url": "https://www.youtube.com/@TF2Llama"
+          },
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "This is a combination of More Menu Mod, Visibility Mod and Pudding Mod."
+      },
+      "web": [
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/arrow/MorePudding.js"
+        },
+        {
+          "version": 4,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/pre_dpad/MorePudding.js"
+        },
+        {
+          "version": 5,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/magnet/MorePudding.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/v12/MorePudding.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakePudding/main/MorePudding.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Works, but reduced features"
+      }
+    },
+    "RemixMod": {
+      "displayName": "Remix Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeRemix/main/RemixMod.js",
+      "gsmOnly": true,
+      "modDescription": {
+        "descriptionName": "Remix Mod",
+        "authors": [
+          {
+            "name": "Fizhes",
+            "url": "https://www.youtube.com/@Fizhes"
+          },
+          {
+            "name": "TF2Llama",
+            "url": "https://www.youtube.com/@TF2Llama"
+          },
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "This is an expanded version of More Pudding Mod. Adds new modes and additional speeds and counts. On older game versions, this loads the original Chess Mod or Candy Mod."
+      },
+      "web": [
+        {
+          "version": 2,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeChess/main/ChessMod.js"
+        },
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeChess/main/ChessMod.js"
+        },
+        {
+          "version": 5,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeCandy/main/CandyMod.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeRemix/v12/RemixMod.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeRemix/main/RemixMod.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Works, but reduced features"
+      }
+    },
+    "RemixUltraMod": {
+      "displayName": "Remix Ultra Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeRemix/main/RemixUltraMod.js",
+      "gsmOnly": true,
+      "modDescription": {
+        "descriptionName": "Remix Ultra Mod",
+        "authors": [
+          {
+            "name": "Fizhes",
+            "url": "https://www.youtube.com/@Fizhes"
+          },
+          {
+            "name": "TF2Llama",
+            "url": "https://www.youtube.com/@TF2Llama"
+          },
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "Remix Mod with an expanded version of Level Editor. Revives Animation Mod and lets you customize pretty much anything."
+      },
+      "web": [
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeRemix/v12/RemixUltraMod.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeRemix/main/RemixUltraMod.js"
+        }
+      ],
+      "mobile": {
+        "support": false,
+        "description": "No support for mobile"
+      }
+    },
+    "HamiltonMod": {
+      "displayName": "Hamilton Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeWallSolver/main/HamiltonMod.js",
+      "modDescription": {
+        "descriptionName": "Hamilton Mod",
+        "authors": [
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "In wall mode only, solves the live wall pattern and draws a thin red polyline tour on the board. Uses the Wall Solver in a background worker so gameplay does not freeze. The score-bar wall icon changes color to show searching, a found solution, or no solution."
+      },
+      "web": [
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeWallSolver/main/HamiltonMod.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Full support"
+      }
+    },
+    "VisibilityMod": {
+      "displayName": "Visibility Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/main/VisibilityMod.js",
+      "modDescription": {
+        "descriptionName": "Visibility Mod",
+        "authors": [
+          {
+            "name": "TF2Llama",
+            "url": "https://www.youtube.com/@TF2Llama"
+          },
+          {
+            "name": "Yarmiplay",
+            "url": "https://www.youtube.com/@Yarmiplay"
+          }
+        ],
+        "description": "This mod lets you delete different parts of the snake, game elements, and the background. Comes with Pudding Mod."
+      },
+      "web": [
+        {
+          "version": 1,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/shield_working/VisibilityMod.js"
+        },
+        {
+          "version": 2,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/shield_working/VisibilityMod.js"
+        },
+        {
+          "version": 3,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/arrow/VisibilityMod.js"
+        },
+        {
+          "version": 4,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/main/VisibilityMod.js"
+        },
+        {
+          "version": 5,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/v5/VisibilityMod.js"
+        },
+        {
+          "version": 12,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/v12/VisibilityMod.js"
+        },
+        {
+          "version": 13,
+          "url": "../../mods/DarkSnakeGang/GoogleSnakeDeleteStuffMod/main/VisibilityMod.js"
+        }
+      ],
+      "mobile": {
+        "support": true,
+        "description": "Full support"
+      }
+    },
+    "ConwayMod": {
+      "displayName": "Conway Mod",
+      "hasUrl": true,
+      "url": "../../mods/DarkSnakeGang/ConwayMod/bare_bones_dice_support/ConwayMod.js",
+      "gsmOnly": true,
+      "modDescription": {
+        "descriptionName": "Conway Mod",
+        "authors": [
+          {
+            "name": "cyt",
+            "url": "https://www.youtube.com/@cytrussToo"
+          }
+        ],
+        "description": "This is conway's game of life. Not supported on Tampermonkey."
+      },
+      "web": [
+        {
+          "version": 1,
+          "url": "../../mods/DarkSnakeGang/ConwayMod/bare_bones_dice_support/ConwayMod.js"
+        }
+      ],
+      "mobile": {
+        "support": false,
+        "description": "Requires a play/pause button to support."
+      }
+    }
+  }
+}

@@ -113,7 +113,7 @@ let externalConfig = {
 
     //Make a synchronous request for modInfo JSON file
     let req = new XMLHttpRequest();
-    req.open('GET', 'https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json', false);
+    req.open('GET', '../../mod-info.json', false);
     req.onload = function() {
       if(this.status === 200) {
         try {
@@ -129,12 +129,12 @@ let externalConfig = {
           externalConfig.hasError = true;
         }
       } else {
-        console.error(`Loading external config from https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json returned non-200 status. Received: ${this.status}`);
+        console.error(`Loading external config from ../../mod-info.json returned non-200 status. Received: ${this.status}`);
         externalConfig.hasError = true;
       }
     };
     req.onerror = function(event) {
-      console.error('Error when attempting to retrieve external config from https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json');
+      console.error('Error when attempting to retrieve external config from ../../mod-info.json');
       console.log(event);
       externalConfig.hasError = true;
     };
@@ -907,7 +907,7 @@ let addModSelectorPopup = function() {
     <div id="mod-loader-title" style="display: flex;justify-content: space-between;align-items: center;margin: 0px 0px 15px 0px;border: 2px solid var(--mod-loader-title-border);background-color: var(--mod-loader-title-bg);border-radius: 2px;">
       <span><a target="_blank" href="https://github.com/DarkSnakeGang"><img title="DarkSnakeGang github" style="margin-left:3px; margin-top:2px" src="https://www.google.com/logos/fnbx/snake_arcade/v3/speed_00.png" alt="" height="34" crossorigin="anonymous"></a></span>
       <h1 style="font-size: 2em;font-weight: bold;font-family: &quot;Century Gothic&quot;, sans-serif;text-align: center;color: var(--mod-loader-heading-col, #4674e9);margin-top: 0;margin-bottom: 0;">Snake Mod Loader</h1>
-      <span><a target="_blank" href="https://discord.gg/NA6vHg62An"><img title="Discord server" src="${WEB_VERSION ? "../../img/Discord.png" : "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeIcons/main/Extras/Discord.png"}" width="35px" crossorigin="anonymous" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"></a></span>
+      <span><a target="_blank" href="https://discord.gg/NA6vHg62An"><img title="Discord server" src="../../img/Discord.png" width="35px" crossorigin="anonymous" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"></a></span>
     </div>
     ${gsmPromo}
     <div id="main-panel" style="display: flex;justify-content: start;">
@@ -998,7 +998,7 @@ let addModSelectorPopup = function() {
   let hideEndScreenImg = document.createElement('img');
   hideEndScreenImg.style = "position: absolute;left: 10px;top: 10px;cursor: pointer; height:20px; width:auto;";
   hideEndScreenImg.crossOrigin = 'anonymous';
-  hideEndScreenImg.src = WEB_VERSION ? "../../img/EyeIcon.png" : "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeIcons/main/ToggleDeathscreen/EyeIcon.png";
+  hideEndScreenImg.src = "../../img/EyeIcon.png";
   hideEndScreenImg.title = "Click to hide. Click anywhere to bring back";
   hideEndScreenImg.id = "death-screen-toggle";
   let firstMenuScreen = document.getElementsByClassName('T7SB3d')[0];

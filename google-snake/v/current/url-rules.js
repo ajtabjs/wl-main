@@ -60,8 +60,7 @@
   };
 
   window.webSnake._modInfoCache = null;
-  window.webSnake._modInfoUrl =
-    "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json";
+  window.webSnake._modInfoUrl = "../../mod-info.json";
 
   window.webSnake.getGameVersionFromUrl = function() {
     var href = window.location.href;
