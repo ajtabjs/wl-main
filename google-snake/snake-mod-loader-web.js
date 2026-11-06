@@ -905,9 +905,9 @@ let addModSelectorPopup = function() {
   const modSelectorModal = `
   <div id="mod-selector-dialogue" style="display: block;margin:25px auto;padding:10px;border: 1px solid var(--mod-loader-thin-border);width:550px;background-color: var(--mod-loader-main-bg) !important;border-radius:5px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.24);box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);font-family: helvetica, sans-serif;max-width: calc(100vw - 35px);overflow-y: auto;max-height: calc(100vh - 110px);">
     <div id="mod-loader-title" style="display: flex;justify-content: space-between;align-items: center;margin: 0px 0px 15px 0px;border: 2px solid var(--mod-loader-title-border);background-color: var(--mod-loader-title-bg);border-radius: 2px;">
-      <span><a target="_blank" href="https://github.com/DarkSnakeGang"><img title="DarkSnakeGang github" style="margin-left:3px; margin-top:2px" src="https://www.google.com/logos/fnbx/snake_arcade/v3/speed_00.png" alt="" height="34"></a></span>
+      <span><a target="_blank" href="https://github.com/DarkSnakeGang"><img title="DarkSnakeGang github" style="margin-left:3px; margin-top:2px" src="https://www.google.com/logos/fnbx/snake_arcade/v3/speed_00.png" alt="" height="34" crossorigin="anonymous"></a></span>
       <h1 style="font-size: 2em;font-weight: bold;font-family: &quot;Century Gothic&quot;, sans-serif;text-align: center;color: var(--mod-loader-heading-col, #4674e9);margin-top: 0;margin-bottom: 0;">Snake Mod Loader</h1>
-      <span><a target="_blank" href="https://discord.gg/NA6vHg62An"><img title="Discord server" src="${WEB_VERSION ? "/img/Discord.png" : "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeIcons/main/Extras/Discord.png"}" width="35px" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"></a></span>
+      <span><a target="_blank" href="https://discord.gg/NA6vHg62An"><img title="Discord server" src="${WEB_VERSION ? "../../img/Discord.png" : "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeIcons/main/Extras/Discord.png"}" width="35px" crossorigin="anonymous" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"></a></span>
     </div>
     ${gsmPromo}
     <div id="main-panel" style="display: flex;justify-content: start;">
@@ -997,7 +997,8 @@ let addModSelectorPopup = function() {
 
   let hideEndScreenImg = document.createElement('img');
   hideEndScreenImg.style = "position: absolute;left: 10px;top: 10px;cursor: pointer; height:20px; width:auto;";
-  hideEndScreenImg.src = WEB_VERSION ? "/img/EyeIcon.png" : "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeIcons/main/ToggleDeathscreen/EyeIcon.png";
+  hideEndScreenImg.crossOrigin = 'anonymous';
+  hideEndScreenImg.src = WEB_VERSION ? "../../img/EyeIcon.png" : "https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeIcons/main/ToggleDeathscreen/EyeIcon.png";
   hideEndScreenImg.title = "Click to hide. Click anywhere to bring back";
   hideEndScreenImg.id = "death-screen-toggle";
   let firstMenuScreen = document.getElementsByClassName('T7SB3d')[0];
@@ -2056,9 +2057,9 @@ function getGameVersionFromUrl() {
 
 function redirectToSpecificGameVersion(gameVersion) {
   if(gameVersion === webLatestVersion) {
-    window.location.href = '../../v/current/';
+    window.location.href = '../../v/current/index.html';
   } else {
-    window.location.href = `../../v/${gameVersion}`;
+    window.location.href = `../../v/${gameVersion}/index.html`;
   }
   console.log('Redirecting to ' + gameVersion);
 }

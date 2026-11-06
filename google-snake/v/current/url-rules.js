@@ -108,9 +108,9 @@
   window.webSnake.redirectToGameVersion = function(gameVersion) {
     var latest = typeof window.webLatestVersion === "number" ? window.webLatestVersion : 13;
     if (gameVersion === latest) {
-      window.location.href = "../../v/current/";
+      window.location.href = "../../v/current/index.html";
     } else {
-      window.location.href = "../../v/" + gameVersion + "/";
+      window.location.href = "../../v/" + gameVersion + "/index.html";
     }
   };
 

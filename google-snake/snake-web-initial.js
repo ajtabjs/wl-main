@@ -199,7 +199,7 @@ function switchToMobile() {
 
   /*Change keys image to swipe image*/
   .rNjvu {
-    background-image: url(//www.google.com/logos/fnbx/snake_arcade/swipe.svg) !important
+    background-image: url(../../img/icons/swipe.svg) !important
   }
 
   /*Menu modal panels don't overlap edge*/
@@ -428,7 +428,7 @@ function switchToMobile() {
     //Rotate game to portrait for mobile
     const rotateGameMobileHtml = `
     <div jsname="ar2wLb" class="t6jjTb">
-        <img class="xAAoNb" src="https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/screen_rotation/default/48px.svg" alt="Rotate device to portrait">
+        <img class="xAAoNb" src="../../img/icons/screen_rotation.svg" alt="Rotate device to portrait" crossorigin="anonymous">
     </div>
     `;
 
