@@ -20,6 +20,9 @@ export const THREADED_RUNTIME = "./_framework/dotnet.js";
 /** The single-threaded runtime, published beside it. */
 export const SINGLE_RUNTIME = "./_framework-single/dotnet.js";
 
+/** Only the single-threaded runtime is published (scripts/publish_browser.py --single-only). */
+export const SINGLE_ONLY = true;
+
 const NO_GRAPHICS =
     "This browser cannot draw the 3D graphics the game needs. " +
     "iOS and iPadOS need version 15 or newer.";
@@ -71,6 +74,13 @@ export function parseModeQuery(search = "") {
  * before the game could report anything.
  */
 export function selectRuntime(environment, requested = null) {
+    // Community Package web port: published with --single-only, so there is no threaded
+    // runtime to pick and no cross-origin isolation is required.
+    if (SINGLE_ONLY) {
+        return environment.localGraphics
+            ? { mode: "single", runtime: SINGLE_RUNTIME, reason: null }
+            : { mode: "unsupported", runtime: null, reason: NO_GRAPHICS };
+    }
     const threaded =
         environment.isolated &&
         environment.sharedMemory &&
