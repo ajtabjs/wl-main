@@ -68,7 +68,7 @@ document.getElementById("picker").addEventListener("submit", function (event) {
   event.preventDefault();
   if (!select.value) return;
   localStorage.setItem(key, select.value);
-  location.assign("./" + select.value + "/");
+  location.assign("./" + select.value + "/index.html");
 });
 </script>
 </body>
