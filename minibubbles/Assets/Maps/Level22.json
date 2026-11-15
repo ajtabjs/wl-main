@@ -1,0 +1,495 @@
+{ "backgroundcolor":"#282800",
+ "compressionlevel":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "target":"."
+        }
+    },
+ "height":25,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 49, 49, 70, 118, 118, 118, 118, 118, 118, 118, 118, 118, 118, 69, 49, 49, 49, 49, 49, 49, 49, 49, 0, 0, 0, 0, 49, 49, 49, 49, 49, 73, 111, 95, 95, 95, 109, 111, 95, 95, 95, 109, 71, 49, 49, 49, 49, 49, 49, 49, 49, 0, 0, 0, 0, 49, 49, 70, 118, 118, 119, 50, 0, 0, 0, 48, 50, 0, 0, 0, 48, 117, 118, 118, 118, 118, 118, 69, 49, 49, 0, 0, 0, 0, 49, 49, 73, 111, 95, 95, 96, 0, 0, 142, 94, 96, 140, 144, 145, 94, 95, 95, 95, 95, 95, 109, 71, 49, 49, 0, 0, 0, 0, 70, 118, 119, 50, 0, 0, 0, 0, 142, 143, 141, 0, 0, 146, 140, 144, 145, 0, 0, 0, 0, 48, 71, 49, 49, 0, 0, 0, 0, 73, 111, 95, 96, 0, 0, 0, 142, 143, 141, 0, 0, 0, 0, 0, 146, 140, 140, 144, 145, 0, 48, 71, 49, 49, 0, 0, 0, 0, 73, 50, 0, 142, 143, 144, 147, 143, 141, 0, 53, 55, 0, 0, 0, 0, 0, 0, 146, 144, 147, 48, 71, 49, 49, 0, 0, 0, 0, 73, 50, 147, 143, 141, 146, 140, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 146, 140, 48, 71, 49, 49, 0, 0, 0, 0, 73, 50, 140, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 71, 49, 49, 0, 0, 0, 0, 73, 19, 3, 4, 0, 0, 0, 53, 13, 15, 54, 54, 54, 54, 16, 0, 0, 2, 4, 0, 0, 48, 71, 49, 49, 0, 0, 0, 0, 24, 26, 27, 50, 0, 0, 0, 0, 48, 50, 0, 0, 0, 0, 56, 54, 54, 105, 96, 0, 0, 48, 117, 118, 69, 0, 0, 0, 0, 49, 49, 73, 19, 4, 0, 0, 0, 48, 50, 0, 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 94, 95, 109, 71, 0, 0, 0, 0, 49, 49, 24, 27, 50, 0, 0, 0, 48, 50, 0, 0, 0, 0, 52, 143, 140, 140, 140, 144, 145, 0, 0, 48, 71, 0, 0, 0, 0, 49, 49, 49, 73, 19, 3, 3, 3, 17, 50, 0, 0, 53, 54, 108, 141, 0, 0, 0, 146, 144, 145, 0, 48, 71, 0, 0, 0, 0, 49, 49, 49, 24, 26, 26, 26, 26, 27, 50, 0, 0, 142, 143, 141, 0, 0, 2, 4, 0, 146, 2, 3, 17, 71, 0, 0, 0, 0, 49, 49, 49, 49, 49, 49, 49, 49, 73, 50, 143, 140, 140, 0, 0, 0, 0, 94, 107, 13, 3, 17, 25, 26, 23, 0, 0, 0, 0, 49, 49, 49, 49, 49, 70, 118, 118, 119, 50, 141, 0, 0, 0, 0, 0, 0, 0, 0, 48, 67, 25, 23, 49, 49, 0, 0, 0, 0, 49, 49, 49, 49, 49, 73, 111, 95, 95, 96, 0, 0, 0, 0, 0, 0, 0, 53, 54, 105, 109, 71, 49, 49, 49, 0, 0, 0, 0, 49, 49, 49, 49, 49, 73, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 71, 49, 49, 49, 0, 0, 0, 0, 49, 49, 49, 49, 49, 73, 19, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 17, 71, 49, 49, 49, 0, 0, 0, 0, 49, 49, 49, 49, 49, 24, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 23, 49, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":25,
+         "id":9,
+         "name":"Terrain",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":29,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":5,
+         "name":"Entities",
+         "objects":[
+                {
+                 "gid":2147483649,
+                 "height":8,
+                 "id":466,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":64,
+                 "y":120
+                }, 
+                {
+                 "gid":47,
+                 "height":8,
+                 "id":467,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":116,
+                 "y":120
+                }, 
+                {
+                 "gid":415,
+                 "height":8,
+                 "id":470,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":72,
+                 "y":40
+                }, 
+                {
+                 "gid":415,
+                 "height":8,
+                 "id":471,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":80,
+                 "y":40
+                }, 
+                {
+                 "gid":415,
+                 "height":8,
+                 "id":472,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":112,
+                 "y":40
+                }, 
+                {
+                 "gid":415,
+                 "height":8,
+                 "id":473,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":120,
+                 "y":40
+                }, 
+                {
+                 "gid":2147484109,
+                 "height":8,
+                 "id":474,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":120
+                }, 
+                {
+                 "gid":2147484109,
+                 "height":8,
+                 "id":475,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":128
+                }, 
+                {
+                 "gid":415,
+                 "height":8,
+                 "id":476,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":128,
+                 "y":40
+                }, 
+                {
+                 "gid":415,
+                 "height":8,
+                 "id":477,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":88,
+                 "y":40
+                }, 
+                {
+                 "gid":2147484109,
+                 "height":8,
+                 "id":479,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":160,
+                 "y":152
+                }, 
+                {
+                 "gid":93,
+                 "height":8,
+                 "id":480,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":100,
+                 "y":152
+                }, 
+                {
+                 "gid":369,
+                 "height":8,
+                 "id":481,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":80,
+                 "y":168
+                }, 
+                {
+                 "gid":461,
+                 "height":8,
+                 "id":482,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":32,
+                 "y":88
+                }, 
+                {
+                 "gid":461,
+                 "height":8,
+                 "id":483,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":32,
+                 "y":80
+                }, 
+                {
+                 "gid":461,
+                 "height":8,
+                 "id":484,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"steps charging",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"steps shoot",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"steps start",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"steps wait",
+                         "type":"int",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":32,
+                 "y":72
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":12,
+ "nextobjectid":485,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.4.3",
+ "tileheight":8,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"Tileset.json"
+        }],
+ "tilewidth":8,
+ "type":"map",
+ "version":1.4,
+ "width":29
+}

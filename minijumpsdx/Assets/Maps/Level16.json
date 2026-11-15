@@ -1,0 +1,187 @@
+{ "compressionlevel":0,
+ "height":17,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 61, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 111, 95, 96, 97, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 3, 5, 13, 13, 113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 49, 60, 10, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 49, 51, 20, 20, 112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 95, 97, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 112, 0, 0, 0, 0, 0, 0, 0, 59, 61, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 95, 96, 97, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 20, 112, 0, 0, 0, 0, 0],
+         "height":17,
+         "id":9,
+         "name":"Terrain",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":22,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":10,
+         "name":"Entities",
+         "objects":[
+                {
+                 "gid":2147483649,
+                 "height":8,
+                 "id":41,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":120,
+                 "y":112
+                }, 
+                {
+                 "gid":47,
+                 "height":8,
+                 "id":132,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"area x",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":40,
+                 "y":72
+                }, 
+                {
+                 "gid":93,
+                 "height":16,
+                 "id":152,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":7
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":56,
+                 "y":104
+                }, 
+                {
+                 "gid":93,
+                 "height":8,
+                 "id":171,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":-7
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":112,
+                 "y":80
+                }, 
+                {
+                 "gid":93,
+                 "height":24,
+                 "id":172,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":7
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":56,
+                 "y":48
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":11,
+ "nextobjectid":175,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"2021.03.23",
+ "tileheight":8,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"Tileset.json"
+        }],
+ "tilewidth":8,
+ "type":"map",
+ "version":1.5,
+ "width":22
+}

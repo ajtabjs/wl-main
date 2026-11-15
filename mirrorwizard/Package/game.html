@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<script>
+/* webripper:cors-stub */
+
+(function () {
+  if (window.__webripperCorsStub) return;
+  window.__webripperCorsStub = true;
+
+  function clear(image) {
+    try { image.crossOrigin = null; } catch (e) {}
+    try {
+      if (image.removeAttribute) image.removeAttribute('crossorigin');
+    } catch (e) {}
+  }
+
+  try {
+    var descriptor = Object.getOwnPropertyDescriptor(
+      HTMLImageElement.prototype,
+      'crossOrigin'
+    );
+    if (descriptor && descriptor.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'crossOrigin', {
+        configurable: true,
+        enumerable: descriptor.enumerable,
+        get: function () { return null; },
+        set: function () {}
+      });
+    }
+  } catch (e) {}
+
+  var NativeImage = window.Image;
+  if (NativeImage) {
+    function WrappedImage(width, height) {
+      var image = new NativeImage(width, height);
+      clear(image);
+      return image;
+    }
+    WrappedImage.prototype = NativeImage.prototype;
+    window.Image = WrappedImage;
+  }
+
+  var nativeCreateElement = document.createElement.bind(document);
+  document.createElement = function (tag, options) {
+    var element = nativeCreateElement(tag, options);
+    if (String(tag).toLowerCase() === 'img') clear(element);
+    return element;
+  };
+
+  var nativeCreateElementNS = document.createElementNS.bind(document);
+  document.createElementNS = function (namespace, tag, options) {
+    var element = nativeCreateElementNS(namespace, tag, options);
+    if (String(tag).toLowerCase() === 'img') clear(element);
+    return element;
+  };
+
+  function isImage(element) {
+    return !!element && String(element.tagName || '').toLowerCase() === 'img';
+  }
+
+  var nativeSetAttribute = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function (name, value) {
+    if (isImage(this) && String(name).toLowerCase() === 'crossorigin') return;
+    return nativeSetAttribute.call(this, name, value);
+  };
+
+  var nativeSetAttributeNS = Element.prototype.setAttributeNS;
+  Element.prototype.setAttributeNS = function (namespace, name, value) {
+    if (isImage(this) && String(name).toLowerCase() === 'crossorigin') return;
+    return nativeSetAttributeNS.call(this, namespace, name, value);
+  };
+
+  function scrubParsedImages() {
+    try {
+      var images = document.querySelectorAll('img[crossorigin]');
+      for (var i = 0; i < images.length; i++) clear(images[i]);
+    } catch (e) {}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scrubParsedImages);
+  } else {
+    scrubParsedImages();
+  }
+})();
+
+</script>
+
+        <title>Mirror Wizard</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+    </head>
+    <body oncontextmenu="return false;" style="background-color: #0a0117">
+        <canvas id="gameCanvas" width="100%" height="100%" style="background-color: #0a0117; top: 0px; position: absolute; left: 0px; display: block">Your browser requires Canvas support to play this game.</canvas>
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>

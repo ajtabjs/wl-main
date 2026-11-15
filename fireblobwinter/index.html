@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<script>
+/* webripper:gamemonetize-stub */
+
+(function () {
+  window._runGame = true;
+  window.SDK_OPTIONS = window.SDK_OPTIONS || { onEvent: function () {} };
+
+  // Some games show a full-screen "PLEASE WAIT" overlay while an ad plays and
+  // only unblock when the SDK reports the ad is over (SDK_GAME_START).  With no
+  // real ad to wait for, emulate that lifecycle immediately and release the
+  // game, otherwise it would freeze on the overlay forever.
+  var emit = function (name) {
+    try {
+      var options = window.SDK_OPTIONS;
+      if (options && typeof options.onEvent === 'function') {
+        options.onEvent({ name: name });
+        return;
+      }
+    } catch (e) {}
+    // Fall back to the pause/resume hooks the driver installs directly.
+    try {
+      if (name === 'SDK_GAME_PAUSE' && typeof window._adPauseGame === 'function') {
+        window._adPauseGame();
+      } else if (name === 'SDK_GAME_START' && typeof window._adResumeGame === 'function') {
+        window._adResumeGame();
+      }
+    } catch (e) {}
+  };
+  var runAd = function (cb) {
+    emit('SDK_GAME_PAUSE');
+    emit('SDK_GAME_START');
+    if (cb) { try { cb(); } catch (e) {} }
+  };
+  var noop = function () {};
+  var base = {
+    showBanner: function () { runAd(); },
+    showAd: function (cb) { runAd(cb); },
+    showRewarded: function (cb) { runAd(cb); },
+    showRewardedAd: function (cb) { runAd(cb); },
+    onEvent: noop,
+    gameLoadingStart: noop,
+    gameLoadingFinished: noop,
+    gameplayStart: noop,
+    gameplayStop: noop,
+    happyTime: noop,
+    commercialBreak: function (cb) {
+      runAd(cb);
+      return Promise.resolve();
+    },
+    rewardedBreak: function (cb) {
+      runAd(cb);
+      return Promise.resolve(true);
+    }
+  };
+  window.sdk = new Proxy(base, {
+    get: function (target, prop) {
+      if (prop === 'then') return undefined;
+      if (prop in target) return target[prop];
+      return function () {};
+    }
+  });
+})();
+
+</script>
+
+<script>
+/* webripper:cors-stub */
+
+(function () {
+  if (window.__webripperCorsStub) return;
+  window.__webripperCorsStub = true;
+
+  function clear(image) {
+    try { image.crossOrigin = null; } catch (e) {}
+    try {
+      if (image.removeAttribute) image.removeAttribute('crossorigin');
+    } catch (e) {}
+  }
+
+  try {
+    var descriptor = Object.getOwnPropertyDescriptor(
+      HTMLImageElement.prototype,
+      'crossOrigin'
+    );
+    if (descriptor && descriptor.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'crossOrigin', {
+        configurable: true,
+        enumerable: descriptor.enumerable,
+        get: function () { return null; },
+        set: function () {}
+      });
+    }
+  } catch (e) {}
+
+  var NativeImage = window.Image;
+  if (NativeImage) {
+    function WrappedImage(width, height) {
+      var image = new NativeImage(width, height);
+      clear(image);
+      return image;
+    }
+    WrappedImage.prototype = NativeImage.prototype;
+    window.Image = WrappedImage;
+  }
+
+  var nativeCreateElement = document.createElement.bind(document);
+  document.createElement = function (tag, options) {
+    var element = nativeCreateElement(tag, options);
+    if (String(tag).toLowerCase() === 'img') clear(element);
+    return element;
+  };
+
+  var nativeCreateElementNS = document.createElementNS.bind(document);
+  document.createElementNS = function (namespace, tag, options) {
+    var element = nativeCreateElementNS(namespace, tag, options);
+    if (String(tag).toLowerCase() === 'img') clear(element);
+    return element;
+  };
+
+  function isImage(element) {
+    return !!element && String(element.tagName || '').toLowerCase() === 'img';
+  }
+
+  var nativeSetAttribute = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function (name, value) {
+    if (isImage(this) && String(name).toLowerCase() === 'crossorigin') return;
+    return nativeSetAttribute.call(this, name, value);
+  };
+
+  var nativeSetAttributeNS = Element.prototype.setAttributeNS;
+  Element.prototype.setAttributeNS = function (namespace, name, value) {
+    if (isImage(this) && String(name).toLowerCase() === 'crossorigin') return;
+    return nativeSetAttributeNS.call(this, namespace, name, value);
+  };
+
+  function scrubParsedImages() {
+    try {
+      var images = document.querySelectorAll('img[crossorigin]');
+      for (var i = 0; i < images.length; i++) clear(images[i]);
+    } catch (e) {}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scrubParsedImages);
+  } else {
+    scrubParsedImages();
+  }
+})();
+
+</script>
+
+        <title>FireBlob Winter</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <script type="text/javascript">
+            window._runGame = true;
+            window._adPauseGame=function(){};
+            window._adResumeGame=function(){};
+            window.SDK_OPTIONS = {
+                gameId: "pj05r8tubjj0ukl65o5t9ha5pp111a2r",
+                onEvent: function (a) {
+                    switch (a.name) {
+                        case "SDK_GAME_PAUSE":
+                            window._adPauseGame();
+                            break;
+                        case "SDK_GAME_START":
+                            window._adResumeGame();
+                            break;
+                        case "SDK_READY":
+                            window._runGame=true;
+                            break;
+                    }
+                }
+            };
+            (function (a, b, c) {
+                var d = a.getElementsByTagName(b)[0];
+                a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "data:text/javascript,", d.parentNode.insertBefore(a, d))
+            })(document, "script", "gamemonetize-sdk"); 
+        </script>
+    </head>
+    <body oncontextmenu="return false;" style="background-color: #ffffff">
+<canvas id="gameCanvas" width="100%" height="100%" style="background-color: #ffffff; top: 0px; position: absolute; left: 0px; display: block">Your browser requires Canvas support to play this game.</canvas>
+        <script type="text/javascript" src="game.js"></script>
+
+        
+        <script type="text/javascript" src="FilesGameMonetize/main.js"></script>
+        <script type="text/javascript" id="sdk"></script>
+</body>
+</html>
