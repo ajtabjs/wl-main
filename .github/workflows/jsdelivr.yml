@@ -55,9 +55,100 @@ jobs:
 
           echo "urls=$URLS" >> $GITHUB_OUTPUT
 
-      - name: Purge jsDelivr cache
+      - name: Purge jsDelivr cache (branch aliases)
         if: steps.purge_urls.outputs.urls != ''
         uses: egad13/purge-jsdelivr-cache@v1
         with:
           url: ${{ steps.purge_urls.outputs.urls }}
           attempts: 5
+
+      # Base tags in the HTML files pin a specific commit SHA
+      # (https://cdn.jsdelivr.net/gh/<repo>@<sha>/<dir>/). jsDelivr caches
+      # per-ref, so a stale edge entry for a pinned SHA is never cleared by
+      # purging only the branch aliases above. For every changed HTML that
+      # carries a base tag, purge every file under its directory at that pinned
+      # SHA too, so asset 403s self-heal on push.
+      - name: Purge pinned base-tag URLs
+        if: github.event.before != '0000000000000000000000000000000000000000'
+        run: |
+          REPO="${{ github.repository }}" \
+          BEFORE="${{ github.event.before }}" \
+          AFTER="${{ github.event.after }}" \
+          python3 - <<'PY' > /tmp/pinned_paths.txt
+          import os
+          import re
+          import subprocess
+          import sys
+          import urllib.parse
+
+          repo = os.environ["REPO"]
+          before = os.environ["BEFORE"]
+          after = os.environ["AFTER"]
+
+          def git(*args):
+              return subprocess.run(
+                  ["git", *args], capture_output=True, text=True, check=True
+              ).stdout
+
+          def ref_exists(ref):
+              return subprocess.run(
+                  ["git", "cat-file", "-e", ref],
+                  capture_output=True, text=True
+              ).returncode == 0
+
+          changed = [
+              p for p in git(
+                  "diff", "--no-renames", "--name-only", before, after,
+                  "--diff-filter=AMR",
+              ).splitlines()
+              if p and not p.startswith(".github/")
+              and not p.endswith((".md", ".txt"))
+          ]
+
+          base_re = re.compile(
+              r"<base\b[^>]*\bhref\s*=\s*[\"\x27]?https?://cdn\.jsdelivr\.net/"
+              r"gh/" + re.escape(repo) + r"@([0-9a-fA-F]{7,40})/",
+              re.IGNORECASE,
+          )
+
+          pinned: set[tuple[str, str]] = set()  # (sha, directory)
+          for path in changed:
+              if not path.lower().endswith((".html", ".htm")):
+                  continue
+              if not ref_exists("%s:%s" % (after, path)):
+                  continue
+              text = git("show", "%s:%s" % (after, path))
+              match = base_re.search(text)
+              if match:
+                  directory = os.path.dirname(path)
+                  pinned.add((match.group(1), directory))
+
+          seen: set[str] = set()
+          for sha, directory in sorted(pinned):
+              if not ref_exists(sha):
+                  subprocess.run(
+                      ["git", "fetch", "--depth=1", "origin", sha],
+                      capture_output=True, text=True,
+                  )
+              if not ref_exists(sha):
+                  continue
+              args = ["ls-tree", "-r", "--name-only", sha]
+              if directory:
+                  args += ["--", directory]
+              for rel in git(*args).splitlines():
+                  if not rel:
+                      continue
+                  url = "https://cdn.jsdelivr.net/gh/%s@%s/%s" % (
+                      repo, sha, urllib.parse.quote(rel, safe="/"))
+                  if url not in seen:
+                      seen.add(url)
+                      print(urllib.parse.urlsplit(url).path)
+          PY
+          if [ -s /tmp/pinned_paths.txt ]; then
+            echo "purging $(wc -l < /tmp/pinned_paths.txt) pinned base-tag path(s)"
+            xargs -a /tmp/pinned_paths.txt -P 12 -I{} \
+              curl -sS -o /dev/null -L --max-time 40 \
+              "https://purge.jsdelivr.net{}" || true
+          else
+            echo "no pinned base-tag paths to purge"
+          fi
