@@ -1970,7 +1970,7 @@ self.assetsManifest = {
       "url": "content/video_hd/ctr_outro.webm"
     },
     {
-      "hash": "sha256-4Z6OT0ZluhqqbZIdA/1S/Lvt8poc9+P/PxqvSjEjBNA=",
+      "hash": "sha256-fQnANL6nffaxCSqlKk1I8VchUHQKjUtblxrwuzekqlM=",
       "url": "cursor.js"
     },
     {
@@ -1994,7 +1994,7 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-AXb/BhEPD1e7MODBVgUc2w6sTknr3Hf+fgb5u3KP58c=",
+      "hash": "sha256-eLIo/w3HIwabVHbTS0ov/0EBNTuA8xA/n34qLVTHRq8=",
       "url": "index.html"
     },
     {

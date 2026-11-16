@@ -2,15 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <script src="./console-capture.js"></script>
-        <script src="./coi.js"></script>
-
         <!-- Resolves to the directory this page is served from, so the app works from a domain
              root and from a GitHub Pages project subpath alike. It lives here rather than being
              injected at deploy time because publish hashes index.html into
              service-worker-assets.js, and a later edit would leave the shipped file failing the
-             integrity check the service worker installs it with. -->
+             integrity check the service worker installs it with. It must come before any
+             relative URL, or those resolve against the embedding host instead. -->
         <base href="https://cdn.jsdelivr.net/gh/ajtabjs/wl-main@a9e299eb33524ec8722ce3e9433b5c85c5cabcbb/ctr-community/" />
+
+        <script src="./console-capture.js"></script>
+        <script src="./coi.js"></script>
 
         <meta
             name="viewport"

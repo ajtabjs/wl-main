@@ -52,7 +52,15 @@ function build(image, src) {
     // The default low-quality filter drops the thin dark outline when halving.
     context.imageSmoothingQuality = "high";
     context.drawImage(image, 0, 0, target.width, target.height);
-    const base = target.toDataURL("image/png");
+    let base;
+    try {
+        base = target.toDataURL("image/png");
+    } catch {
+        // The canvas is tainted when the bitmap came from another origin without CORS
+        // (e.g. the page is embedded in an iframe on a different host). Fall back to the
+        // original image instead of throwing, so the rest of the boot is not aborted.
+        return `url("${src}") 0 0, auto`;
+    }
 
     // The first form the browser accepts wins; image-set in cursor is still uneven, and an
     // unsupported value would otherwise throw the whole declaration away.
@@ -71,6 +79,8 @@ function build(image, src) {
 for (const [name, src] of Object.entries(sources)) {
     const image = new Image();
     image.decoding = "async";
+    // Keeps the canvas untainted so toDataURL works when assets are served from a CDN.
+    image.crossOrigin = "anonymous";
     image.addEventListener("load", () => {
         values[name] = build(image, src);
         apply();
