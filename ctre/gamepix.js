@@ -25,12 +25,13 @@ var GamePix = {
             // console.log('GamePix Loading Event', perc);
 
             var elem = document.getElementById("myBar");
-            elem.style.width = perc + "%";
+            if (elem) elem.style.width = perc + "%";
         },
         gameLoaded: function (callback) {
             console.log("GamePix Loaded Event");
             callback();
-            document.getElementById("progressScreen").remove();
+            var screen = document.getElementById("progressScreen");
+            if (screen) screen.remove();
         },
         ping: function (type, object) {
             console.log(type);
