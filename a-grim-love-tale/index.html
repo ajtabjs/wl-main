@@ -13,6 +13,15 @@
   </head>
   <script src="libs/phaser.min.js"></script>
   <script src="https://www.kongregate.com/javascripts/kongregate_api.js"></script>
+  <script>
+    window.kongregate = window.kongregate || { stats: { submit: function () {} } };
+    if (typeof kongregateAPI === "undefined") {
+      window.kongregateAPI = {
+        loadAPI: function (callback) { if (typeof callback === "function") callback(); },
+        getAPI: function () { return { stats: { submit: function () {} } }; }
+      };
+    }
+  </script>
   <body>
     <script src="src/main.4b3ff657.js" charset="utf-8"></script>
     <div id="game-container"></div>

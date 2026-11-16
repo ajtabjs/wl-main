@@ -12,6 +12,15 @@
     </style>
   </head>
   <script src="https://www.kongregate.com/javascripts/kongregate_api.js"></script>
+  <script>
+    window.kongregate = window.kongregate || { stats: { submit: function () {} } };
+    if (typeof kongregateAPI === "undefined") {
+      window.kongregateAPI = {
+        loadAPI: function (callback) { if (typeof callback === "function") callback(); },
+        getAPI: function () { return { stats: { submit: function () {} } }; }
+      };
+    }
+  </script>
   <script src="src/phaser.min.ba1606ec.js"></script>
 
   <body>
