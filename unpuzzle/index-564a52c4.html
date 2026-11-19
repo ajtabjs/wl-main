@@ -34,80 +34,207 @@
   if (window.__webripperCorsStub) return;
   window.__webripperCorsStub = true;
 
-  function clear(image) {
-    try { image.crossOrigin = null; } catch (e) {}
+  // Construct 2/3 upload sprites from <img> (and video frames from <video>)
+  // straight into WebGL with texImage2D.  A cross-origin image loaded without
+  // CORS taints the canvas, so that upload throws a SecurityError -- Firefox
+  // reports it as "The operation is insecure." -- and boot aborts.  Construct
+  // itself assigns ``img.crossOrigin = null`` immediately before ``img.src``,
+  // which is exactly the broken combination.  Load cross-origin media in CORS
+  // mode instead: CDNs such as jsDelivr answer with Access-Control-Allow-Origin,
+  // so the texture upload is legal.  A host that does not send CORS headers
+  // falls back to a plain load on the error event, so the art still renders
+  // (the canvas is then tainted, but only WebGL uploads care).
+  var elementProto = window.Element && Element.prototype;
+  var imageProto = window.HTMLImageElement && HTMLImageElement.prototype;
+  var mediaProto = window.HTMLMediaElement && HTMLMediaElement.prototype;
+  var sourceProto = window.HTMLSourceElement && HTMLSourceElement.prototype;
+  if (!elementProto || !imageProto) return;
+
+  function descriptorOf(proto, name) {
+    while (proto) {
+      var descriptor = Object.getOwnPropertyDescriptor(proto, name);
+      if (descriptor) return descriptor;
+      proto = Object.getPrototypeOf(proto);
+    }
+    return null;
+  }
+
+  var nativeSetAttribute = elementProto.setAttribute;
+  var nativeGetAttribute = elementProto.getAttribute;
+  var nativeRemoveAttribute = elementProto.removeAttribute;
+  var imageSrc = descriptorOf(imageProto, 'src');
+  var imageCrossOrigin = descriptorOf(imageProto, 'crossOrigin');
+  var mediaSrc = descriptorOf(mediaProto, 'src');
+  var mediaCrossOrigin = descriptorOf(mediaProto, 'crossOrigin');
+  var sourceSrc = descriptorOf(sourceProto, 'src');
+  if (!imageSrc || !imageSrc.set) return;
+
+  function trim(value) {
+    return String(value == null ? '' : value).replace(/^\s+|\s+$/g, '');
+  }
+
+  function tagOf(element) {
+    return trim(element && element.tagName).toLowerCase();
+  }
+
+  function isMedia(element) {
+    var tag = tagOf(element);
+    return tag === 'img' || tag === 'video' || tag === 'audio' || tag === 'source';
+  }
+
+  function isRemote(value) {
+    var raw = trim(value);
+    if (!raw || /^(?:data|blob|filesystem|javascript|about):/i.test(raw)) return false;
+    var url;
     try {
-      if (image.removeAttribute) image.removeAttribute('crossorigin');
+      url = new URL(raw, document.baseURI || document.URL);
+    } catch (e) {
+      return false;
+    }
+    if (url.protocol !== 'http:' && url.protocol !== 'https:') return false;
+    return url.origin !== window.location.origin;
+  }
+
+  function corsMarked(element) {
+    try {
+      return nativeGetAttribute.call(element, 'crossorigin') !== null;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function mediaOwner(element) {
+    if (tagOf(element) === 'source' && element.parentNode) return element.parentNode;
+    return element;
+  }
+
+  // Add crossorigin *before* the browser sees the URL.  Setting it after the
+  // request starts has no effect, which is why the src hooks below matter.
+  function prepare(element, value) {
+    var owner = mediaOwner(element);
+    if (!isMedia(owner) || owner.__webripperPlainLoad) return;
+    if (!isRemote(value)) return;
+    try {
+      if (!corsMarked(owner)) {
+        nativeSetAttribute.call(owner, 'crossorigin', 'anonymous');
+      }
     } catch (e) {}
   }
 
-  try {
-    var descriptor = Object.getOwnPropertyDescriptor(
-      HTMLImageElement.prototype,
-      'crossOrigin'
-    );
-    if (descriptor && descriptor.set) {
-      Object.defineProperty(HTMLImageElement.prototype, 'crossOrigin', {
-        configurable: true,
-        enumerable: descriptor.enumerable,
-        get: function () { return null; },
-        set: function () {}
-      });
-    }
-  } catch (e) {}
-
-  var NativeImage = window.Image;
-  if (NativeImage) {
-    function WrappedImage(width, height) {
-      var image = new NativeImage(width, height);
-      clear(image);
-      return image;
-    }
-    WrappedImage.prototype = NativeImage.prototype;
-    window.Image = WrappedImage;
+  // A CORS request to a host without Access-Control-Allow-Origin fails
+  // outright.  Retry once without CORS so plain canvas/HTML games keep
+  // working; __webripperPlainLoad stops prepare() from re-adding it.
+  function reloadPlain(element) {
+    if (!element || element.__webripperPlainLoad) return;
+    var target = mediaOwner(element);
+    if (target !== element) element = target;
+    var src = null;
+    try {
+      src = nativeGetAttribute.call(element, 'src');
+    } catch (e) {}
+    element.__webripperPlainLoad = true;
+    try {
+      nativeRemoveAttribute.call(element, 'crossorigin');
+    } catch (e) {}
+    if (!src) return;
+    try {
+      var descriptor = tagOf(element) === 'img' ? imageSrc : descriptorOf(Object.getPrototypeOf(element), 'src');
+      if (descriptor && descriptor.set) descriptor.set.call(element, src);
+    } catch (e) {}
   }
 
-  var nativeCreateElement = document.createElement.bind(document);
-  document.createElement = function (tag, options) {
-    var element = nativeCreateElement(tag, options);
-    if (String(tag).toLowerCase() === 'img') clear(element);
-    return element;
-  };
-
-  var nativeCreateElementNS = document.createElementNS.bind(document);
-  document.createElementNS = function (namespace, tag, options) {
-    var element = nativeCreateElementNS(namespace, tag, options);
-    if (String(tag).toLowerCase() === 'img') clear(element);
-    return element;
-  };
-
-  function isImage(element) {
-    return !!element && String(element.tagName || '').toLowerCase() === 'img';
+  function hookSrc(proto, descriptor) {
+    if (!proto || !descriptor || !descriptor.set) return;
+    Object.defineProperty(proto, 'src', {
+      configurable: true,
+      enumerable: descriptor.enumerable,
+      get: function () {
+        return descriptor.get.call(this);
+      },
+      set: function (value) {
+        prepare(this, value);
+        return descriptor.set.call(this, value);
+      }
+    });
   }
 
-  var nativeSetAttribute = Element.prototype.setAttribute;
-  Element.prototype.setAttribute = function (name, value) {
-    if (isImage(this) && String(name).toLowerCase() === 'crossorigin') return;
+  function hookCrossOrigin(proto, descriptor) {
+    if (!proto || !descriptor || !descriptor.set) return;
+    Object.defineProperty(proto, 'crossOrigin', {
+      configurable: true,
+      enumerable: descriptor.enumerable,
+      get: function () {
+        return descriptor.get.call(this);
+      },
+      set: function (value) {
+        var src = null;
+        try {
+          src = nativeGetAttribute.call(this, 'src');
+        } catch (e) {}
+        // Construct clears crossOrigin to switch CORS off; on a cross-origin
+        // asset that only guarantees a tainted, unusable texture.
+        if ((value === null || value === '') && !this.__webripperPlainLoad && isRemote(src)) {
+          value = 'anonymous';
+        }
+        return descriptor.set.call(this, value);
+      }
+    });
+  }
+
+  hookSrc(imageProto, imageSrc);
+  hookSrc(mediaProto, mediaSrc);
+  hookSrc(sourceProto, sourceSrc);
+  hookCrossOrigin(imageProto, imageCrossOrigin);
+  hookCrossOrigin(mediaProto, mediaCrossOrigin);
+
+  // Engines that write the attribute instead of the IDL property.
+  elementProto.setAttribute = function (name, value) {
+    try {
+      if (trim(name).toLowerCase() === 'src' && isMedia(this)) prepare(this, value);
+    } catch (e) {}
     return nativeSetAttribute.call(this, name, value);
   };
 
-  var nativeSetAttributeNS = Element.prototype.setAttributeNS;
-  Element.prototype.setAttributeNS = function (namespace, name, value) {
-    if (isImage(this) && String(name).toLowerCase() === 'crossorigin') return;
-    return nativeSetAttributeNS.call(this, namespace, name, value);
+  elementProto.removeAttribute = function (name) {
+    try {
+      if (
+        trim(name).toLowerCase() === 'crossorigin' &&
+        !this.__webripperPlainLoad &&
+        isMedia(this) &&
+        isRemote(nativeGetAttribute.call(this, 'src'))
+      ) {
+        return;
+      }
+    } catch (e) {}
+    return nativeRemoveAttribute.call(this, name);
   };
 
-  function scrubParsedImages() {
+  window.addEventListener('error', function (event) {
+    var target = event.target;
+    if (!target || !isMedia(target) || !corsMarked(mediaOwner(target))) return;
+    reloadPlain(target);
+  }, true);
+
+  // Media already parsed from markup started loading before this script ran.
+  function upgradeParsedMedia() {
     try {
-      var images = document.querySelectorAll('img[crossorigin]');
-      for (var i = 0; i < images.length; i++) clear(images[i]);
+      var nodes = document.querySelectorAll('img,video,audio');
+      for (var i = 0; i < nodes.length; i++) {
+        var node = nodes[i];
+        var src = nativeGetAttribute.call(node, 'src');
+        if (!src || !isRemote(src) || corsMarked(node)) continue;
+        if (tagOf(node) === 'img' && node.complete) continue;
+        prepare(node, src);
+        var descriptor = tagOf(node) === 'img' ? imageSrc : descriptorOf(Object.getPrototypeOf(node), 'src');
+        if (descriptor && descriptor.set) descriptor.set.call(node, src);
+      }
     } catch (e) {}
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', scrubParsedImages);
+    document.addEventListener('DOMContentLoaded', upgradeParsedMedia);
   } else {
-    scrubParsedImages();
+    upgradeParsedMedia();
   }
 })();
 
