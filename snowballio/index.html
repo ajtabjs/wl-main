@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Snowball</title>
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #231F20;
+    }
+    /* Override the template's centered .webgl-content so the player fills the viewport. */
+    .webgl-content {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      margin: 0;
+      transform: none;
+    }
+    #gameContainer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #gameContainer canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    #errorBox {
+      display: none;
+      position: absolute;
+      inset: 0;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 24px;
+      color: #fff;
+      font: 16px/1.5 Helvetica, Arial, sans-serif;
+      text-align: center;
+    }
+    #errorBox.visible {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="webgl-content">
+    <div id="gameContainer"></div>
+    <div id="errorBox">
+      <p class="error-message">The game could not be loaded.</p>
+    </div>
+  </div>
+
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    (function () {
+      var errorBox = document.getElementById("errorBox");
+      var errorMessage = errorBox.querySelector(".error-message");
+
+      function showError(message) {
+        errorMessage.textContent = message;
+        errorBox.classList.add("visible");
+      }
+
+      if (location.protocol === "file:") {
+        showError("This Unity WebGL build has to be served over HTTP. Run a local web server in this folder instead of opening index.html directly.");
+        return;
+      }
+
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/sb.json", {
+        onProgress: UnityProgress,
+        Module: {
+          onRuntimeInitialized: function () {
+            UnityProgress(gameInstance, 1);
+          },
+          onAbort: function (reason) {
+            showError("The game could not start: " + reason);
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
