@@ -7,9 +7,12 @@ on:
   workflow_dispatch:
     inputs:
       sync_test_mode:
-        description: 'Fork Sync Test Mode'
+        description: 'Fork Sync Test Mode (skip the actual sync)'
         type: boolean
         default: false
+
+permissions:
+  contents: write
 
 jobs:
   sync_latest_from_upstream:
@@ -18,25 +21,13 @@ jobs:
     if: github.repository != 'ajtabjs/wl-main'
 
     steps:
-    - name: Checkout target repo
-      uses: actions/checkout@v3
-      with:
-        ref: master
-
-    - name: Sync upstream changes
-      id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
-      with:
-        target_sync_branch: master
-        target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        upstream_sync_branch: master
-        upstream_sync_repo: ajtabjs/wl-main
-        test_mode: ${{ inputs.sync_test_mode }}
-
-    - name: New commits found
-      if: steps.sync.outputs.has_new_commits == 'true'
-      run: echo "New commits were found to sync."
-
-    - name: No new commits
-      if: steps.sync.outputs.has_new_commits == 'false'
-      run: echo "There were no new commits."
+    - name: Sync fork with upstream
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TEST_MODE: ${{ inputs.sync_test_mode }}
+      run: |
+        if [ "$TEST_MODE" = "true" ]; then
+          echo "Test mode: skipping sync."
+          exit 0
+        fi
+        gh repo sync "${{ github.repository }}" --source ajtabjs/wl-main --branch master
